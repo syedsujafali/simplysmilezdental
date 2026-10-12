@@ -1,0 +1,366 @@
+/* Reset and base overrides for Simply Smilez Dental React clone */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-height: 100vh;
+  display: block;
+  text-align: left;
+}
+
+/* Fixes & custom styles identical to original site */
+.top-bar {
+  background-color: #0d3b66;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-weight: 500;
+}
+
+.top-bar .highlight {
+  background-color: #ffb703;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.services-cta:hover,
+.services-cta:focus {
+  color: #ffffff !important;
+  background-color: #008dcc !important;
+  border-color: #008dcc !important;
+}
+
+/* Mobile Fixed Bottom Quick Action Bar */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 767.98px) {
+  .mobile-bottom-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px 0;
+  }
+  body {
+    padding-bottom: 60px;
+  }
+}
+
+.mobile-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  flex: 1;
+  padding: 4px 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-bar-item i {
+  font-size: 18px;
+  margin-bottom: 3px;
+  color: #0284c7;
+}
+
+.mobile-bar-item.whatsapp-item i {
+  color: #25d366;
+}
+
+.mobile-bar-item:hover, .mobile-bar-item:focus {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+/* Services Modal */
+.services-modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.services-modal-backdrop.show {
+  display: flex;
+}
+
+.services-modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.services-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.services-modal-icon-header {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.services-modal-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0b2545;
+}
+
+.services-modal-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.services-modal-close {
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.services-modal-body {
+  padding: 15px 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.services-modal-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1e293b;
+  margin-bottom: 8px;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+
+.services-modal-item:hover {
+  background: #e0f2fe;
+  text-decoration: none;
+  color: #0284c7;
+}
+
+.item-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #0284c7;
+  margin-right: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.item-icon-box.featured {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.services-modal-item.featured-item {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.item-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.item-desc {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.services-modal-divider {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 700;
+  margin: 12px 0 6px 4px;
+}
+
+/* Image gallery card zoom effect */
+.album .card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.album .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.album .card img {
+  transition: transform 0.4s ease;
+}
+
+.album .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Carousel style & control buttons */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+  color: #0b2545;
+  transition: all 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: #00b7ff;
+  color: #fff;
+}
+
+.carousel-arrow.prev { left: 10px; }
+.carousel-arrow.next { right: 10px; }
+
+/* Lightbox Modal */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-backdrop img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #ffffff;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

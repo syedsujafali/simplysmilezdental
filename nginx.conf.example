@@ -1,0 +1,30 @@
+# Nginx configuration for Simply Smilez Dental SPA
+# Place inside server block in /etc/nginx/sites-available/dental
+
+# 301 Redirects from legacy .html URLs to React routes
+rewrite ^/index\.html$ / permanent;
+rewrite ^/about\.html$ /about permanent;
+rewrite ^/all-services\.html$ /all-services permanent;
+rewrite ^/composite-fillings-hyderabad\.html$ /services/composite-fillings permanent;
+rewrite ^/crowns\.html$ /services/crowns permanent;
+rewrite ^/dental-veneers-hyderabad\.html$ /services/veneers permanent;
+rewrite ^/braces\.html$ /services/braces permanent;
+rewrite ^/laserteeth\.html$ /services/laser-teeth-whitening permanent;
+rewrite ^/laserroot\.html$ /services/laser-root-canal permanent;
+rewrite ^/lasergum\.html$ /services/laser-gum-surgery permanent;
+rewrite ^/dentalimplant\.html$ /services/dental-implants permanent;
+rewrite ^/pediatary\.html$ /services/pediatric-dentistry permanent;
+rewrite ^/wisdom\.html$ /services/wisdom-tooth-extraction permanent;
+rewrite ^/gallery\.html$ /gallery permanent;
+rewrite ^/doctor\.html$ /doctors permanent;
+rewrite ^/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad\.html$ /doctor/dr-ankush-kumar permanent;
+rewrite ^/doctor/dr-susheel-kumar-pediatric-dentist-implantologist-hyderabad\.html$ /doctor/dr-susheel-kumar permanent;
+rewrite ^/testimonal\.html$ /testimonials permanent;
+rewrite ^/contact\.html$ /contact permanent;
+
+# Client-side SPA routing fallback
+location / {
+    root /var/www/dental/dist;
+    index index.html;
+    try_files $uri $uri/ /index.html;
+}

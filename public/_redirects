@@ -1,0 +1,23 @@
+# Exact 301 Redirects from legacy .html URLs to React routes
+/index.html                                                                 /                                    301!
+/about.html                                                                 /about                               301!
+/all-services.html                                                          /all-services                        301!
+/composite-fillings-hyderabad.html                                          /services/composite-fillings         301!
+/crowns.html                                                                /services/crowns                     301!
+/dental-veneers-hyderabad.html                                              /services/veneers                    301!
+/braces.html                                                                /services/braces                     301!
+/laserteeth.html                                                            /services/laser-teeth-whitening      301!
+/laserroot.html                                                             /services/laser-root-canal           301!
+/lasergum.html                                                              /services/laser-gum-surgery          301!
+/dentalimplant.html                                                         /services/dental-implants            301!
+/pediatary.html                                                             /services/pediatric-dentistry        301!
+/wisdom.html                                                                /services/wisdom-tooth-extraction    301!
+/gallery.html                                                               /gallery                             301!
+/doctor.html                                                                /doctors                             301!
+/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad.html     /doctor/dr-ankush-kumar              301!
+/doctor/dr-susheel-kumar-pediatric-dentist-implantologist-hyderabad.html    /doctor/dr-susheel-kumar             301!
+/testimonal.html                                                            /testimonials                        301!
+/contact.html                                                               /contact                             301!
+
+# SPA Fallback for client-side routing
+/*                                                                          /index.html                          200
