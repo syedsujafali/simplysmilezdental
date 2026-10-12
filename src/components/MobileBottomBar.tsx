@@ -7,7 +7,7 @@ interface MobileBottomBarProps {
 export default function MobileBottomBar({ onOpenServices }: MobileBottomBarProps) {
   return (
     <div className="mobile-bottom-bar">
-      <a href="tel:+919603338904" className="mobile-bar-item">
+      <a href="tel:+917799376656" className="mobile-bar-item">
         <i className="fa-solid fa-phone"></i>
         <span>Call</span>
       </a>
