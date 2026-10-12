@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const quickServices = [
   { name: 'All Services', path: '/all-services', icon: 'fa-layer-group', highlight: true },
-  { name: 'Composite Fillings', path: '/services/composite-fillings', icon: 'fa-fill-drip' },
-  { name: 'Crowns & Bridges', path: '/services/crowns', icon: 'fa-crown' },
-  { name: 'Dental Veneers', path: '/services/veneers', icon: 'fa-smile' },
-  { name: 'Braces & Invisalign', path: '/services/braces', icon: 'fa-teeth-open' },
-  { name: 'Laser Teeth Whitening', path: '/services/laser-teeth-whitening', icon: 'fa-wand-magic-sparkles' },
-  { name: 'Laser Root Canal', path: '/services/laser-root-canal', icon: 'fa-microscope' },
-  { name: 'Laser Gum Surgery', path: '/services/laser-gum-surgery', icon: 'fa-hand-holding-medical' },
-  { name: 'Dental Implants', path: '/services/dental-implants', icon: 'fa-tooth' },
+  { name: 'Braces & Clear Aligners (Invisalign)', path: '/services/braces', icon: 'fa-teeth-open' },
   { name: 'Pediatric Dentistry', path: '/services/pediatric-dentistry', icon: 'fa-child' },
+  { name: 'Dental Implants', path: '/services/dental-implants', icon: 'fa-tooth' },
+  { name: 'Microscopic Root Canal Treatment', path: '/services/microscopic-root-canal', icon: 'fa-microscope' },
+  { name: 'Dental Crowns', path: '/services/crowns', icon: 'fa-crown' },
+  { name: 'Dental Veneers', path: '/services/veneers', icon: 'fa-smile' },
+  { name: 'Composite Fillings', path: '/services/composite-fillings', icon: 'fa-fill-drip' },
+  { name: 'Laser Teeth Whitening', path: '/services/laser-teeth-whitening', icon: 'fa-wand-magic-sparkles' },
+  { name: 'Laser Gum Surgery & Care', path: '/services/laser-gum-surgery', icon: 'fa-hand-holding-medical' },
   { name: 'Wisdom Tooth Extractions', path: '/services/wisdom-tooth-extraction', icon: 'fa-user-doctor' },
 ];
 

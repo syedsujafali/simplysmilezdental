@@ -10,46 +10,16 @@ interface ModalServiceItem {
 
 const modalServices: ModalServiceItem[] = [
   {
-    title: 'Composite Fillings',
-    desc: 'Tooth-colored resin restorations',
-    icon: 'fa-fill-drip',
-    path: '/services/composite-fillings'
-  },
-  {
-    title: 'Crowns & Bridges',
-    desc: 'Durable ceramic & zirconia crowns',
-    icon: 'fa-crown',
-    path: '/services/crowns'
-  },
-  {
-    title: 'Veneers',
-    desc: 'Porcelain veneers for a perfect smile',
-    icon: 'fa-smile',
-    path: '/services/veneers'
-  },
-  {
-    title: 'Braces & Invisalign',
+    title: 'Braces & Clear Aligners (Invisalign)',
     desc: 'Teeth straightening & clear aligners',
     icon: 'fa-teeth-open',
     path: '/services/braces'
   },
   {
-    title: 'Laser Teeth Whitening',
-    desc: 'Instant brightening & stain removal',
-    icon: 'fa-wand-magic-sparkles',
-    path: '/services/laser-teeth-whitening'
-  },
-  {
-    title: 'Laser Root Canal Therapy',
-    desc: 'Painless & precision RCT treatment',
-    icon: 'fa-microscope',
-    path: '/services/laser-root-canal'
-  },
-  {
-    title: 'Laser Gum Surgery',
-    desc: 'Minimally invasive periodontal care',
-    icon: 'fa-hand-holding-medical',
-    path: '/services/laser-gum-surgery'
+    title: 'Pediatric Dentistry',
+    desc: 'Gentle dental care for kids',
+    icon: 'fa-child',
+    path: '/services/pediatric-dentistry'
   },
   {
     title: 'Dental Implants',
@@ -58,10 +28,40 @@ const modalServices: ModalServiceItem[] = [
     path: '/services/dental-implants'
   },
   {
-    title: 'Pediatric Dentistry',
-    desc: 'Gentle dental care for kids',
-    icon: 'fa-child',
-    path: '/services/pediatric-dentistry'
+    title: 'Microscopic Root Canal Treatment',
+    desc: 'Precision micro-endodontics under microscope',
+    icon: 'fa-microscope',
+    path: '/services/microscopic-root-canal'
+  },
+  {
+    title: 'Dental Crowns',
+    desc: 'Durable ceramic & zirconia crowns',
+    icon: 'fa-crown',
+    path: '/services/crowns'
+  },
+  {
+    title: 'Dental Veneers',
+    desc: 'Porcelain veneers for a perfect smile',
+    icon: 'fa-smile',
+    path: '/services/veneers'
+  },
+  {
+    title: 'Composite Fillings',
+    desc: 'Tooth-colored resin restorations',
+    icon: 'fa-fill-drip',
+    path: '/services/composite-fillings'
+  },
+  {
+    title: 'Laser Teeth Whitening',
+    desc: 'Instant brightening & stain removal',
+    icon: 'fa-wand-magic-sparkles',
+    path: '/services/laser-teeth-whitening'
+  },
+  {
+    title: 'Laser Gum Surgery & Care',
+    desc: 'Minimally invasive periodontal care',
+    icon: 'fa-hand-holding-medical',
+    path: '/services/laser-gum-surgery'
   },
   {
     title: 'Wisdom Tooth Extractions',

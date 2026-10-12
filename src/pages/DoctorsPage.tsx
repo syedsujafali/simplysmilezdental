@@ -53,7 +53,7 @@ export default function DoctorsPage() {
             <Link to="/doctor/dr-susheel-kumar" className="text-decoration-none text-dark">
               <div className="staff h-100 d-flex flex-column">
                 <div className="img-wrap flex-grow-1">
-                  <div className="img w-100 h-100" style={{ backgroundImage: "url('images/about.webp')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10 }}>
+                  <div className="img w-100 h-100" style={{ backgroundImage: "url('/images/susheel1.png')", backgroundSize: "cover", backgroundPosition: "top center", borderRadius: 10 }}>
                   </div>
                 </div>
                 <div className="text pt-4 text-center">

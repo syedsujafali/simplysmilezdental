@@ -57,29 +57,18 @@ export default function WhyChooseUs() {
           <div className="row">
             {reasons.map((r, i) => (
               <div key={i} className="col-md-4 mb-4">
-                <div
-                  className="p-4 bg-white rounded shadow-sm h-100 border-top"
-                  style={{ borderTop: '4px solid #0284c7 !important' }}
-                >
+                <div className="why-choose-card p-4 h-100">
                   <div className="d-flex align-items-center mb-3">
                     <div
-                      className="icon-box mr-3 d-flex align-items-center justify-content-center rounded-circle"
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        backgroundColor: '#e0f2fe',
-                        color: '#0284c7',
-                        fontSize: '20px',
-                        marginRight: '15px'
-                      }}
+                      className="why-choose-icon-box mr-3 d-flex align-items-center justify-content-center rounded-circle"
                     >
                       <i className={`fa-solid ${r.icon}`}></i>
                     </div>
-                    <h4 className="mb-0" style={{ fontSize: '18px', fontWeight: 700, color: '#0b2545' }}>
+                    <h4 className="mb-0 why-choose-card-title">
                       {r.title}
                     </h4>
                   </div>
-                  <p style={{ fontSize: '14px', color: '#4b5563', marginBottom: 0, lineHeight: 1.6 }}>
+                  <p className="why-choose-card-desc">
                     {r.desc}
                   </p>
                 </div>
@@ -92,8 +81,8 @@ export default function WhyChooseUs() {
       {/* Blue CTA Banner */}
       <section className="py-5" style={{ background: 'linear-gradient(135deg, #0b2545 0%, #134074 100%)', color: 'white' }}>
         <div className="container">
-          <div className="row align-items-center text-center text-md-left">
-            <div className="col-md-8 mb-4 mb-md-0 text-left">
+          <div className="row align-items-center justify-content-between text-center text-md-left">
+            <div className="col-lg-7 col-md-7 mb-4 mb-md-0 text-left">
               <h2 style={{ fontSize: '28px', fontWeight: 700, color: '#ffffff' }} className="mb-2">
                 Need a Dentist in Hyderabad?
               </h2>
@@ -121,20 +110,14 @@ export default function WhyChooseUs() {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 text-center text-md-right mt-3 mt-md-0">
+            <div className="col-lg-5 col-md-5 text-center text-md-right mt-3 mt-md-0">
               <a
                 href="https://wa.me/917799376656"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary btn-lg px-4 py-3 font-weight-bold shadow-lg"
-                style={{
-                  borderRadius: '30px',
-                  backgroundColor: '#0284c7',
-                  borderColor: '#0284c7',
-                  display: 'inline-block'
-                }}
+                className="why-choose-cta-btn"
               >
-                <i className="fa-brands fa-whatsapp mr-2" style={{ marginRight: '8px' }}></i> Book Your Dental Appointment
+                <i className="fa-brands fa-whatsapp mr-1"></i> Book Your Dental Appointment
               </a>
             </div>
           </div>

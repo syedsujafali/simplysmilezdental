@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function WelcomeAbout() {
   return (
@@ -45,34 +46,34 @@ export default function WelcomeAbout() {
                 </h4>
                 <ul style={{ lineHeight: 1.8, color: '#4b5563' }} className="pl-3 mb-4">
                   <li>
-                    <strong><a href="#services" className="text-dark">Invisalign &amp; Braces</a></strong> – Orthodontic treatment to improve tooth alignment and bite.
+                    <Link to="/services/braces" className="treatment-link">Braces &amp; Clear Aligners (Invisalign)</Link> – Advanced orthodontic treatment to improve tooth alignment and smile aesthetics.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Invisalign First for Kids</a></strong> – Early orthodontic care for suitable growing children.
+                    <Link to="/services/pediatric-dentistry" className="treatment-link">Pediatric Dentistry</Link> – Gentle, child-friendly preventive and restorative dental care for growing smiles.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Dental Implants</a></strong> – Tooth replacement designed to restore function and appearance.
+                    <Link to="/services/dental-implants" className="treatment-link">Dental Implants</Link> – Permanent tooth replacement designed to restore natural function, comfort, and appearance.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Root Canal Treatment</a></strong> – Treatment for infected or damaged teeth while helping preserve the natural tooth.
+                    <Link to="/services/microscopic-root-canal" className="treatment-link">Microscopic Root Canal Treatment</Link> – High-precision surgical microscope-guided treatment to eliminate infection and save your natural tooth.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Dental Crowns</a> &amp; <a href="#services" className="text-dark">Composite Fillings</a></strong> – Restorative treatments for damaged or decayed teeth.
+                    <Link to="/services/crowns" className="treatment-link">Dental Crowns</Link> – Durable custom restorations to strengthen and protect damaged or weakened teeth.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Dental Veneers</a> &amp; <a href="#services" className="text-dark">Teeth Whitening</a></strong> – Cosmetic treatments to improve the appearance of your smile.
+                    <Link to="/services/veneers" className="treatment-link">Dental Veneers</Link> – Custom porcelain and composite laminates to enhance and transform your smile.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Pediatric Dentistry</a></strong> – Gentle, child-friendly dental care for growing smiles.
+                    <Link to="/services/composite-fillings" className="treatment-link">Composite Fillings</Link> – Natural tooth-coloured aesthetic fillings for invisible cavity restoration.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Wisdom Tooth Extraction</a></strong> – Diagnosis and treatment of problematic wisdom teeth.
+                    <Link to="/services/laser-teeth-whitening" className="treatment-link">Laser Teeth Whitening</Link> – Professional in-office brightening and stain removal for a radiant smile.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">Laser Gum Treatment</a></strong> – Treatment options for certain gum conditions.
+                    <Link to="/services/laser-gum-surgery" className="treatment-link">Laser Gum Surgery &amp; Care</Link> – Minimally invasive laser periodontal care for healthier gums.
                   </li>
                   <li>
-                    <strong><a href="#services" className="text-dark">General &amp; Cosmetic Dentistry</a></strong> – Preventive, restorative, and cosmetic dental care based on individual needs.
+                    <Link to="/services/wisdom-tooth-extraction" className="treatment-link">Wisdom Tooth Extractions</Link> – Safe, gentle assessment and comfortable extraction for problematic wisdom teeth.
                   </li>
                 </ul>
 

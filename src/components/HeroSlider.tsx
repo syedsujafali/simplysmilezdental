@@ -11,19 +11,19 @@ const slides: Slide[] = [
     bg: '/images/banner1.jpeg',
     title: (
       <>
-        Helping Your <span>Stay Happy One</span>
+        dentistry,  <span>designed around you</span>
       </>
     ),
-    subheading: 'Everyday We Bring Hope and Smile to the Patient We Serve'
+    subheading: 'Comprehensive, painless dental care in Shaikpet / Manikonda, Hyderabad.'
   },
   {
     bg: '/images/banner2.jpeg',
     title: (
       <>
-        Smile Makes <br />A Lasting Impression
+        A smile designed <br />for who you are.
       </>
     ),
-    subheading: 'Your Health is Our Top Priority with Comprehensive, Affordable medical.'
+    subheading: 'Specializing in Invisalign, microscopic root canal treatments, pediatric dentistry, and dental implants.'
   }
 ];
 

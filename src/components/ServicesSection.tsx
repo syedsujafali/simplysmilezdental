@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { servicesData, ServiceItem } from '../data';
 
 interface ServicesSectionProps {
@@ -6,125 +7,257 @@ interface ServicesSectionProps {
 }
 
 export default function ServicesSection({ onOpenServices }: ServicesSectionProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  // Filter out wisdom tooth extraction service card
+  const filteredServices = servicesData.filter(
+    (service: ServiceItem) => !service.title.toLowerCase().includes('wisdom')
+  );
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchOffset, setTouchOffset] = useState<number>(0);
+  const [isSwiping, setIsSwiping] = useState<boolean>(false);
+  const totalSlides = filteredServices.length;
+
+  // Auto slide ONLY in mobile (< 768px)
+  useEffect(() => {
+    // Only run on small screens
+    const isMobileScreen = window.innerWidth < 768;
+    if (!isMobileScreen || isPaused || isSwiping) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalSlides);
+    }, 3800);
+
+    return () => clearInterval(timer);
+  }, [isPaused, isSwiping, totalSlides]);
+
+  // Touch Swipe Handlers for Buttery Smooth Mobile Swiping
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
+    setIsSwiping(true);
+    setTouchStart(e.touches[0].clientX);
+    setTouchOffset(0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - touchStart;
+    // Dampen edges
+    if ((currentIndex === 0 && diff > 0) || (currentIndex === totalSlides - 1 && diff < 0)) {
+      setTouchOffset(diff * 0.3);
+    } else {
+      setTouchOffset(diff);
     }
   };
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+  const handleTouchEnd = () => {
+    setIsSwiping(false);
+    if (touchStart !== null) {
+      // Threshold to trigger slide change
+      if (touchOffset < -50 && currentIndex < totalSlides - 1) {
+        setCurrentIndex((prev) => prev + 1);
+      } else if (touchOffset > 50 && currentIndex > 0) {
+        setCurrentIndex((prev) => prev - 1);
+      } else if (touchOffset < -50 && currentIndex === totalSlides - 1) {
+        // Loop back to start on swipe left at end
+        setCurrentIndex(0);
+      } else if (touchOffset > 50 && currentIndex === 0) {
+        // Loop to end on swipe right at start
+        setCurrentIndex(totalSlides - 1);
+      }
     }
+    setTouchStart(null);
+    setTouchOffset(0);
+
+    // Resume auto-slide after brief pause
+    setTimeout(() => {
+      setIsPaused(false);
+    }, 4000);
   };
 
   return (
     <section className="ftco-services ftco-section bg-light py-5" id="services">
       <div className="container">
-        <div className="row justify-content-center mb-4 pb-1">
-          <div className="col-md-8 text-center heading-section">
-            <span className="subheading" style={{ color: '#008dcc', fontWeight: 600, fontSize: '15px' }}>
-              Dental Services in Shaikpet, Hyderabad
+        {/* Section Header */}
+        <div className="row justify-content-center mb-5 pb-2">
+          <div className="col-md-9 text-center heading-section">
+            <span
+              className="subheading d-inline-block mb-2"
+              style={{
+                color: '#0284c7',
+                fontWeight: 700,
+                fontSize: '14px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em'
+              }}
+            >
+              Advanced Dental Care in Shaikpet, Hyderabad
             </span>
-            <h2 className="mb-4" style={{ color: '#0b2545', fontWeight: 700, fontSize: '32px' }}>
-              Our Clinic Services
+            <h2
+              className="mb-3"
+              style={{
+                color: '#0b2545',
+                fontWeight: 800,
+                fontSize: '34px',
+                letterSpacing: '-0.02em'
+              }}
+            >
+              Our Clinic Services &amp; Specialities
             </h2>
+            <p className="text-muted mx-auto" style={{ maxWidth: '640px', fontSize: '15px' }}>
+              From routine family care and cosmetic enhancements to advanced implantology and laser treatments,
+              discover expert dental solutions tailored to your smile.
+            </p>
           </div>
         </div>
 
-        {/* Carousel / Card List */}
-        <div className="position-relative mb-4">
-          <button
-            type="button"
-            className="carousel-arrow prev"
-            onClick={scrollLeft}
-            aria-label="Previous services"
-          >
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
-          <button
-            type="button"
-            className="carousel-arrow next"
-            onClick={scrollRight}
-            aria-label="Next services"
-          >
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
+        {/* 1. DESKTOP & TABLET VIEW: Clean Multi-column Grid (>= 768px, Static, No lag) */}
+        <div className="d-none d-md-flex row g-4 justify-content-center">
+          {filteredServices.map((service: ServiceItem) => (
+            <div
+              key={service.id}
+              className="col-md-6 col-lg-4 mb-4 d-flex"
+            >
+              <div className="service-card-item w-100 d-flex flex-column bg-white rounded-4 overflow-hidden">
+                {/* Image Container with zoom */}
+                <Link
+                  to={service.link}
+                  className="service-card-img-wrap d-block overflow-hidden position-relative"
+                  aria-label={service.title}
+                >
+                  <img
+                    src={service.image}
+                    loading="lazy"
+                    className="w-100 h-100"
+                    alt={service.alt}
+                  />
+                </Link>
 
-          <div
-            ref={scrollRef}
-            className="d-flex overflow-auto pb-3"
-            style={{
-              scrollSnapType: 'x mandatory',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-              gap: '20px'
-            }}
-          >
-            {servicesData.map((service: ServiceItem) => (
-              <div
-                key={service.id}
-                style={{
-                  minWidth: '290px',
-                  maxWidth: '300px',
-                  flex: '0 0 auto',
-                  scrollSnapAlign: 'start'
-                }}
-              >
-                <div className="service-card-item d-flex flex-column text-center text-decoration-none bg-white rounded shadow-sm overflow-hidden h-100 p-3">
-                  <div className="img-container overflow-hidden rounded mb-3" style={{ height: '200px' }}>
-                    <img
-                      src={service.image}
-                      loading="lazy"
-                      className="img-fluid w-100 h-100"
-                      style={{ objectFit: 'cover', transition: 'transform 0.35s ease' }}
-                      alt={service.alt}
-                    />
-                  </div>
-                  <div className="p-2 d-flex flex-column justify-content-between flex-grow-1">
-                    <div>
-                      <h3 className="heading font-weight-bold" style={{ fontSize: '18px', color: '#0d3b66' }}>
-                        {service.title}
-                      </h3>
-                      <p className="text-muted" style={{ fontSize: '13.5px', lineHeight: '1.6' }}>
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="mt-2">
-                      <button
-                        type="button"
-                        onClick={onOpenServices}
-                        className="btn-learn-more text-primary font-weight-bold border-0 bg-transparent cursor-pointer"
-                        style={{ fontSize: '14px', cursor: 'pointer' }}
-                      >
-                        View Service &rarr;
-                      </button>
-                    </div>
+                {/* Card Content */}
+                <div className="service-card-body d-flex flex-column flex-grow-1 p-4">
+                  <h3 className="service-card-title mb-2">
+                    <Link to={service.link} className="text-decoration-none">
+                      {service.title}
+                    </Link>
+                  </h3>
+
+                  <p className="service-card-desc flex-grow-1 mb-3 text-muted">
+                    {service.description}
+                  </p>
+
+                  <div className="service-card-action pt-2 d-flex justify-content-end">
+                    <Link
+                      to={service.link}
+                      className="service-link-arrow"
+                    >
+                      View Service &rarr;
+                    </Link>
                   </div>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 2. MOBILE VIEW: GPU Hardware-Accelerated Auto-Slider (< 768px) */}
+        <div className="d-block d-md-none position-relative">
+          <div
+            className="services-slider-viewport overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div
+              className="services-slider-track"
+              style={{
+                display: 'flex',
+                transform: `translate3d(calc(-${currentIndex * 100}% + ${touchOffset}px), 0, 0)`,
+                transition: isSwiping ? 'none' : 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)',
+                willChange: 'transform'
+              }}
+            >
+              {filteredServices.map((service: ServiceItem) => (
+                <div
+                  key={service.id}
+                  className="services-slider-slide px-1"
+                  style={{
+                    flex: '0 0 100%',
+                    width: '100%',
+                    maxWidth: '100%',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  <div className="service-card-item w-100 d-flex flex-column bg-white rounded-4 overflow-hidden">
+                    <Link
+                      to={service.link}
+                      className="service-card-img-wrap d-block overflow-hidden position-relative"
+                      aria-label={service.title}
+                    >
+                      <img
+                        src={service.image}
+                        loading="lazy"
+                        className="w-100 h-100"
+                        alt={service.alt}
+                      />
+                    </Link>
+
+                    <div className="service-card-body d-flex flex-column flex-grow-1 p-4">
+                      <h3 className="service-card-title mb-2">
+                        <Link to={service.link} className="text-decoration-none">
+                          {service.title}
+                        </Link>
+                      </h3>
+
+                      <p className="service-card-desc flex-grow-1 mb-3 text-muted">
+                        {service.description}
+                      </p>
+
+                      <div className="service-card-action pt-2 d-flex justify-content-end">
+                        <Link
+                          to={service.link}
+                          className="service-link-arrow"
+                        >
+                          View Service &rarr;
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Smooth Indicator Dots */}
+          <div className="services-slider-dots">
+            {filteredServices.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={`services-slider-dot ${currentIndex === idx ? 'active' : ''}`}
+                onClick={() => {
+                  setCurrentIndex(idx);
+                  setIsPaused(true);
+                  setTimeout(() => setIsPaused(false), 4000);
+                }}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
             ))}
           </div>
         </div>
 
-        {/* View All Services CTA Button */}
-        <div className="row mt-4 pt-2">
-          <div className="col-md-12 text-center">
-            <button
-              type="button"
-              onClick={onOpenServices}
-              className="btn btn-primary px-4 py-3 font-weight-bold shadow-sm services-cta"
-              style={{
-                borderRadius: '30px',
-                fontSize: '16px',
-                backgroundColor: '#00b7ff',
-                borderColor: '#00b7ff'
-              }}
+        {/* Bottom CTA to explore all treatments */}
+        <div className="row mt-4 pt-3">
+          <div className="col-12 text-center">
+            <Link
+              to="/all-services"
+              className="btn-all-services-cta"
             >
-              Explore Our Dental Services <i className="fa-solid fa-arrow-right ml-2"></i>
-            </button>
+              Explore Our Dental Services <i className="fa-solid fa-arrow-right" style={{ marginLeft: '8px' }}></i>
+            </Link>
           </div>
         </div>
       </div>

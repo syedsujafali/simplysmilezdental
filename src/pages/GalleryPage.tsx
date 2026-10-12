@@ -1,8 +1,11 @@
 import Seo from '../components/Seo';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { galleryImages, GalleryItem } from '../data';
 
 export default function GalleryPage() {
+  const [activeImg, setActiveImg] = useState<string | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad";
@@ -12,167 +15,116 @@ export default function GalleryPage() {
     <div className="page-wrapper gallerypage">
       <Seo
         title="Clinic Gallery | Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
-        description="Take a virtual tour of Simply Smilez Dental Clinic in Shaikpet, Hyderabad. View our modern equipment, treatment rooms, and smile transformations."
+        description="Take a virtual tour of Simply Smilez Dental Clinic in Shaikpet, Hyderabad. View our modern equipment, treatment rooms, and clinic environment."
         canonicalPath="/gallery"
       />
-      <section>
-    <main>
-      
-      <div className="album">
-        <div className="col-md-12 text-center heading-section">
-          
-          <h2 className="pb-4 pt-4" id="doctorsour">Our Gallery</h2>
-          
-        </div>
-        <section>
 
-          <main>
-            
-            <div className="album bg-light">
-              <div className="container">
-                <div className="album pt-2 pb-5 bg-light">
-                  <div className="container">
-                    <div className="row g-3">
-                      
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-a.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-a.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 1" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-b.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-b.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 2" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-c.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-c.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 3" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-d.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-d.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 1" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-e.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-e.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 2" />
-                          </Link>
-                        </div>
-                      </div>
-                      
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-1.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-1.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 1" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-2.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-2.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 2" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-3.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-3.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 3" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/teeth-1.webp" data-fancybox="gallery">
-                            <img src="/images/teeth-1.webp" alt="Image 12" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/three.webp" data-fancybox="gallery">
-                            <img src="/images/three.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 3" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/four.webp" data-fancybox="gallery">
-                            <img src="/images/four.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 4" />
-                          </Link>
-                        </div>
-                      </div>
+      <section className="album bg-light py-5 min-vh-100">
+        <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-4 text-left" style={{ fontSize: '14px', color: '#64748b' }}>
+            <Link to="/" style={{ color: '#0284c7', textDecoration: 'none' }}>
+              <i className="fa-solid fa-house mr-1"></i> Home
+            </Link>
+            <span className="mx-2">&gt;</span>
+            <span style={{ color: '#0f172a', fontWeight: 600 }}>Gallery</span>
+          </div>
 
-                      
+          <div className="col-md-12 text-center heading-section mb-4">
+            <h1 className="pb-2 pt-2" style={{ fontSize: '32px', fontWeight: 700, color: '#0b2545' }}>
+              Our Clinic Gallery
+            </h1>
+            <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>
+              Explore our state-of-the-art dental facility, advanced digital dental equipment, and treatment operatories in Shaikpet, Hyderabad.
+            </p>
+          </div>
 
-
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/seven.webp" data-fancybox="gallery">
-                            <img src="/images/seven.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 7" />
-                          </Link>
-                        </div>
-                      </div>
-
-
-                      
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/nine.webp" data-fancybox="gallery">
-                            <img src="/images/nine.webp" alt="Image 9" />
-                          </Link>
-                        </div>
-                      </div>
-
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-4.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-4.webp" alt="Image 11" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-5.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-5.webp" alt="Image 12" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/gallery-6.webp" data-fancybox="gallery">
-                            <img src="/images/gallery-6.webp" alt="Image 12" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-3" style={{ margin: "5px 0px !important" }}>
-                        <div className="card shadow-sm">
-                          <Link to="/images/one.webp" data-fancybox="gallery">
-                            <img src="/images/one.webp" style={{ width: "100% !important", height: "auto!important" }} alt="Image 1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+          {galleryImages.length > 0 ? (
+            <div className="row g-3">
+              {galleryImages.map((item: GalleryItem) => (
+                <div key={item.id} className="col-6 col-md-4 col-lg-3 mb-4">
+                  <div
+                    className="card shadow-sm h-100 border-0"
+                    style={{
+                      cursor: 'pointer',
+                      overflow: 'hidden',
+                      borderRadius: '12px',
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                    }}
+                    onClick={() => setActiveImg(item.src)}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      style={{
+                        width: '100%',
+                        height: '240px',
+                        objectFit: 'cover',
+                        transition: 'transform 0.4s ease'
+                      }}
+                    />
                   </div>
                 </div>
-
+              ))}
+            </div>
+          ) : (
+            <div className="row justify-content-center">
+              <div className="col-lg-8 col-md-10 text-center py-5 my-3 bg-white rounded shadow-sm border">
+                <div
+                  style={{
+                    width: '80px',
+                    height: '80px',
+                    borderRadius: '50%',
+                    background: 'rgba(2, 132, 199, 0.1)',
+                    color: '#0284c7',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '32px',
+                    marginBottom: '18px'
+                  }}
+                >
+                  <i className="fa-solid fa-camera"></i>
+                </div>
+                <h2 className="h4 font-weight-bold mb-2" style={{ color: '#0b2545' }}>
+                  Gallery Photos Being Updated
+                </h2>
+                <p className="text-muted mx-auto mb-4" style={{ maxWidth: '540px', fontSize: '15px', lineHeight: '1.7' }}>
+                  We are currently updating our clinic tour, dental microscope operatory, and patient smile transformation gallery with high-resolution imagery. Please check back soon or visit our clinic in person!
+                </p>
+                <div className="d-flex justify-content-center flex-wrap gap-2">
+                  <Link to="/contact" className="btn btn-primary px-4 py-2 mr-2 mb-2">
+                    <i className="fa-solid fa-calendar-check mr-2"></i> Visit Our Clinic
+                  </Link>
+                  <Link to="/all-services" className="btn btn-outline-secondary px-4 py-2 mb-2">
+                    Explore Services
+                  </Link>
+                </div>
               </div>
             </div>
-          </main>
-        </section>
-      </div>
-    </main>
-  </section>
+          )}
+        </div>
+      </section>
+
+      {/* Lightbox Modal */}
+      {activeImg && (
+        <div className="lightbox-backdrop" onClick={() => setActiveImg(null)}>
+          <button
+            type="button"
+            className="lightbox-close"
+            onClick={() => setActiveImg(null)}
+            aria-label="Close"
+          >
+            <i className="fa-solid fa-xmark"></i>
+          </button>
+          <img
+            src={activeImg}
+            alt="Enlarged view"
+            onClick={(e: React.MouseEvent) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }

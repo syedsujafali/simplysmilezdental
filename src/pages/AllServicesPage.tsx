@@ -2,6 +2,98 @@ import Seo from '../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+interface ServiceCardItem {
+  title: string;
+  category: string;
+  image: string;
+  alt: string;
+  link: string;
+  description: string;
+}
+
+const allServicesList: ServiceCardItem[] = [
+  {
+    title: "Braces & Clear Aligners (Invisalign)",
+    category: "Orthodontics & Aligners",
+    image: "/images/braces.webp",
+    alt: "Braces & Clear Aligners (Invisalign)",
+    link: "/services/braces",
+    description: "Advanced orthodontic solutions including traditional metal/ceramic braces and Invisalign clear aligners for teenagers and adults."
+  },
+  {
+    title: "Pediatric Dentistry",
+    category: "Pediatric Dentistry",
+    image: "/images/pedia2.webp",
+    alt: "Pediatric Dentistry",
+    link: "/services/pediatric-dentistry",
+    description: "Child-friendly dental care including preventive checkups, fluorides, sealants, cavity fillings, and early orthodontic evaluations for kids."
+  },
+  {
+    title: "Dental Implants",
+    category: "Implantology",
+    image: "/images/dentalimp.webp",
+    alt: "Dental Implants in Hyderabad",
+    link: "/services/dental-implants",
+    description: "Fixed, natural-looking tooth replacement option to restore missing teeth, improve chewing function, facial structure, and smiling confidence."
+  },
+  {
+    title: "Microscopic Root Canal Treatment",
+    category: "Endodontics",
+    image: "/images/microscopic-rct.jpg",
+    alt: "Microscopic Root Canal Treatment",
+    link: "/services/microscopic-root-canal",
+    description: "High-magnification surgical operating microscope endodontics designed to eliminate canal infection, retrieve broken instruments, relieve pain, and save your natural tooth."
+  },
+  {
+    title: "Dental Crowns",
+    category: "Prosthodontics",
+    image: "/images/crowns.webp",
+    alt: "Dental Crowns",
+    link: "/services/crowns",
+    description: "Durable ceramic and zirconia crowns to protect weak teeth after root canal treatment or severe tooth damage, restoring strength and aesthetics."
+  },
+  {
+    title: "Dental Veneers",
+    category: "Cosmetic Dentistry",
+    image: "/images/veneers.webp",
+    alt: "Dental Veneers",
+    link: "/services/veneers",
+    description: "Ultra-thin porcelain or composite veneers designed to correct discoloured, chipped, gapped, or slightly misaligned teeth for a red-carpet smile."
+  },
+  {
+    title: "Composite Fillings",
+    category: "Restorative Dentistry",
+    image: "/images/composite.webp",
+    alt: "Composite Fillings",
+    link: "/services/composite-fillings",
+    description: "Tooth-coloured composite resin restorations to treat decay, repair minor chips, and restore natural tooth structure seamlessly."
+  },
+  {
+    title: "Laser Teeth Whitening",
+    category: "Laser & Whitening",
+    image: "/images/laserteeth.webp",
+    alt: "Laser Teeth Whitening",
+    link: "/services/laser-teeth-whitening",
+    description: "Fast, safe laser-assisted bleaching treatments to remove stubborn stains and brighten your smile by several shades in a single in-clinic session."
+  },
+  {
+    title: "Laser Gum Surgery & Care",
+    category: "Periodontics",
+    image: "/images/lasergum.webp",
+    alt: "Laser Gum Treatment",
+    link: "/services/laser-gum-surgery",
+    description: "Minimally invasive laser gum therapy to treat periodontitis, bleeding gums, gum recession, and aesthetic gum depigmentation."
+  },
+  {
+    title: "Wisdom Tooth Extractions",
+    category: "Oral Surgery",
+    image: "/images/wisdom.webp",
+    alt: "Wisdom Tooth Extraction",
+    link: "/services/wisdom-tooth-extraction",
+    description: "Gentle, expert surgical removal of impacted, painful, or overcrowded third molars to prevent infection and structural jaw pain."
+  }
+];
+
 export default function AllServicesPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,256 +134,34 @@ export default function AllServicesPage() {
       </div>
 
       <div className="row">
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/dental-implants">
-                  <img src="/images/dentalimp.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Dental Implants in Hyderabad" />
+        {allServicesList.map((svc, idx) => (
+          <div key={idx} className="col-md-6 col-lg-4 mb-4 d-flex">
+            <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between w-100">
+              <div>
+                <div className="service-img-wrap mb-3">
+                  <Link to={svc.link}>
+                    <img src={svc.image} alt={svc.alt} />
+                  </Link>
+                </div>
+                <span className="service-badge">
+                  <i className="fa-solid fa-sparkles" style={{ fontSize: '9px' }}></i> {svc.category}
+                </span>
+                <h3 className="service-card-title">
+                  <Link to={svc.link} className="text-decoration-none">
+                    {svc.title}
+                  </Link>
+                </h3>
+                <p className="service-card-desc">{svc.description}</p>
+              </div>
+              <div className="mt-3 pt-3 border-top">
+                <Link to={svc.link} className="service-card-btn">
+                  <span>View Full Details</span>
+                  <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Implantology</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/dental-implants" className="text-decoration-none" style={{ color: "#0d3b66" }}>Dental Implants</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Fixed, natural-looking tooth replacement
-                option to restore missing teeth, improve chewing function, facial structure, and smiling confidence.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/dental-implants" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
             </div>
           </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/composite-fillings">
-                  <img src="/images/composite.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Composite Fillings" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Restorative Dentistry</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/composite-fillings" className="text-decoration-none" style={{ color: "#0d3b66" }}>Composite Fillings</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Tooth-coloured composite resin
-                restorations to treat decay, repair minor chips, and restore natural tooth structure seamlessly.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/composite-fillings" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/crowns">
-                  <img src="/images/crowns.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Dental Crowns" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Prosthodontics</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/crowns" className="text-decoration-none" style={{ color: "#0d3b66" }}>Dental Crowns</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Durable ceramic and zirconia crowns to
-                protect weak teeth after root canal treatment or severe tooth damage, restoring strength and aesthetics.
-              </p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/crowns" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/veneers">
-                  <img src="/images/veneers.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Dental Veneers" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Cosmetic Dentistry</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/veneers" className="text-decoration-none" style={{ color: "#0d3b66" }}>Dental
-                  Veneers</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Ultra-thin porcelain or composite veneers
-                designed to correct discoloured, chipped, gapped, or slightly misaligned teeth for a red-carpet smile.
-              </p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/veneers" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/laser-teeth-whitening">
-                  <img src="/images/laserteeth.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Laser Teeth Whitening" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Laser &amp; Whitening</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/laser-teeth-whitening" className="text-decoration-none" style={{ color: "#0d3b66" }}>Laser Teeth Whitening</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Fast, safe laser-assisted bleaching
-                treatments to remove stubborn stains and brighten your smile by several shades in a single in-clinic
-                session.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/laser-teeth-whitening" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/braces">
-                  <img src="/images/braces.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Braces & Aligners" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Orthodontics &amp; Aligners</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/braces" className="text-decoration-none" style={{ color: "#0d3b66" }}>Braces &amp; Aligners
-                  (Invisalign)</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Advanced orthodontic solutions including
-                traditional metal/ceramic braces and Invisalign clear aligners for teenagers and adults.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/braces" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/laser-root-canal">
-                  <img src="/images/laserroot.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Laser Root Canal Therapy" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Endodontics</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/laser-root-canal" className="text-decoration-none" style={{ color: "#0d3b66" }}>Laser Root Canal
-                  Therapy</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Modern laser-assisted root canal
-                treatment designed to eliminate root canal bacterial infection, relieve pain, and save your natural
-                tooth.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/laser-root-canal" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/laser-gum-surgery">
-                  <img src="/images/lasergum.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Laser Gum Treatment" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Periodontics</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/laser-gum-surgery" className="text-decoration-none" style={{ color: "#0d3b66" }}>Laser Gum Surgery &amp;
-                  Care</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Minimally invasive laser gum therapy to
-                treat periodontitis, bleeding gums, gum recession, and aesthetic gum depigmentation.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/laser-gum-surgery" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/pediatric-dentistry">
-                  <img src="/images/pedia2.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Pediatric Dentistry" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Pediatric Dentistry</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/pediatric-dentistry" className="text-decoration-none" style={{ color: "#0d3b66" }}>Pediatric Dentistry</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Child-friendly dental care including
-                preventive checkups, fluorides, sealants, cavity fillings, and early orthodontic evaluations for kids.
-              </p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/pediatric-dentistry" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="col-md-6 col-lg-4 mb-4 d-flex">
-          <div className="service-card-box h-100 p-3 d-flex flex-column justify-content-between shadow-sm w-100">
-            <div>
-              <div className="overflow-hidden rounded mb-3" style={{ height: 210 }}>
-                <Link to="/services/wisdom-tooth-extraction">
-                  <img src="/images/wisdom.webp" className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} alt="Wisdom Tooth Extraction" />
-                </Link>
-              </div>
-              <span className="badge badge-primary px-2 py-1 mb-2" style={{ backgroundColor: "#00b7ff", fontWeight: "500" }}>Oral
-                Surgery</span>
-              <h3 style={{ fontSize: 20, fontWeight: "700", color: "#0d3b66" }} className="mb-2">
-                <Link to="/services/wisdom-tooth-extraction" className="text-decoration-none" style={{ color: "#0d3b66" }}>Wisdom Tooth Extractions</Link>
-              </h3>
-              <p className="text-muted" style={{ fontSize: 14, lineHeight: "1.6" }}>Gentle, expert surgical removal of
-                impacted, painful, or overcrowded third molars to prevent infection and structural jaw pain.</p>
-            </div>
-            <div className="mt-3 pt-3 border-top">
-              <Link to="/services/wisdom-tooth-extraction" className="btn btn-outline-primary btn-block font-weight-bold" style={{ borderColor: "#00b7ff", color: "#00b7ff" }}>
-                View Full Details &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-
+        ))}
       </div>
     </div>
   </section>
@@ -310,7 +180,7 @@ export default function AllServicesPage() {
       <div className="row">
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-stethoscope mr-2" style={{ color: "#00b7ff" }} /> General Dentistry
             </h3>
@@ -332,7 +202,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100" style={{ borderTop: "3px solid #00b7ff !important" }}>
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-teeth-open mr-2" style={{ color: "#00b7ff" }} /> Invisalign &amp; Clear Aligners
             </h3>
@@ -361,7 +231,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-child mr-2" style={{ color: "#00b7ff" }} /> Pediatric Dentistry
             </h3>
@@ -389,7 +259,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-teeth mr-2" style={{ color: "#00b7ff" }} /> Braces &amp; Orthodontics
             </h3>
@@ -415,7 +285,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-tooth mr-2" style={{ color: "#00b7ff" }} /> Root Canal &amp; Endodontics
             </h3>
@@ -438,7 +308,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-wand-magic-sparkles mr-2" style={{ color: "#00b7ff" }} /> Restorative &amp; Cosmetic Dentistry
             </h3>
@@ -460,7 +330,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-pump-medical mr-2" style={{ color: "#00b7ff" }} /> Hygiene &amp; Gum Care
             </h3>
@@ -482,7 +352,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-notes-medical mr-2" style={{ color: "#00b7ff" }} /> Oral Surgery
             </h3>
@@ -500,7 +370,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-sparkles mr-2" style={{ color: "#00b7ff" }} /> Teeth Whitening
             </h3>
@@ -517,7 +387,7 @@ export default function AllServicesPage() {
 
         
         <div className="col-lg-6 mb-4 d-flex">
-          <div className="bg-white p-4 rounded shadow-sm border w-100 h-100">
+          <div className="directory-3d-card p-4 w-100 h-100">
             <h3 className="h5 font-weight-bold pb-2 border-bottom" style={{ color: "#0d3b66" }}>
               <i className="fa-solid fa-microscope mr-2" style={{ color: "#00b7ff" }} /> Advanced Dentistry
             </h3>

@@ -193,8 +193,8 @@ export default function DentalImplantPage() {
           <h2 className="h4 font-weight-bold mt-5 mb-3 text-left" style={{ color: "#0d3b66" }}>Why Choose Simply Smilez Dental
             Clinic?</h2>
           <p className="text-left">Simply Smilez Dental Clinic is a dental clinic in Shaikpet, Hyderabad, offering dental
-            implants alongside other dental services including crowns, veneers, braces and aligners, laser root canal
-            therapy, laser gum surgery, teeth whitening, pediatric dentistry, and wisdom tooth extractions.</p>
+            implants alongside other dental services including crowns, veneers, braces and aligners, microscopic root canal
+            treatment, laser gum surgery, teeth whitening, pediatric dentistry, and wisdom tooth extractions.</p>
           <p className="text-left">The clinic&apos;s website identifies Dr. Susheel Kumar as a pediatric dentist and
             implantologist and Dr. Ankush Kumar as an orthodontist and Invisalign provider.</p>
           <p className="text-left">The clinic is located at: <strong>P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony,
@@ -290,14 +290,13 @@ export default function DentalImplantPage() {
                 </Link>
               </div>
               <div className="col-md-6 col-12 mb-3">
-                <Link to="/services/laser-root-canal" className="service-card-link p-3 text-left">
+                <Link to="/services/microscopic-root-canal" className="service-card-link p-3 text-left">
                   <div>
                     <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h5 className="h6 font-weight-bold service-title mb-0 text-left">Laser Root Canal Therapy</h5>
+                      <h5 className="h6 font-weight-bold service-title mb-0 text-left">Microscopic Root Canal Treatment</h5>
                       <i className="fas fa-chevron-right text-primary small" />
                     </div>
-                    <p className="small text-muted mb-2 text-left">Advanced laser-assisted endodontics for precise infection
-                      removal.</p>
+                    <p className="small text-muted mb-2 text-left">Advanced microscope-guided endodontics for precise tooth preservation.</p>
                   </div>
                   <span className="btn-learn-more text-left mt-2">View Service <i className="fas fa-arrow-right ml-1" /></span>
                 </Link>

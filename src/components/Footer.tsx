@@ -1,111 +1,535 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+
+  const toggleAccordion = (name: string) => {
+    setOpenAccordion(prev => prev === name ? null : name);
+  };
 
   return (
-    <footer className="ftco-footer ftco-bg-dark ftco-section pt-5" id="contact" style={{ backgroundColor: '#0d1b2a', color: '#cbd5e1' }}>
+    <footer className="footer-main" id="contact">
       <div className="container">
-        <div className="row mb-4">
-          <div className="col-lg-8">
-            <div className="ftco-footer-widget mb-5">
-              <div>
-                <p style={{ color: '#e2e8f0', fontSize: '14.5px', lineHeight: 1.8 }}>
-                  Simply Smilez Dental Clinic provides comprehensive dental care for children and adults in Shaikpet, Hyderabad.<br />
-                  Our services include Invisalign, Invisalign First for Kids, dental implants, braces, root canal treatment, dental crowns, veneers, teeth whitening, pediatric dentistry, wisdom tooth extraction, and general dental care.
-                </p>
+        {/* =================================================================
+            1. DESKTOP VIEW (>= 768px): 4-Column Layout
+            ================================================================= */}
+        <div className="d-none d-md-block">
+          <div className="row">
+            {/* Column 1: Brand & Action Buttons */}
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div className="footer-logo-badge mb-3">
+                <img
+                  src="/images/logo-3.webp"
+                  alt="Simply Smilez Dental"
+                  className="img-fluid"
+                  style={{ maxHeight: '46px', width: 'auto' }}
+                />
+              </div>
+              <p className="footer-desc mb-4">
+                Comprehensive, painless dental care in Shaikpet / Manikonda, Hyderabad. Specializing in Invisalign, microscopic root canal treatments, pediatric dentistry, and dental implants.
+              </p>
+              <div className="footer-cta-btns d-flex flex-wrap align-items-center">
+                <a href="tel:+917799376656" className="btn-footer-call mr-2 mb-2">
+                  <i className="fa-solid fa-phone mr-1"></i> Call Clinic
+                </a>
+                <a
+                  href="https://wa.me/+917799376656"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-footer-whatsapp mb-2"
+                >
+                  <i className="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                </a>
+              </div>
+            </div>
+
+            {/* Column 2: Dental Treatments */}
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4 className="footer-heading">Dental Treatments</h4>
+              <div className="footer-heading-bar"></div>
+              <ul className="footer-links-list list-unstyled mb-0">
+                <li>
+                  <Link to="/services/braces">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Braces &amp; Clear Aligners (Invisalign)
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/pediatric-dentistry">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Pediatric Dentistry
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/dental-implants">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Implants
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/microscopic-root-canal">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Microscopic Root Canal Treatment
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/crowns">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Crowns
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/veneers">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Veneers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/composite-fillings">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Composite Fillings
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/laser-teeth-whitening">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Teeth Whitening
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/laser-gum-surgery">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Gum Surgery &amp; Care
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services/wisdom-tooth-extraction">
+                    <i className="fa-solid fa-chevron-right link-arrow"></i> Wisdom Tooth Extractions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: Contact & Timings */}
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4 className="footer-heading">Contact &amp; Timings</h4>
+              <div className="footer-heading-bar"></div>
+
+              <div className="footer-contact-item d-flex align-items-start mb-3">
+                <i className="fa-solid fa-location-dot footer-contact-icon mr-2 mt-1"></i>
+                <div>
+                  <strong className="d-block footer-contact-label">Address:</strong>
+                  <p className="mb-0 footer-contact-text">
+                    P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet, Hyderabad, Telangana 500008
+                  </p>
+                </div>
               </div>
 
-              <b className="ftco-heading-2 d-block text-white mt-4 mb-2" style={{ fontWeight: 600, fontSize: '18px' }}>
-                Our Address
-              </b>
-              <div className="block-23 mb-3">
-                <ul className="list-unstyled">
-                  <li className="d-flex align-items-start">
-                    <span className="fa-solid fa-location-dot mr-3 mt-1" style={{ color: '#00b7ff', marginRight: '12px' }}></span>
-                    <span className="text">
-                      P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony,<br />
-                      O.U Colony Road. Shaikpet , Hyderabad, 500008
-                    </span>
-                  </li>
-                </ul>
+              <div className="footer-contact-item d-flex align-items-start mb-3">
+                <i className="fa-regular fa-clock footer-contact-icon mr-2 mt-1"></i>
+                <div>
+                  <strong className="d-block footer-contact-label">Opening Hours:</strong>
+                  <p className="mb-0 footer-contact-text">
+                    Mon - Sat: 10:00am - 9:00pm<br />
+                    Sunday: 11:00am - 4:00pm
+                  </p>
+                </div>
               </div>
 
-              <b className="ftco-heading-2 d-block text-white mt-4 mb-2" style={{ fontWeight: 600, fontSize: '18px' }}>
-                Opening Hours
-              </b>
-              <div className="block-23 mb-3">
-                <ul className="list-unstyled">
-                  <li className="d-flex align-items-center">
-                    <span className="fa-regular fa-clock mr-3" style={{ color: '#00b7ff', marginRight: '12px' }}></span>
-                    <span>
-                      Mon - Sat: 10:00am - 9:00pm &nbsp;|&nbsp; Sun: 11:00am - 4:00pm
-                    </span>
-                  </li>
-                </ul>
+              <div className="footer-contact-item d-flex align-items-start mb-3">
+                <i className="fa-solid fa-phone footer-contact-icon mr-2 mt-1"></i>
+                <div>
+                  <strong className="d-block footer-contact-label">Phone Numbers:</strong>
+                  <p className="mb-0 footer-contact-phones">
+                    <a href="tel:+917799376656">77993 76656</a> &bull; <a href="tel:+919603338904">96033 38904</a>
+                  </p>
+                </div>
               </div>
 
-              <b className="ftco-heading-2 d-block text-white mt-4 mb-2" style={{ fontWeight: 600, fontSize: '18px' }}>
-                Call
-              </b>
-              <div className="block-23 mb-3">
-                <ul className="list-unstyled">
-                  <li className="d-flex align-items-center">
-                    <span className="fa-solid fa-phone mr-3" style={{ color: '#00b7ff', marginRight: '12px' }}></span>
-                    <span className="text">
-                      <a href="tel:+919603338904" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>96033 38904</a>
-                      {' '}|{' '}
-                      <a href="tel:+917799376656" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>77993 76656</a>
-                    </span>
-                  </li>
-                </ul>
+              <div className="footer-contact-item d-flex align-items-start mb-0">
+                <i className="fa-regular fa-envelope footer-contact-icon mr-2 mt-1"></i>
+                <div>
+                  <strong className="d-block footer-contact-label">Email:</strong>
+                  <a href="mailto:info.invisaligndental@gmail.com" className="footer-contact-email">
+                    info.invisaligndental@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 4: Find Our Clinic & Map */}
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4 className="footer-heading">Find Our Clinic</h4>
+              <div className="footer-heading-bar"></div>
+
+              <div className="footer-map-card mb-3">
+                <iframe
+                  src="https://www.google.com/maps?q=Simply%20Smilez%20Dental%20Clinic%2C%20Shaikpet%2C%20Hyderabad&output=embed"
+                  title="Simply Smilez Dental Clinic location"
+                  width="100%"
+                  height="135"
+                  style={{ border: 0, display: 'block', borderRadius: '12px' }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
 
-              <b className="ftco-heading-2 d-block text-white mt-4 mb-2" style={{ fontWeight: 600, fontSize: '18px' }}>
-                Email address
-              </b>
-              <div className="block-23 mb-3">
-                <ul className="list-unstyled">
-                  <li className="d-flex align-items-center">
-                    <span className="fa-solid fa-envelope mr-3" style={{ color: '#00b7ff', marginRight: '12px' }}></span>
-                    <a href="mailto:info.invisaligndental@gmail.com" style={{ color: '#e2e8f0', textDecoration: 'none' }}>
-                      info.invisaligndental@gmail.com
-                    </a>
-                  </li>
-                </ul>
+              <div className="d-flex align-items-center justify-content-between pt-1">
+                <a
+                  href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-directions-link"
+                >
+                  <i className="fa-solid fa-location-arrow mr-1"></i> Get Directions &rarr;
+                </a>
+                <div className="footer-social-icons d-flex align-items-center">
+                  <a
+                    href="https://www.instagram.com/sush_micro_dontist?stkn=cTMxejQ2ejl6djR0&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="footer-social-btn"
+                  >
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/share/1F4XvjRLHq/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="footer-social-btn"
+                  >
+                    <i className="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://wa.me/917799376656"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                    className="footer-social-btn"
+                  >
+                    <i className="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="col-md-4 footer-maps">
-            <div className="maps">
-              <a href="#home">
-                <img
-                  src="/images/map.webp"
-                  width="404"
-                  height="93"
-                  loading="lazy"
-                  alt="Simply Smilez Dental Clinic Map"
-                  className="img-fluid mb-3 rounded"
-                />
-              </a>
-              <iframe
-                src="https://www.google.com/maps?q=Simply%20Smilez%20Dental%20Clinic%2C%20Shaikpet%2C%20Hyderabad&output=embed"
-                title="Simply Smilez Dental Clinic location"
-                width="100%"
-                height="240"
-                style={{ border: 0, borderRadius: '8px' }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+          {/* Desktop Bottom Bar: Copyright & Navigation */}
+          <div className="footer-bottom-bar mt-5 pt-4">
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p className="mb-0 footer-copyright">
+                  &copy; {currentYear} Simply Smilez Dental Clinic. All rights reserved.
+                </p>
+              </div>
+              <div className="col-md-6 text-center text-md-right">
+                <ul className="footer-bottom-nav list-inline mb-0">
+                  <li className="list-inline-item mr-3">
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li className="list-inline-item mr-3">
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li className="list-inline-item mr-3">
+                    <Link to="/doctors">Doctors</Link>
+                  </li>
+                  <li className="list-inline-item mr-3">
+                    <Link to="/all-services">Treatments</Link>
+                  </li>
+                  <li className="list-inline-item mr-3">
+                    <Link to="/gallery">Gallery</Link>
+                  </li>
+                  <li className="list-inline-item">
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-md-12 text-center py-3" style={{ backgroundColor: '#070f18', margin: '0 -15px' }}>
-            <p className="mb-0" style={{ color: '#94a3b8', fontSize: '13.5px' }}>
-              &copy; {currentYear} All rights reserved | Simply Smilez Dental Clinic
+        {/* =================================================================
+            2. MOBILE VIEW (< 768px): Modern Collapsible Accordion Dropdown
+            ================================================================= */}
+        <div className="d-block d-md-none footer-mobile-view">
+          {/* Logo Badge & Summary */}
+          <div className="footer-logo-badge mb-3">
+            <img
+              src="/images/logo-3.webp"
+              alt="Simply Smilez Dental"
+              className="img-fluid"
+              style={{ maxHeight: '44px', width: 'auto' }}
+            />
+          </div>
+          <p className="footer-desc mb-4" style={{ maxWidth: '100%' }}>
+            Comprehensive, painless dental care in Shaikpet / Manikonda, Hyderabad.
+          </p>
+
+          {/* Accordion 1: DENTAL TREATMENTS */}
+          <div className="footer-accordion-item">
+            <button
+              type="button"
+              className="footer-accordion-header"
+              onClick={() => toggleAccordion('treatments')}
+              aria-expanded={openAccordion === 'treatments'}
+            >
+              <span>DENTAL TREATMENTS</span>
+              <i
+                className="fa-solid fa-chevron-down chevron"
+                style={{
+                  transform: openAccordion === 'treatments' ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              ></i>
+            </button>
+            {openAccordion === 'treatments' && (
+              <div className="footer-accordion-body">
+                <ul className="footer-links-list list-unstyled mb-0">
+                  <li>
+                    <Link to="/services/braces">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Braces &amp; Clear Aligners (Invisalign)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pediatric-dentistry">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Pediatric Dentistry
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/dental-implants">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Implants
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/microscopic-root-canal">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Microscopic Root Canal Treatment
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/crowns">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Crowns
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/veneers">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Veneers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/composite-fillings">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Composite Fillings
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/laser-teeth-whitening">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Teeth Whitening
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/laser-gum-surgery">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Gum Surgery &amp; Care
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/wisdom-tooth-extraction">
+                      <i className="fa-solid fa-chevron-right link-arrow"></i> Wisdom Tooth Extractions
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 2: QUICK LINKS */}
+          <div className="footer-accordion-item">
+            <button
+              type="button"
+              className="footer-accordion-header"
+              onClick={() => toggleAccordion('links')}
+              aria-expanded={openAccordion === 'links'}
+            >
+              <span>QUICK LINKS</span>
+              <i
+                className="fa-solid fa-chevron-down chevron"
+                style={{
+                  transform: openAccordion === 'links' ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              ></i>
+            </button>
+            {openAccordion === 'links' && (
+              <div className="footer-accordion-body">
+                <ul className="footer-links-list list-unstyled mb-0">
+                  <li>
+                    <Link to="/"><i className="fa-solid fa-chevron-right link-arrow"></i> Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about"><i className="fa-solid fa-chevron-right link-arrow"></i> About Us</Link>
+                  </li>
+                  <li>
+                    <Link to="/doctors"><i className="fa-solid fa-chevron-right link-arrow"></i> Doctors &amp; Specialists</Link>
+                  </li>
+                  <li>
+                    <Link to="/all-services"><i className="fa-solid fa-chevron-right link-arrow"></i> All Treatments</Link>
+                  </li>
+                  <li>
+                    <Link to="/gallery"><i className="fa-solid fa-chevron-right link-arrow"></i> Clinic Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/testimonials"><i className="fa-solid fa-chevron-right link-arrow"></i> Patient Testimonials</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact"><i className="fa-solid fa-chevron-right link-arrow"></i> Contact Us</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 3: CLINIC TIMINGS */}
+          <div className="footer-accordion-item">
+            <button
+              type="button"
+              className="footer-accordion-header"
+              onClick={() => toggleAccordion('timings')}
+              aria-expanded={openAccordion === 'timings'}
+            >
+              <span>CLINIC TIMINGS</span>
+              <i
+                className="fa-solid fa-chevron-down chevron"
+                style={{
+                  transform: openAccordion === 'timings' ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              ></i>
+            </button>
+            {openAccordion === 'timings' && (
+              <div className="footer-accordion-body">
+                <div className="footer-contact-item d-flex align-items-start py-2">
+                  <i className="fa-regular fa-clock footer-contact-icon mr-2 mt-1"></i>
+                  <div>
+                    <strong className="d-block footer-contact-label">Working Hours:</strong>
+                    <p className="mb-1 footer-contact-text">Monday - Saturday: 10:00am - 9:00pm</p>
+                    <p className="mb-0 footer-contact-text">Sunday: 11:00am - 4:00pm</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 4: FIND OUR CLINIC */}
+          <div className="footer-accordion-item">
+            <button
+              type="button"
+              className="footer-accordion-header"
+              onClick={() => toggleAccordion('map')}
+              aria-expanded={openAccordion === 'map'}
+            >
+              <span>FIND OUR CLINIC</span>
+              <i
+                className="fa-solid fa-chevron-down chevron"
+                style={{
+                  transform: openAccordion === 'map' ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              ></i>
+            </button>
+            {openAccordion === 'map' && (
+              <div className="footer-accordion-body">
+                <div className="footer-map-card mb-3 mt-2">
+                  <iframe
+                    src="https://www.google.com/maps?q=Simply%20Smilez%20Dental%20Clinic%2C%20Shaikpet%2C%20Hyderabad&output=embed"
+                    title="Simply Smilez Dental Clinic location mobile"
+                    width="100%"
+                    height="140"
+                    style={{ border: 0, display: 'block', borderRadius: '12px' }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div className="d-flex align-items-center justify-content-between pt-1 mb-2">
+                  <a
+                    href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-directions-link"
+                  >
+                    <i className="fa-solid fa-location-arrow mr-1"></i> Get Directions &rarr;
+                  </a>
+                  <div className="footer-social-icons d-flex align-items-center">
+                    <a
+                      href="https://www.instagram.com/sush_micro_dontist?stkn=cTMxejQ2ejl6djR0&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                      className="footer-social-btn"
+                    >
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/share/1F4XvjRLHq/?mibextid=wwXIfr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      className="footer-social-btn"
+                    >
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="https://wa.me/917799376656"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                      className="footer-social-btn"
+                    >
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* INQUIRIES & APPOINTMENTS Section */}
+          <div className="footer-mobile-inquiries mt-4 pt-2">
+            <h5 className="footer-mobile-inquiries-title mb-3">
+              INQUIRIES &amp; APPOINTMENTS
+            </h5>
+            <p className="footer-contact-text mb-3" style={{ lineHeight: 1.6 }}>
+              P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet, Hyderabad, Telangana 500008
+            </p>
+
+            <div className="footer-mobile-contact-line d-flex align-items-center mb-2">
+              <i className="fa-solid fa-phone footer-contact-icon mr-2"></i>
+              <span>
+                Call:{' '}
+                <a href="tel:+917799376656" className="text-cyan font-weight-bold">77993 76656</a>
+                {' '}&bull;{' '}
+                <a href="tel:+919603338904" className="text-cyan font-weight-bold">96033 38904</a>
+              </span>
+            </div>
+
+            <div className="footer-mobile-contact-line d-flex align-items-center mb-4">
+              <i className="fa-regular fa-envelope footer-contact-icon mr-2"></i>
+              <a href="mailto:info.invisaligndental@gmail.com" className="footer-contact-email">
+                info.invisaligndental@gmail.com
+              </a>
+            </div>
+
+            {/* Action Buttons Stack */}
+            <div className="footer-mobile-buttons">
+              <a
+                href="https://wa.me/917799376656"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-mobile-whatsapp-cta mb-2"
+              >
+                <i className="fa-brands fa-whatsapp mr-2"></i> BOOK ON WHATSAPP
+              </a>
+              <a
+                href="tel:+917799376656"
+                className="btn-mobile-call-cta mb-3"
+              >
+                <i className="fa-solid fa-phone mr-2"></i> CALL NOW: 77993 76656
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile Bottom Copyright */}
+          <div className="footer-mobile-copyright text-center pt-3 border-top" style={{ borderColor: 'rgba(255, 255, 255, 0.08) !important' }}>
+            <p className="mb-0 footer-copyright">
+              &copy; {currentYear} Simply Smilez Dental Clinic. All rights reserved.
             </p>
           </div>
         </div>

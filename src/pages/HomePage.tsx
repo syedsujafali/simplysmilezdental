@@ -7,6 +7,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import DoctorsSection from '../components/DoctorsSection';
 import GallerySection from '../components/GallerySection';
 import FAQSection from '../components/FAQSection';
+import GoogleReviewsSection from '../components/GoogleReviewsSection';
 
 interface HomePageProps {
   onOpenServices: () => void;
@@ -66,6 +67,9 @@ export default function HomePage({ onOpenServices }: HomePageProps) {
 
       {/* Frequently Asked Questions */}
       <FAQSection />
+
+      {/* Patient Google Reviews & Direct Feedback */}
+      <GoogleReviewsSection />
     </>
   );
 }

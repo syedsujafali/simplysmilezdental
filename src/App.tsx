@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,7 +15,7 @@ import CrownsPage from './pages/services/CrownsPage';
 import VeneersPage from './pages/services/VeneersPage';
 import BracesPage from './pages/services/BracesPage';
 import LaserTeethPage from './pages/services/LaserTeethPage';
-import LaserRootPage from './pages/services/LaserRootPage';
+import MicroscopicRootCanalPage from './pages/services/MicroscopicRootCanalPage';
 import LaserGumPage from './pages/services/LaserGumPage';
 import DentalImplantPage from './pages/services/DentalImplantPage';
 import PediataryPage from './pages/services/PediataryPage';
@@ -47,6 +47,7 @@ export default function App() {
 
             {/* All Services */}
             <Route path="/all-services" element={<AllServicesPage />} />
+            <Route path="/services" element={<AllServicesPage />} />
 
             {/* Individual Specialty Services */}
             <Route path="/services/composite-fillings" element={<CompositeFillingsPage />} />
@@ -54,7 +55,8 @@ export default function App() {
             <Route path="/services/veneers" element={<VeneersPage />} />
             <Route path="/services/braces" element={<BracesPage />} />
             <Route path="/services/laser-teeth-whitening" element={<LaserTeethPage />} />
-            <Route path="/services/laser-root-canal" element={<LaserRootPage />} />
+            <Route path="/services/microscopic-root-canal" element={<MicroscopicRootCanalPage />} />
+            <Route path="/services/laser-root-canal" element={<Navigate to="/services/microscopic-root-canal" replace />} />
             <Route path="/services/laser-gum-surgery" element={<LaserGumPage />} />
             <Route path="/services/dental-implants" element={<DentalImplantPage />} />
             <Route path="/services/pediatric-dentistry" element={<PediataryPage />} />

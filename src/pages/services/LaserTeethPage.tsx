@@ -243,14 +243,13 @@ export default function LaserTeethPage() {
                 </Link>
               </div>
               <div className="col-md-6 col-12 mb-3">
-                <Link to="/services/laser-root-canal" className="service-card-link p-3 text-left">
+                <Link to="/services/microscopic-root-canal" className="service-card-link p-3 text-left">
                   <div>
                     <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h5 className="h6 font-weight-bold service-title mb-0 text-left">Laser Root Canal Therapy</h5>
+                      <h5 className="h6 font-weight-bold service-title mb-0 text-left">Microscopic Root Canal Treatment</h5>
                       <i className="fas fa-chevron-right text-primary small" />
                     </div>
-                    <p className="small text-muted mb-2 text-left">Advanced laser-assisted endodontics for precise infection
-                      removal.</p>
+                    <p className="small text-muted mb-2 text-left">Advanced microscope-guided endodontics for precise tooth preservation.</p>
                   </div>
                   <span className="btn-learn-more text-left mt-2">View Service <i className="fas fa-arrow-right ml-1" /></span>
                 </Link>

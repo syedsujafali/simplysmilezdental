@@ -13,6 +13,7 @@ export interface DoctorItem {
   role: string;
   tag: string;
   image: string;
+  link: string;
 }
 
 export interface GalleryItem {
@@ -30,82 +31,82 @@ export interface FAQItem {
 export const servicesData: ServiceItem[] = [
   {
     id: 1,
-    title: "Dental Implants",
-    image: "/images/dentalimp.webp",
-    alt: "Dental Implants in Hyderabad",
-    link: "#services",
-    description: "Replace missing teeth with dental implants designed to restore function, comfort, and your natural smile."
-  },
-  {
-    id: 2,
-    title: "Composite Fillings",
-    image: "/images/composite.webp",
-    alt: "Composite Fillings",
-    link: "#services",
-    description: "Tooth-coloured aesthetic fillings to repair cavities and restore damaged teeth invisibly."
-  },
-  {
-    id: 3,
-    title: "Dental Crowns",
-    image: "/images/crowns.webp",
-    alt: "Dental Crowns",
-    link: "#services",
-    description: "Restore damaged or weakened teeth with durable crowns that improve strength, function and appearance."
-  },
-  {
-    id: 4,
-    title: "Dental Veneers",
-    image: "/images/veneers.webp",
-    alt: "Dental Veneers",
-    link: "#services",
-    description: "Transform your smile with custom porcelain and composite veneers for suitable cosmetic cases."
-  },
-  {
-    id: 5,
-    title: "Laser Teeth Whitening",
-    image: "/images/laserteeth.webp",
-    alt: "Laser Teeth Whitening",
-    link: "#services",
-    description: "Brighten your smile safely and effectively with professional laser teeth whitening treatments."
-  },
-  {
-    id: 6,
-    title: "Braces & Aligners",
+    title: "Braces & Clear Aligners (Invisalign)",
     image: "/images/braces.webp",
-    alt: "Braces & Aligners",
-    link: "#services",
+    alt: "Braces & Clear Aligners (Invisalign)",
+    link: "/services/braces",
     description: "Straighten teeth discreetly with Invisalign clear aligners or traditional orthodontic braces."
   },
   {
-    id: 7,
-    title: "Laser Root Canal Therapy",
-    image: "/images/laserroot.webp",
-    alt: "Laser Root Canal Therapy",
-    link: "#services",
-    description: "Painless, high-precision laser root canal therapy to eliminate infection and save your natural tooth."
-  },
-  {
-    id: 8,
-    title: "Laser Gum Treatment",
-    image: "/images/lasergum.webp",
-    alt: "Laser Gum Treatment",
-    link: "#services",
-    description: "Advanced laser treatment for periodontal gum problems, inflammation, infection, and gum re-contouring."
-  },
-  {
-    id: 9,
+    id: 2,
     title: "Pediatric Dentistry",
     image: "/images/pedia2.webp",
     alt: "Pediatric Dentistry",
-    link: "#services",
+    link: "/services/pediatric-dentistry",
     description: "Gentle, comprehensive preventive and restorative dental care tailored for children and teenagers."
+  },
+  {
+    id: 3,
+    title: "Dental Implants",
+    image: "/images/dentalimp.webp",
+    alt: "Dental Implants in Hyderabad",
+    link: "/services/dental-implants",
+    description: "Replace missing teeth with dental implants designed to restore function, comfort, and your natural smile."
+  },
+  {
+    id: 4,
+    title: "Microscopic Root Canal Treatment",
+    image: "/images/microscopic-rct.jpg",
+    alt: "Microscopic Root Canal Treatment",
+    link: "/services/microscopic-root-canal",
+    description: "High-precision microscopic root canal treatment using surgical dental microscopes to eliminate deep infection and save your natural tooth."
+  },
+  {
+    id: 5,
+    title: "Dental Crowns",
+    image: "/images/crowns.webp",
+    alt: "Dental Crowns",
+    link: "/services/crowns",
+    description: "Restore damaged or weakened teeth with durable crowns that improve strength, function and appearance."
+  },
+  {
+    id: 6,
+    title: "Dental Veneers",
+    image: "/images/veneers.webp",
+    alt: "Dental Veneers",
+    link: "/services/veneers",
+    description: "Transform your smile with custom porcelain and composite veneers for suitable cosmetic cases."
+  },
+  {
+    id: 7,
+    title: "Composite Fillings",
+    image: "/images/composite.webp",
+    alt: "Composite Fillings",
+    link: "/services/composite-fillings",
+    description: "Tooth-coloured aesthetic fillings to repair cavities and restore damaged teeth invisibly."
+  },
+  {
+    id: 8,
+    title: "Laser Teeth Whitening",
+    image: "/images/laserteeth.webp",
+    alt: "Laser Teeth Whitening",
+    link: "/services/laser-teeth-whitening",
+    description: "Brighten your smile safely and effectively with professional laser teeth whitening treatments."
+  },
+  {
+    id: 9,
+    title: "Laser Gum Surgery & Care",
+    image: "/images/lasergum.webp",
+    alt: "Laser Gum Surgery & Care",
+    link: "/services/laser-gum-surgery",
+    description: "Advanced laser treatment for periodontal gum problems, inflammation, infection, and gum re-contouring."
   },
   {
     id: 10,
     title: "Wisdom Tooth Extractions",
     image: "/images/wisdom.webp",
     alt: "Wisdom Tooth Extractions",
-    link: "#services",
+    link: "/services/wisdom-tooth-extraction",
     description: "Professional assessment and gentle extraction for impacted or problematic wisdom teeth."
   }
 ];
@@ -116,35 +117,37 @@ export const doctorsData: DoctorItem[] = [
     name: "ANKUSH KUMAR MDS",
     role: "(Orthodontist and Invisalign Provider)",
     tag: "- SR DOCTOR -",
-    image: "/images/ankush.webp"
+    image: "/images/ankush.webp",
+    link: "/doctor/dr-ankush-kumar"
   },
   {
     id: 2,
     name: "SUSHEEL KUMAR MDS",
     role: "(Pediatric Dentist and Implantologist)",
     tag: "- SR DOCTOR -",
-    image: "/images/about.webp"
+    image: "/images/susheel1.png",
+    link: "/doctor/dr-susheel-kumar"
   }
 ];
 
 export const galleryImages: GalleryItem[] = [
-  { id: 1, src: "/images/gallery-a.webp", alt: "Gallery Image A" },
-  { id: 2, src: "/images/gallery-b.webp", alt: "Gallery Image B" },
-  { id: 3, src: "/images/gallery-c.webp", alt: "Gallery Image C" },
-  { id: 4, src: "/images/gallery-d.webp", alt: "Gallery Image D" },
-  { id: 5, src: "/images/gallery-e.webp", alt: "Gallery Image E" },
-  { id: 6, src: "/images/gallery-1.webp", alt: "Gallery Image 1" },
-  { id: 7, src: "/images/gallery-2.webp", alt: "Gallery Image 2" },
-  { id: 8, src: "/images/gallery-3.webp", alt: "Gallery Image 3" },
-  { id: 9, src: "/images/teeth-1.webp", alt: "Teeth Procedure" },
-  { id: 10, src: "/images/three.webp", alt: "Clinic View 1" },
-  { id: 11, src: "/images/four.webp", alt: "Clinic View 2" },
-  { id: 12, src: "/images/seven.webp", alt: "Clinic Equipment" },
-  { id: 13, src: "/images/nine.webp", alt: "Smile Result" },
-  { id: 14, src: "/images/gallery-4.webp", alt: "Gallery Image 4" },
-  { id: 15, src: "/images/gallery-5.webp", alt: "Gallery Image 5" },
-  { id: 16, src: "/images/gallery-6.webp", alt: "Gallery Image 6" },
-  { id: 17, src: "/images/one.webp", alt: "Clinic Setup" }
+  { id: 1, src: "/images/gallery_1.jpeg", alt: "Simply Smilez Dental Clinic Gallery 1" },
+  { id: 2, src: "/images/gallery_2.jpeg", alt: "Simply Smilez Dental Clinic Gallery 2" },
+  { id: 3, src: "/images/gallery_3.jpeg", alt: "Simply Smilez Dental Clinic Gallery 3" },
+  { id: 4, src: "/images/gallery_4.jpeg", alt: "Simply Smilez Dental Clinic Gallery 4" },
+  { id: 5, src: "/images/gallery_5.jpeg", alt: "Simply Smilez Dental Clinic Gallery 5" },
+  { id: 6, src: "/images/gallery_6.jpeg", alt: "Simply Smilez Dental Clinic Gallery 6" },
+  { id: 7, src: "/images/gallery_7.jpeg", alt: "Simply Smilez Dental Clinic Gallery 7" },
+  { id: 8, src: "/images/gallery_8.jpeg", alt: "Simply Smilez Dental Clinic Gallery 8" },
+  { id: 9, src: "/images/gallery_9.jpeg", alt: "Simply Smilez Dental Clinic Gallery 9" },
+  { id: 10, src: "/images/gallery_10.jpeg", alt: "Simply Smilez Dental Clinic Gallery 10" },
+  { id: 11, src: "/images/gallery_11.jpeg", alt: "Simply Smilez Dental Clinic Gallery 11" },
+  { id: 12, src: "/images/gallery_12.jpeg", alt: "Simply Smilez Dental Clinic Gallery 12" },
+  { id: 13, src: "/images/gallery_13.jpeg", alt: "Simply Smilez Dental Clinic Gallery 13" },
+  { id: 14, src: "/images/gallery_14.jpeg", alt: "Simply Smilez Dental Clinic Gallery 14" },
+  { id: 15, src: "/images/gallery_15.jpeg", alt: "Simply Smilez Dental Clinic Gallery 15" },
+  { id: 16, src: "/images/gallery_16.jpeg", alt: "Simply Smilez Dental Clinic Gallery 16" },
+  { id: 17, src: "/images/gallery_17.jpeg", alt: "Simply Smilez Dental Clinic Gallery 17" }
 ];
 
 export const faqsData: FAQItem[] = [
