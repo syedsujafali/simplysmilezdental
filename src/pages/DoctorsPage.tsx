@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,11 +9,6 @@ export default function DoctorsPage() {
 
   return (
     <div className="page-wrapper doctorspage">
-      <Seo
-        title="Expert Dentists in Shaikpet, Hyderabad | Simply Smilez Dental Team"
-        description="Meet our senior dentists: Dr. Ankush Kumar MDS (Orthodontist & Invisalign Provider) and Dr. Susheel Kumar MDS (Pediatric Dentist & Implantologist)."
-        canonicalPath="/doctors"
-      />
       <section>
 
     <section className="ftco-section test8">

@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function WisdomPage() {
   useEffect(() => {
@@ -10,52 +10,32 @@ export default function WisdomPage() {
 
   return (
     <div className="page-wrapper wisdompage">
-      <Seo
-        title="Wisdom Tooth Extraction in Shaikpet, Hyderabad | Painless Removal"
-        description="Gentle evaluation and surgical removal of impacted, painful wisdom teeth by experienced dental specialists in Hyderabad."
-        canonicalPath="/services/wisdom-tooth-extraction"
-      />
-      <><section className="hero-wrap hero-wrap-2" style={{ backgroundImage: "url('images/bg_1.webp')" }} data-stellar-background-ratio="0.5">
-    <div className="overlay" />
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <h1 className="mb-2 bread">Wisdom Tooth Extraction in Hyderabad</h1>
-          <p className="breadcrumbs">
-            <span className="mr-2"><Link to="/">Home <i className="ion-ios-arrow-forward" /></Link></span>
-            <span>Wisdom Tooth Extraction <i className="ion-ios-arrow-forward" /></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div className="container py-5 text-left">
+        <div className="row">
+          <div className="col-lg-8 col-md-12 text-left">
+            <div className="about-us text-left">
+              <h1 className="h2 font-weight-bold mb-3 text-left" style={{ color: "#00b7ff" }}>
+                Wisdom Tooth Extraction in Hyderabad | Simply Smilez Dental Clinic
+              </h1>
+              <hr className="short mb-4 ml-0" style={{ marginLeft: "0", width: 60, borderTop: "3px solid #00b7ff" }} />
 
-  
-  <section className="ftco-section">
-    <div className="container">
-      <div className="row">
-        
-        <div className="col-lg-8 col-md-12 text-left">
-          <h1 className="font-weight-bold mb-3 text-left" style={{ color: "#0d3b66", fontSize: "2.2rem" }}>Wisdom Tooth Extraction
-            in Hyderabad</h1>
-          <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Professional Care for Impacted and
-            Problematic Wisdom Teeth</h2>
+              <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Professional Care for Impacted and Problematic Wisdom Teeth</h2>
 
-          <p className="text-left lead font-weight-normal text-muted mb-4">Wisdom tooth extraction is a dental procedure
-            used to remove one or more third molars when they cause pain, infection, damage, or other dental problems.
-            Simply Smilez Dental Clinic provides wisdom tooth extraction and surgical extraction services in Shaikpet,
-            Hyderabad, serving patients from nearby areas including Manikonda, Tolichowki, Jubilee Hills, Banjara Hills,
-            Gachibowli, Narsingi, and surrounding locations.</p>
+              <p className="lead text-left">Wisdom tooth extraction is a dental procedure
+                used to remove one or more third molars when they cause pain, infection, damage, or other dental problems.
+                Simply Smilez Dental Clinic provides wisdom tooth extraction and surgical extraction services in Shaikpet,
+                Hyderabad, serving patients from nearby areas including Manikonda, Tolichowki, Jubilee Hills, Banjara Hills,
+                Gachibowli, Narsingi, and surrounding locations.</p>
 
-          <p className="text-left">Wisdom teeth are the last permanent teeth to develop and commonly emerge during the late
-            teenage years or early adulthood. Some wisdom teeth erupt normally and remain healthy, while others become
-            impacted because there is insufficient room for normal eruption.</p>
+              <p className="text-left">Wisdom teeth are the last permanent teeth to develop and commonly emerge during the late
+                teenage years or early adulthood. Some wisdom teeth erupt normally and remain healthy, while others become
+                impacted because there is insufficient room for normal eruption.</p>
 
-          <div className="my-4 text-left">
-            <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Wisdom Tooth Consultation</Link>
-          </div>
+              <div className="my-4 text-left">
+                <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Wisdom Tooth Consultation</Link>
+              </div>
 
-          <h2 className="h4 font-weight-bold mt-5 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is a Wisdom Tooth?</h2>
+              <h3 className="h4 font-weight-bold mt-4 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is a Wisdom Tooth?</h3>
           <p className="text-left">Wisdom teeth, also called third molars, are located at the back of the upper and lower
             jaws. They are the last permanent teeth to erupt and generally appear between the ages of 17 and 25,
             although timing varies between individuals. Some people do not develop one or more wisdom teeth.</p>
@@ -333,134 +313,39 @@ export default function WisdomPage() {
           </div>
 
           
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions</h3>
-          <div className="accordion faq-accordion mb-5" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>Does every wisdom tooth need to be removed?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. A wisdom tooth does not automatically need to be removed. The decision depends on factors such as
-                  its position, symptoms, oral health, ability to maintain the area, and whether it is causing or likely
-                  to cause clinically significant problems.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>What is an impacted wisdom tooth?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  An impacted wisdom tooth is a tooth that cannot erupt normally because of insufficient space or its
-                  position within the jaw. It may be partially erupted, completely covered by gum tissue, or positioned
-                  against another tooth.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>How do I know if my wisdom tooth is infected?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Pain, swelling, tenderness, gum inflammation, unpleasant taste, or difficulty opening the mouth can
-                  occur with dental infections. These symptoms can have other causes, so a dental examination is needed
-                  to determine the source.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Is wisdom tooth extraction painful?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The extraction is performed using appropriate anesthesia. Some soreness and swelling can occur during
-                  recovery. Your dentist can explain pain-control and anesthesia options and provide specific aftercare
-                  instructions based on the complexity of the extraction.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>How long does wisdom tooth extraction take?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The time required depends on the position and complexity of the tooth. A normally erupted wisdom tooth
-                  may be simpler to remove than a deeply impacted tooth. The dentist can explain the expected procedure
-                  after evaluating the tooth.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>Can an impacted wisdom tooth damage another tooth?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  An impacted wisdom tooth can sometimes press against or contribute to problems involving the adjacent
-                  second molar. A dental examination and appropriate imaging can help assess the position of the wisdom
-                  tooth and its relationship with nearby teeth.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading7">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-                    <span>Where can I get wisdom tooth extraction in Shaikpet?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse7" className="collapse" aria-labelledby="faqHeading7" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Simply Smilez Dental Clinic provides wisdom tooth extraction and surgical/impacted tooth extraction
-                  services at its Shaikpet location in Hyderabad. The clinic is at P.V. Reddy Complex, Dwaraka Nagar
-                  Colony, O.U. Colony Road, Shaikpet, Hyderabad &ndash; 500008.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions"
+            faqs={[
+              {
+                question: "Does every wisdom tooth need to be removed?",
+                answer: "No. A wisdom tooth does not automatically need to be removed. The decision depends on factors such as its position, symptoms, oral health, ability to maintain the area, and whether it is causing or likely to cause clinically significant problems."
+              },
+              {
+                question: "What is an impacted wisdom tooth?",
+                answer: "An impacted wisdom tooth is a tooth that cannot erupt normally because of insufficient space or its position within the jaw. It may be partially erupted, completely covered by gum tissue, or positioned against another tooth."
+              },
+              {
+                question: "How do I know if my wisdom tooth is infected?",
+                answer: "Pain, swelling, tenderness, gum inflammation, unpleasant taste, or difficulty opening the mouth can occur with dental infections. These symptoms can have other causes, so a dental examination is needed to determine the source."
+              },
+              {
+                question: "Is wisdom tooth extraction painful?",
+                answer: "The extraction is performed using appropriate anesthesia. Some soreness and swelling can occur during recovery. Your dentist can explain pain-control and anesthesia options and provide specific aftercare instructions based on the complexity of the extraction."
+              },
+              {
+                question: "How long does wisdom tooth extraction take?",
+                answer: "The time required depends on the position and complexity of the tooth. A normally erupted wisdom tooth may be simpler to remove than a deeply impacted tooth. The dentist can explain the expected procedure after evaluating the tooth."
+              },
+              {
+                question: "Can an impacted wisdom tooth damage another tooth?",
+                answer: "An impacted wisdom tooth can sometimes press against or contribute to problems involving the adjacent second molar. A dental examination and appropriate imaging can help assess the position of the wisdom tooth and its relationship with nearby teeth."
+              },
+              {
+                question: "Where can I get wisdom tooth extraction in Shaikpet?",
+                answer: "Simply Smilez Dental Clinic provides wisdom tooth extraction and surgical/impacted tooth extraction services at its Shaikpet location in Hyderabad. The clinic is at P.V. Reddy Complex, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet, Hyderabad – 500008."
+              }
+            ]}
+          />
 
           
           <div className="bg-light p-4 rounded text-left border mb-4">
@@ -480,35 +365,34 @@ export default function WisdomPage() {
               <Link to="/contact" className="btn btn-primary px-4 py-2">Book Consultation</Link>
             </div>
           </div>
-        </div>
-
-        
-        <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
-          <div className="sticky-top" style={{ top: 100 }}>
-            <div className="card border-0 shadow-sm mb-4">
-              <img src="/images/wisdom.webp" className="card-img-top rounded-top" alt="Wisdom Tooth Extraction in Hyderabad" />
-              <div className="card-body text-left p-4">
-                <h4 className="card-title font-weight-bold mb-2 text-left">Wisdom Tooth Extraction</h4>
-                <p className="card-text text-muted text-left">Safe, effective extraction for impacted or problematic wisdom
-                  teeth.</p>
-                <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
-              </div>
             </div>
+          </div>
 
-            <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
-              <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-              <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road,
-                  Shaikpet, Hyderabad - 500008</a></p>
-              <p className="mb-2 text-left"><i className="icon-phone mr-2" /> <a href="tel:+919603338904" className="text-white">96033 38904</a> / <a href="tel:+917799376656" className="text-white">77993 76656</a>
-              </p>
-              <p className="mb-2 text-left"><i className="icon-envelope mr-2" /> info.invisaligndental@gmail.com</p>
-              <p className="mb-0 text-left"><i className="icon-clock-o mr-2" /> Mon - Sat: 10:00am - 9:00pm | Sunday: 11:00am - 4:00pm</p>
+          <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
+            <div className="sticky-top" style={{ top: 100 }}>
+              <div className="card border-0 shadow-sm mb-4">
+                <img src="/images/wisdom.webp" className="card-img-top rounded-top" alt="Wisdom Tooth Extraction in Hyderabad" />
+                <div className="card-body text-left p-4">
+                  <h4 className="card-title font-weight-bold mb-2 text-left">Wisdom Tooth Extraction</h4>
+                  <p className="card-text text-muted text-left">Safe, effective extraction for impacted or problematic wisdom
+                    teeth.</p>
+                  <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
+                </div>
+              </div>
+
+              <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
+                <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
+                <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+                    Hyderabad, 500008</a></p>
+                <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+                  <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+                </p>
+                <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section></>
     </div>
   );
 }

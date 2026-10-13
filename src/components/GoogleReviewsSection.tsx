@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 // Exact Google Write Review Link (triggers review dialog directly with 5-star prompt)
 export const GOOGLE_WRITE_REVIEW_URL = "https://www.google.com/search?sca_esv=bfa957c708c098d7&cs=1&output=search&kgmid=/g/11f525jy3x&q=Simply+Smilez+Dental+Clinic+-Fully+Digital+Invisalign+Centre#lrd=0x3bcb90c618ceaaab:0x5543d8d68ff843d2,3,,,,";
@@ -93,6 +93,7 @@ export const clinicReviews: GoogleReview[] = [
 export default function GoogleReviewsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [expandedReviews, setExpandedReviews] = useState<{ [key: string]: boolean }>({});
+  const [isInteracting, setIsInteracting] = useState(false);
 
   const toggleExpand = (id: string) => {
     setExpandedReviews(prev => ({
@@ -111,8 +112,37 @@ export default function GoogleReviewsSection() {
     }
   };
 
+  // Automatic smooth scrolling with loop and pause on hover/touch
+  useEffect(() => {
+    if (isInteracting) return;
+
+    const interval = setInterval(() => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      const step = 380;
+
+      // If reached the end, smoothly loop back to start
+      if (container.scrollLeft >= maxScrollLeft - 20) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [isInteracting]);
+
   return (
-    <section className="ftco-section google-reviews-section py-5" style={{ background: '#f8fafc' }}>
+    <section
+      className="ftco-section google-reviews-section py-5"
+      style={{ background: '#f8fafc' }}
+      onMouseEnter={() => setIsInteracting(true)}
+      onMouseLeave={() => setIsInteracting(false)}
+      onTouchStart={() => setIsInteracting(true)}
+      onTouchEnd={() => setIsInteracting(false)}
+    >
       <div className="container">
         {/* Header with Google Badge */}
         <div className="row justify-content-center mb-4">
@@ -283,30 +313,6 @@ export default function GoogleReviewsSection() {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Bottom Banner */}
-        <div className="google-review-cta-banner mt-5 p-4 text-center">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-lg-8 text-lg-left text-center mb-3 mb-lg-0">
-              <h4 style={{ fontWeight: 800, color: '#0b2545', marginBottom: 4 }}>
-                Visited Simply Smilez Dental Clinic Recently?
-              </h4>
-              <p style={{ color: '#475569', fontSize: 14.5, margin: 0 }}>
-                Your feedback helps other patients find the best dental care in Hyderabad. Share your experience in just 1 minute!
-              </p>
-            </div>
-            <div className="col-lg-4 text-lg-right text-center">
-              <a
-                href={GOOGLE_WRITE_REVIEW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-google-review-primary"
-              >
-                <i className="fa-solid fa-star" /> Write Your Review
-              </a>
-            </div>
           </div>
         </div>
       </div>

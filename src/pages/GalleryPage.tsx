@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { galleryImages, GalleryItem } from '../data';
@@ -13,11 +12,6 @@ export default function GalleryPage() {
 
   return (
     <div className="page-wrapper gallerypage">
-      <Seo
-        title="Clinic Gallery | Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
-        description="Take a virtual tour of Simply Smilez Dental Clinic in Shaikpet, Hyderabad. View our modern equipment, treatment rooms, and clinic environment."
-        canonicalPath="/gallery"
-      />
 
       <section className="album bg-light py-5 min-vh-100">
         <div className="container">

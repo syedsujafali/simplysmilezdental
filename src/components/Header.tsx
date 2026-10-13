@@ -247,6 +247,12 @@ export default function Header({ onOpenServices }: HeaderProps) {
               </li>
 
               <li className="ssd-nav-item">
+                <Link to="/blog" className={`ssd-nav-link ${isActive('/blog') ? 'active' : ''}`}>
+                  Blog
+                </Link>
+              </li>
+
+              <li className="ssd-nav-item">
                 <Link to="/testimonials" className={`ssd-nav-link ${isActive('/testimonials') ? 'active' : ''}`}>
                   Testimonials
                 </Link>
@@ -317,7 +323,7 @@ export default function Header({ onOpenServices }: HeaderProps) {
 
         {/* Quick Call & WhatsApp Action Strip */}
         <div className="ssd-drawer-quick-actions">
-          <a href="tel:+919603338904" className="ssd-drawer-quick-btn call">
+          <a href="tel:+917799376656" className="ssd-drawer-quick-btn call">
             <i className="fa-solid fa-phone"></i> Call Now
           </a>
           <a
@@ -411,6 +417,17 @@ export default function Header({ onOpenServices }: HeaderProps) {
                 onClick={() => setDrawerOpen(false)}
               >
                 <span>Clinic Gallery</span>
+                <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/blog"
+                className={`ssd-drawer-link ${isActive('/blog') ? 'active' : ''}`}
+                onClick={() => setDrawerOpen(false)}
+              >
+                <span>Dental Blog &amp; Articles</span>
                 <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
               </Link>
             </li>

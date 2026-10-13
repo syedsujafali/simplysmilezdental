@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -57,11 +56,6 @@ export default function ContactPage() {
 
   return (
     <div className="page-wrapper contactpage">
-      <Seo
-        title="Contact Simply Smilez Dental Clinic | Shaikpet, Hyderabad"
-        description="Book your dental visit or online consultation at Simply Smilez Dental Clinic in Shaikpet / Manikonda, Hyderabad. Located at P.V. Reddy Complex, O.U Colony Road."
-        canonicalPath="/contact"
-      />
 
       {/* Breadcrumb Header */}
       <section className="doctor-hero-section py-4" style={{ background: '#f0f9ff' }}>

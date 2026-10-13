@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function VeneersPage() {
   useEffect(() => {
@@ -10,11 +10,6 @@ export default function VeneersPage() {
 
   return (
     <div className="page-wrapper veneerspage">
-      <Seo
-        title="Dental Veneers in Hyderabad | Porcelain & Composite Veneers"
-        description="Transform your smile with custom porcelain and composite veneers for chipped, gapped, or discoloured teeth in Hyderabad."
-        canonicalPath="/services/veneers"
-      />
       <div className="container py-5 text-left">
     <div className="row">
       <div className="col-lg-8 col-md-12 text-left">
@@ -298,112 +293,35 @@ export default function VeneersPage() {
             </div>
           </div>
 
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions About
-            Dental Veneers</h3>
-          <div className="accordion faq-accordion mb-4" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>What are dental veneers?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Dental veneers are thin, custom-made restorations designed to cover the front surface of selected
-                  teeth and improve their appearance.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>Can veneers fix chipped teeth?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Veneers may be suitable for some mildly chipped teeth. The appropriate treatment depends on the extent
-                  and location of the damage.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>Are veneers the same as crowns?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. Veneers generally cover the front surface of a tooth, while crowns cover a larger portion of the
-                  tooth and are often used when greater structural restoration is required.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Can veneers close gaps between teeth?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Veneers may be considered for certain small cosmetic gaps. However, orthodontic treatment or another
-                  option may be more appropriate depending on the size and cause of the gap.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>Do veneers look natural?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Veneers can be designed to resemble natural teeth. The final appearance depends on factors including
-                  material, colour, shape, tooth position and treatment planning.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>How much do dental veneers cost in Hyderabad?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The cost depends on factors such as the type of veneer, number of teeth being treated, preparation
-                  required and complexity of the case. A consultation is needed to determine the appropriate treatment
-                  and current cost.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions About Dental Veneers"
+            faqs={[
+              {
+                question: "What are dental veneers?",
+                answer: "Dental veneers are thin, custom-made restorations designed to cover the front surface of selected teeth and improve their appearance."
+              },
+              {
+                question: "Can veneers fix chipped teeth?",
+                answer: "Veneers may be suitable for some mildly chipped teeth. The appropriate treatment depends on the extent and location of the damage."
+              },
+              {
+                question: "Are veneers the same as crowns?",
+                answer: "No. Veneers generally cover the front surface of a tooth, while crowns cover a larger portion of the tooth and are often used when greater structural restoration is required."
+              },
+              {
+                question: "Can veneers close gaps between teeth?",
+                answer: "Veneers may be considered for certain small cosmetic gaps. However, orthodontic treatment or another option may be more appropriate depending on the size and cause of the gap."
+              },
+              {
+                question: "Do veneers look natural?",
+                answer: "Veneers can be designed to resemble natural teeth. The final appearance depends on factors including material, colour, shape, tooth position and treatment planning."
+              },
+              {
+                question: "How much do dental veneers cost in Hyderabad?",
+                answer: "The cost depends on factors such as the type of veneer, number of teeth being treated, preparation required and complexity of the case. A consultation is needed to determine the appropriate treatment and current cost."
+              }
+            ]}
+          />
 
           <div className="bg-light p-4 rounded text-left border mb-4">
             <h3 className="h4 font-weight-bold text-left mb-3" style={{ color: "#0d3b66" }}>Ready to Discuss Your Dental
@@ -440,10 +358,12 @@ export default function VeneersPage() {
 
           <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
             <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-            <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+            <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
                 Hyderabad, 500008</a></p>
-            <p className="mb-2 text-left"><i className="ion-ios-telephone mr-2" /> <a href="tel:+919603338904" className="text-white font-weight-bold">96033 38904</a> / <a href="tel:+917799376656" className="text-white font-weight-bold">77993 76656</a></p>
-            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon - Sat: 10:00am - 9:00pm<br /><span className="pl-4">Sun: 11:00am - 4:00pm</span></p>
+            <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+              <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+            </p>
+            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
           </div>
         </div>
       </div>

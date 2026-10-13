@@ -90,7 +90,7 @@ export default function WelcomeAbout() {
                   Smilez Dental Clinic is dedicated to helping families maintain healthy teeth and beautiful smiles.
                 </p>
                 <p className="font-weight-bold mb-0 p-3 rounded" style={{ backgroundColor: '#fff3cd', borderLeft: '4px solid #008dcc', color: '#0b2545' }}>
-                  <a href="#contact" style={{ color: '#008dcc', textDecoration: 'underline' }}>Book an appointment today</a> and take the next step toward healthier teeth and a confident smile.
+                  <a href="/contact" style={{ color: '#008dcc', textDecoration: 'underline' }}>Book an appointment today</a> and take the next step toward healthier teeth and a confident smile.
                 </p>
               </div>
             </div>

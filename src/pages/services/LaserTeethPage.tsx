@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function LaserTeethPage() {
   useEffect(() => {
@@ -10,11 +10,6 @@ export default function LaserTeethPage() {
 
   return (
     <div className="page-wrapper laserteethpage">
-      <Seo
-        title="Laser Teeth Whitening in Shaikpet, Hyderabad | Simply Smilez Dental"
-        description="Safe, instant laser teeth bleaching and whitening treatments to brighten your smile at Simply Smilez Dental Clinic, Hyderabad."
-        canonicalPath="/services/laser-teeth-whitening"
-      />
       <div className="container py-5 text-left">
     <div className="row">
       <div className="col-lg-8 col-md-12 text-left">
@@ -309,111 +304,35 @@ export default function LaserTeethPage() {
             </div>
           </div>
 
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions About
-            Laser Teeth Whitening</h3>
-          <div className="accordion faq-accordion mb-4" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>What is laser teeth whitening?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Laser teeth whitening is a professional cosmetic dental procedure intended to lighten the colour of
-                  natural teeth and reduce certain types of discoloration.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>Can laser teeth whitening remove all stains?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. Whitening does not guarantee that every type of discoloration will disappear. The result depends
-                  on the cause and depth of the staining.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>How long does laser teeth whitening take?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Treatment time depends on the whitening system used and the patient&apos;s individual needs. The dentist
-                  can explain the expected treatment duration during the consultation.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Can sensitive teeth be professionally whitened?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  People with sensitive teeth should inform their dentist before treatment. The dentist can assess the
-                  cause of sensitivity and determine whether whitening is appropriate.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>Will teeth whitening change the colour of crowns or veneers?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Whitening primarily affects natural teeth. Existing crowns, veneers and other restorations generally
-                  do not whiten in the same way as natural tooth enamel.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>How much does laser teeth whitening cost in Hyderabad?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The cost depends on the whitening treatment, dental condition and treatment plan. A consultation is
-                  recommended for an accurate current cost.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions About Laser Teeth Whitening"
+            faqs={[
+              {
+                question: "What is laser teeth whitening?",
+                answer: "Laser teeth whitening is a professional cosmetic dental procedure intended to lighten the colour of natural teeth and reduce certain types of discoloration."
+              },
+              {
+                question: "Can laser teeth whitening remove all stains?",
+                answer: "No. Whitening does not guarantee that every type of discoloration will disappear. The result depends on the cause and depth of the staining."
+              },
+              {
+                question: "How long does laser teeth whitening take?",
+                answer: "Treatment time depends on the whitening system used and the patient's individual needs. The dentist can explain the expected treatment duration during the consultation."
+              },
+              {
+                question: "Can sensitive teeth be professionally whitened?",
+                answer: "People with sensitive teeth should inform their dentist before treatment. The dentist can assess the cause of sensitivity and determine whether whitening is appropriate."
+              },
+              {
+                question: "Will teeth whitening change the colour of crowns or veneers?",
+                answer: "Whitening primarily affects natural teeth. Existing crowns, veneers and other restorations generally do not whiten in the same way as natural tooth enamel."
+              },
+              {
+                question: "How much does laser teeth whitening cost in Hyderabad?",
+                answer: "The cost depends on the whitening treatment, dental condition and treatment plan. A consultation is recommended for an accurate current cost."
+              }
+            ]}
+          />
 
           <div className="bg-light p-4 rounded text-left border mb-4">
             <h3 className="h4 font-weight-bold text-left mb-3" style={{ color: "#0d3b66" }}>Ready to Discuss Your Dental
@@ -450,10 +369,12 @@ export default function LaserTeethPage() {
 
           <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
             <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-            <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+            <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
                 Hyderabad, 500008</a></p>
-            <p className="mb-2 text-left"><i className="ion-ios-telephone mr-2" /> <a href="tel:+919603338904" className="text-white font-weight-bold">96033 38904</a> / <a href="tel:+917799376656" className="text-white font-weight-bold">77993 76656</a></p>
-            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon - Sat: 10:00am - 9:00pm<br /><span className="pl-4">Sun: 11:00am - 4:00pm</span></p>
+            <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+              <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+            </p>
+            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
           </div>
         </div>
       </div>

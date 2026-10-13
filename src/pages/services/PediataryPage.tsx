@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function PediataryPage() {
   useEffect(() => {
@@ -10,52 +10,32 @@ export default function PediataryPage() {
 
   return (
     <div className="page-wrapper pediatarypage">
-      <Seo
-        title="Pediatric Dentistry in Shaikpet, Hyderabad | Child Dental Clinic"
-        description="Gentle, friendly pediatric dental care and Invisalign First for growing children at Simply Smilez Dental Clinic, Hyderabad."
-        canonicalPath="/services/pediatric-dentistry"
-      />
-      <><section className="hero-wrap hero-wrap-2" style={{ backgroundImage: "url('images/bg_1.webp')" }} data-stellar-background-ratio="0.5">
-    <div className="overlay" />
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <h1 className="mb-2 bread">Pediatric Dentistry in Hyderabad</h1>
-          <p className="breadcrumbs">
-            <span className="mr-2"><Link to="/">Home <i className="ion-ios-arrow-forward" /></Link></span>
-            <span>Pediatric Dentistry <i className="ion-ios-arrow-forward" /></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div className="container py-5 text-left">
+        <div className="row">
+          <div className="col-lg-8 col-md-12 text-left">
+            <div className="about-us text-left">
+              <h1 className="h2 font-weight-bold mb-3 text-left" style={{ color: "#00b7ff" }}>
+                Pediatric Dentistry in Hyderabad | Simply Smilez Dental Clinic
+              </h1>
+              <hr className="short mb-4 ml-0" style={{ marginLeft: "0", width: 60, borderTop: "3px solid #00b7ff" }} />
 
-  
-  <section className="ftco-section">
-    <div className="container">
-      <div className="row">
-        
-        <div className="col-lg-8 col-md-12 text-left">
-          <h1 className="font-weight-bold mb-3 text-left" style={{ color: "#0d3b66", fontSize: "2.2rem" }}>Pediatric Dentistry in
-            Hyderabad</h1>
-          <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Gentle, Preventive Dental Care for
-            Children</h2>
+              <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Gentle, Preventive Dental Care for Children</h2>
 
-          <p className="text-left lead font-weight-normal text-muted mb-4">Pediatric dentistry focuses on the oral health of
-            infants, children, and growing teenagers. At Simply Smilez Dental Clinic in Shaikpet, Hyderabad, pediatric
-            dental care is designed around the changing needs of children&apos;s teeth, gums, bite, and oral development.</p>
+              <p className="lead text-left">Pediatric dentistry focuses on the oral health of
+                infants, children, and growing teenagers. At Simply Smilez Dental Clinic in Shaikpet, Hyderabad, pediatric
+                dental care is designed around the changing needs of children&apos;s teeth, gums, bite, and oral development.</p>
 
-          <p className="text-left">Regular dental visits can help identify tooth decay, developing bite concerns, oral
-            habits, and other dental problems at an early stage. Pediatric dental care also gives parents practical
-            guidance about brushing, fluoride, diet, oral habits, and protecting children&apos;s teeth. The clinic&apos;s
-            pediatric dentistry approach focuses on creating a child-friendly environment and providing preventive
-            guidance for parents.</p>
+              <p className="text-left">Regular dental visits can help identify tooth decay, developing bite concerns, oral
+                habits, and other dental problems at an early stage. Pediatric dental care also gives parents practical
+                guidance about brushing, fluoride, diet, oral habits, and protecting children&apos;s teeth. The clinic&apos;s
+                pediatric dentistry approach focuses on creating a child-friendly environment and providing preventive
+                guidance for parents.</p>
 
-          <div className="my-4 text-left">
-            <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Pediatric Dental Consultation</Link>
-          </div>
+              <div className="my-4 text-left">
+                <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Pediatric Dental Consultation</Link>
+              </div>
 
-          <h2 className="h4 font-weight-bold mt-5 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is Pediatric Dentistry?</h2>
+              <h3 className="h4 font-weight-bold mt-4 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is Pediatric Dentistry?</h3>
           <p className="text-left">Pediatric dentistry is the branch of dentistry focused on children&apos;s oral health and
             dental development. Children&apos;s teeth and jaws continue to develop as they grow, so their dental needs can
             differ from those of adults.</p>
@@ -383,135 +363,39 @@ export default function PediataryPage() {
           </div>
 
           
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions</h3>
-          <div className="accordion faq-accordion mb-5" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>At what age should a child first visit the dentist?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The American Academy of Pediatric Dentistry recommends that children have their first dental visit by
-                  their first birthday or within six months after the first tooth appears. Early visits allow parents to
-                  receive preventive guidance and allow the dental team to monitor the child&apos;s developing oral health.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>How often should children visit the dentist?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The appropriate interval depends on the child&apos;s oral health, cavity risk, dental development, and
-                  treatment needs. Regular examinations allow the dentist to monitor changes and identify problems
-                  early. Your child&apos;s dentist can recommend an appropriate recall schedule based on the individual
-                  situation.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>What is preventive pediatric dentistry?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Preventive pediatric dentistry includes measures intended to maintain children&apos;s oral health and
-                  reduce the risk of dental disease. Depending on the child&apos;s needs, it can include dental examinations,
-                  oral-hygiene instruction, fluoride, sealants, dietary guidance, and advice about oral habits.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Are dental sealants useful for children?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Dental sealants can protect the grooves and pits of certain teeth where food and plaque can
-                  accumulate. They may be particularly useful on susceptible back teeth. The dentist should assess the
-                  child&apos;s teeth and cavity risk before recommending sealants.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>When might a child need a pediatric root canal?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  A primary tooth may require pulp treatment when decay or trauma has affected the pulp and the tooth
-                  needs to be maintained. The appropriate treatment depends on the tooth&apos;s condition, the child&apos;s
-                  development, and how long the tooth is expected to remain in the mouth.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>What are space maintainers?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Space maintainers are dental appliances used in selected cases when a primary tooth is lost
-                  prematurely. They can help preserve space for an unerupted permanent tooth. The need for one depends
-                  on the child&apos;s age, the tooth that was lost, and the developing permanent dentition.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading7">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-                    <span>Does every child need early orthodontic treatment?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse7" className="collapse" aria-labelledby="faqHeading7" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. Early orthodontic treatment is recommended only when an assessment identifies a developing issue
-                  that may benefit from intervention during growth. Some children may simply need observation until they
-                  are older, while others may benefit from interceptive or Phase 1 orthodontic treatment.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions"
+            faqs={[
+              {
+                question: "At what age should a child first visit the dentist?",
+                answer: "The American Academy of Pediatric Dentistry recommends that children have their first dental visit by their first birthday or within six months after the first tooth appears. Early visits allow parents to receive preventive guidance and allow the dental team to monitor the child's developing oral health."
+              },
+              {
+                question: "How often should children visit the dentist?",
+                answer: "The appropriate interval depends on the child's oral health, cavity risk, dental development, and treatment needs. Regular examinations allow the dentist to monitor changes and identify problems early. Your child's dentist can recommend an appropriate recall schedule based on the individual situation."
+              },
+              {
+                question: "What is preventive pediatric dentistry?",
+                answer: "Preventive pediatric dentistry includes measures intended to maintain children's oral health and reduce the risk of dental disease. Depending on the child's needs, it can include dental examinations, oral-hygiene instruction, fluoride, sealants, dietary guidance, and advice about oral habits."
+              },
+              {
+                question: "Are dental sealants useful for children?",
+                answer: "Dental sealants can protect the grooves and pits of certain teeth where food and plaque can accumulate. They may be particularly useful on susceptible back teeth. The dentist should assess the child's teeth and cavity risk before recommending sealants."
+              },
+              {
+                question: "When might a child need a pediatric root canal?",
+                answer: "A primary tooth may require pulp treatment when decay or trauma has affected the pulp and the tooth needs to be maintained. The appropriate treatment depends on the tooth's condition, the child's development, and how long the tooth is expected to remain in the mouth."
+              },
+              {
+                question: "What are space maintainers?",
+                answer: "Space maintainers are dental appliances used in selected cases when a primary tooth is lost prematurely. They can help preserve space for an unerupted permanent tooth. The need for one depends on the child's age, the tooth that was lost, and the developing permanent dentition."
+              },
+              {
+                question: "Does every child need early orthodontic treatment?",
+                answer: "No. Early orthodontic treatment is recommended only when an assessment identifies a developing issue that may benefit from intervention during growth. Some children may simply need observation until they are older, while others may benefit from interceptive or Phase 1 orthodontic treatment."
+              }
+            ]}
+          />
 
           
           <div className="bg-light p-4 rounded text-left border mb-4">
@@ -531,35 +415,34 @@ export default function PediataryPage() {
               <Link to="/contact" className="btn btn-primary px-4 py-2">Book Consultation</Link>
             </div>
           </div>
-        </div>
-
-        
-        <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
-          <div className="sticky-top" style={{ top: 100 }}>
-            <div className="card border-0 shadow-sm mb-4">
-              <img src="/images/pedia2.webp" className="card-img-top rounded-top" alt="Pediatric Dentistry in Hyderabad" />
-              <div className="card-body text-left p-4">
-                <h4 className="card-title font-weight-bold mb-2 text-left">Pediatric Dentistry</h4>
-                <p className="card-text text-muted text-left">Gentle, preventive dental care designed for children&apos;s healthy
-                  smiles.</p>
-                <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
-              </div>
             </div>
+          </div>
 
-            <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
-              <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-              <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road,
-                  Shaikpet, Hyderabad - 500008</a></p>
-              <p className="mb-2 text-left"><i className="icon-phone mr-2" /> <a href="tel:+919603338904" className="text-white">96033 38904</a> / <a href="tel:+917799376656" className="text-white">77993 76656</a>
-              </p>
-              <p className="mb-2 text-left"><i className="icon-envelope mr-2" /> info.invisaligndental@gmail.com</p>
-              <p className="mb-0 text-left"><i className="icon-clock-o mr-2" /> Mon - Sat: 10:00am - 9:00pm | Sunday: 11:00am - 4:00pm</p>
+          <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
+            <div className="sticky-top" style={{ top: 100 }}>
+              <div className="card border-0 shadow-sm mb-4">
+                <img src="/images/pedia2.webp" className="card-img-top rounded-top" alt="Pediatric Dentistry in Hyderabad" />
+                <div className="card-body text-left p-4">
+                  <h4 className="card-title font-weight-bold mb-2 text-left">Pediatric Dentistry</h4>
+                  <p className="card-text text-muted text-left">Gentle, preventive dental care designed for children&apos;s healthy
+                    smiles.</p>
+                  <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
+                </div>
+              </div>
+
+              <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
+                <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
+                <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+                    Hyderabad, 500008</a></p>
+                <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+                  <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+                </p>
+                <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section></>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function DentalImplantPage() {
   useEffect(() => {
@@ -10,51 +10,31 @@ export default function DentalImplantPage() {
 
   return (
     <div className="page-wrapper dentalimplantpage">
-      <Seo
-        title="Dental Implants in Shaikpet, Hyderabad | Permanent Tooth Replacement"
-        description="Permanent, natural-looking titanium dental implants to restore missing teeth and chewing function in Shaikpet, Hyderabad."
-        canonicalPath="/services/dental-implants"
-      />
-      <><section className="hero-wrap hero-wrap-2" style={{ backgroundImage: "url('images/bg_1.webp')" }} data-stellar-background-ratio="0.5">
-    <div className="overlay" />
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <h1 className="mb-2 bread">Dental Implants in Hyderabad</h1>
-          <p className="breadcrumbs">
-            <span className="mr-2"><Link to="/">Home <i className="ion-ios-arrow-forward" /></Link></span>
-            <span>Dental Implants <i className="ion-ios-arrow-forward" /></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div className="container py-5 text-left">
+        <div className="row">
+          <div className="col-lg-8 col-md-12 text-left">
+            <div className="about-us text-left">
+              <h1 className="h2 font-weight-bold mb-3 text-left" style={{ color: "#00b7ff" }}>
+                Dental Implants in Hyderabad | Simply Smilez Dental Clinic
+              </h1>
+              <hr className="short mb-4 ml-0" style={{ marginLeft: "0", width: 60, borderTop: "3px solid #00b7ff" }} />
 
-  
-  <section className="ftco-section">
-    <div className="container">
-      <div className="row">
-        
-        <div className="col-lg-8 col-md-12 text-left">
-          <h1 className="font-weight-bold mb-3 text-left" style={{ color: "#0d3b66", fontSize: "2.2rem" }}>Dental Implants in
-            Hyderabad</h1>
-          <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Replace Missing Teeth With Dental
-            Implants in Hyderabad</h2>
+              <h2 className="h4 font-weight-bold mb-3 text-left" style={{ color: "#0d3b66" }}>Replace Missing Teeth With Dental Implants in Hyderabad</h2>
 
-          <p className="text-left lead font-weight-normal text-muted mb-4">Dental implants are a fixed tooth-replacement
-            option for people with one or more missing teeth. An implant is placed in the jawbone and can support a
-            dental crown, bridge, or denture. The right treatment depends on your oral health, gum condition, available
-            bone, and restoration needs.</p>
+              <p className="lead text-left">Dental implants are a fixed tooth-replacement
+                option for people with one or more missing teeth. An implant is placed in the jawbone and can support a
+                dental crown, bridge, or denture. The right treatment depends on your oral health, gum condition, available
+                bone, and restoration needs.</p>
 
-          <p className="text-left">Simply Smilez Dental Clinic provides dental implant treatment in Shaikpet, Hyderabad,
-            with patients also welcomed from nearby areas including Manikonda, Tolichowki, Jubilee Hills, Banjara Hills,
-            Gachibowli, Narsingi, and surrounding localities.</p>
+              <p className="text-left">Simply Smilez Dental Clinic provides dental implant treatment in Shaikpet, Hyderabad,
+                with patients also welcomed from nearby areas including Manikonda, Tolichowki, Jubilee Hills, Banjara Hills,
+                Gachibowli, Narsingi, and surrounding localities.</p>
 
-          <div className="my-4 text-left">
-            <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Dental Implant Consultation</Link>
-          </div>
+              <div className="my-4 text-left">
+                <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Dental Implant Consultation</Link>
+              </div>
 
-          <h2 className="h4 font-weight-bold mt-5 mb-3 text-left" style={{ color: "#0d3b66" }}>What Are Dental Implants?</h2>
+              <h3 className="h4 font-weight-bold mt-4 mb-3 text-left" style={{ color: "#0d3b66" }}>What Are Dental Implants?</h3>
           <p className="text-left">A dental implant is an artificial tooth root placed into the jawbone to provide support
             for a replacement tooth. Depending on the situation, an implant can support a single dental crown, bridge,
             or denture.</p>
@@ -357,138 +337,39 @@ export default function DentalImplantPage() {
           </div>
 
           
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions</h3>
-          <div className="accordion faq-accordion mb-5" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>What are dental implants?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Dental implants are artificial tooth roots placed into the jawbone to support a crown, bridge, or
-                  denture. They can be used to replace one or multiple missing teeth. Whether implants are appropriate
-                  depends on factors such as bone support, gum health, oral hygiene, general health, and the planned
-                  restoration.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>How long does dental implant treatment take?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The timeline varies according to the patient&apos;s condition and treatment plan. Implant treatment may
-                  involve assessment, implant placement, healing, and restoration. If bone grafting or other procedures
-                  are required, treatment may take longer. Your dentist can provide a more specific timeline after
-                  examining your teeth and jawbone.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>Can one missing tooth be replaced with an implant?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Yes. A single missing tooth can often be replaced using an implant-supported crown. One potential
-                  advantage is that the replacement does not require preparation of neighboring healthy teeth for bridge
-                  support. Suitability depends on the condition of the implant site and surrounding oral tissues.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Do I need a bone graft before a dental implant?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Not necessarily. A bone graft may be recommended when there is not enough bone to provide suitable
-                  support for an implant. The need for grafting depends on the individual&apos;s jawbone and planned implant
-                  position. Dental imaging and clinical assessment help determine whether additional bone treatment is
-                  required.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>Are dental implants permanent?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Dental implants are intended as long-term tooth-replacement solutions, but they are not
-                  maintenance-free. Implant components can loosen or wear over time, and the tissues around implants can
-                  develop problems. Regular oral hygiene, professional monitoring, and appropriate maintenance are
-                  important for long-term implant health.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>What does dental implant treatment cost in Hyderabad?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  There is no single price that applies to every implant case. Cost can depend on the number of
-                  implants, restoration type, imaging, bone grafting, complexity, and laboratory requirements. A
-                  consultation is the appropriate way to determine the treatment needed and its associated cost.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading7">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-                    <span>Where can I get dental implants in Shaikpet?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse7" className="collapse" aria-labelledby="faqHeading7" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Simply Smilez Dental Clinic provides dental implant treatment at P.V. Reddy Complex, Dwaraka Nagar
-                  Colony, O.U. Colony Road, Shaikpet, Hyderabad. The clinic also welcomes patients from Manikonda,
-                  Tolichowki, Jubilee Hills, Banjara Hills, Gachibowli, Narsingi, and nearby areas.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions"
+            faqs={[
+              {
+                question: "What are dental implants?",
+                answer: "Dental implants are artificial tooth roots placed into the jawbone to support a crown, bridge, or denture. They can be used to replace one or multiple missing teeth. Whether implants are appropriate depends on factors such as bone support, gum health, oral hygiene, general health, and the planned restoration."
+              },
+              {
+                question: "How long does dental implant treatment take?",
+                answer: "The timeline varies according to the patient's condition and treatment plan. Implant treatment may involve assessment, implant placement, healing, and restoration. If bone grafting or other procedures are required, treatment may take longer. Your dentist can provide a more specific timeline after examining your teeth and jawbone."
+              },
+              {
+                question: "Can one missing tooth be replaced with an implant?",
+                answer: "Yes. A single missing tooth can often be replaced using an implant-supported crown. One potential advantage is that the replacement does not require preparation of neighboring healthy teeth for bridge support. Suitability depends on the condition of the implant site and surrounding oral tissues."
+              },
+              {
+                question: "Do I need a bone graft before a dental implant?",
+                answer: "Not necessarily. A bone graft may be recommended when there is not enough bone to provide suitable support for an implant. The need for grafting depends on the individual's jawbone and planned implant position. Dental imaging and clinical assessment help determine whether additional bone treatment is required."
+              },
+              {
+                question: "Are dental implants permanent?",
+                answer: "Dental implants are intended as long-term tooth-replacement solutions, but they are not maintenance-free. Implant components can loosen or wear over time, and the tissues around implants can develop problems. Regular oral hygiene, professional monitoring, and appropriate maintenance are important for long-term implant health."
+              },
+              {
+                question: "What does dental implant treatment cost in Hyderabad?",
+                answer: "There is no single price that applies to every implant case. Cost can depend on the number of implants, restoration type, imaging, bone grafting, complexity, and laboratory requirements. A consultation is the appropriate way to determine the treatment needed and its associated cost."
+              },
+              {
+                question: "Where can I get dental implants in Shaikpet?",
+                answer: "Simply Smilez Dental Clinic provides dental implant treatment at P.V. Reddy Complex, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet, Hyderabad. The clinic also welcomes patients from Manikonda, Tolichowki, Jubilee Hills, Banjara Hills, Gachibowli, Narsingi, and nearby areas."
+              }
+            ]}
+          />
 
           
           <div className="bg-light p-4 rounded text-left border mb-4">
@@ -508,35 +389,34 @@ export default function DentalImplantPage() {
               <Link to="/contact" className="btn btn-primary px-4 py-2">Book Consultation</Link>
             </div>
           </div>
-        </div>
-
-        
-        <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
-          <div className="sticky-top" style={{ top: 100 }}>
-            <div className="card border-0 shadow-sm mb-4">
-              <img src="/images/dentalimp.webp" className="card-img-top rounded-top" alt="Dental Implants in Hyderabad" />
-              <div className="card-body text-left p-4">
-                <h4 className="card-title font-weight-bold mb-2 text-left">Dental Implants</h4>
-                <p className="card-text text-muted text-left">Restore your smile and chewing function with fixed,
-                  natural-looking dental implants.</p>
-                <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
-              </div>
             </div>
+          </div>
 
-            <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
-              <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-              <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road,
-                  Shaikpet, Hyderabad - 500008</a></p>
-              <p className="mb-2 text-left"><i className="icon-phone mr-2" /> <a href="tel:+919603338904" className="text-white">96033 38904</a> / <a href="tel:+917799376656" className="text-white">77993 76656</a>
-              </p>
-              <p className="mb-2 text-left"><i className="icon-envelope mr-2" /> info.invisaligndental@gmail.com</p>
-              <p className="mb-0 text-left"><i className="icon-clock-o mr-2" /> Mon - Sat: 10:00am - 9:00pm | Sunday: 11:00am - 4:00pm</p>
+          <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
+            <div className="sticky-top" style={{ top: 100 }}>
+              <div className="card border-0 shadow-sm mb-4">
+                <img src="/images/dentalimp.webp" className="card-img-top rounded-top" alt="Dental Implants in Hyderabad" />
+                <div className="card-body text-left p-4">
+                  <h4 className="card-title font-weight-bold mb-2 text-left">Dental Implants</h4>
+                  <p className="card-text text-muted text-left">Restore your smile and chewing function with fixed,
+                    natural-looking dental implants.</p>
+                  <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
+                </div>
+              </div>
+
+              <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
+                <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
+                <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+                    Hyderabad, 500008</a></p>
+                <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+                  <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+                </p>
+                <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section></>
     </div>
   );
 }

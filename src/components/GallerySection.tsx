@@ -1,58 +1,141 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { galleryImages, GalleryItem } from '../data';
 
 export default function GallerySection() {
   const [activeImg, setActiveImg] = useState<string | null>(null);
+  const [isInteracting, setIsInteracting] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Show only 6 images in homepage gallery section
-  const displayedImages = galleryImages.slice(0, 6);
+  const displayedImages = galleryImages;
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 320;
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Automatic smooth scrolling for mobile view
+  useEffect(() => {
+    if (isInteracting) return;
+
+    // Only run interval on mobile view
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      const step = 260;
+
+      if (container.scrollLeft >= maxScrollLeft - 20) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isInteracting]);
 
   return (
-    <section className="album bg-light py-5" id="gallery">
+    <section
+      className="album bg-light py-5 gallery-section-wrapper"
+      id="gallery"
+      onMouseEnter={() => setIsInteracting(true)}
+      onMouseLeave={() => setIsInteracting(false)}
+      onTouchStart={() => setIsInteracting(true)}
+      onTouchEnd={() => setIsInteracting(false)}
+    >
       <div className="container">
-        <div className="col-md-12 text-center heading-section mb-4">
-          <h2 className="pb-2 pt-2" id="doctorsour" style={{ fontSize: '32px', fontWeight: 700, color: '#0b2545' }}>
-            Our Gallery
-          </h2>
-          <p className="text-muted mx-auto" style={{ maxWidth: '600px', fontSize: '15px' }}>
-            Take a look inside Simply Smilez Dental Clinic &ndash; modern operatories, advanced dental technology, and hygienic patient care.
-          </p>
+        <div className="d-flex flex-wrap align-items-end justify-content-between mb-4">
+          <div className="heading-section text-center text-md-left mb-3 mb-md-0 w-100 w-md-auto">
+            <h2 className="pb-1 pt-1" id="doctorsour" style={{ fontSize: '32px', fontWeight: 700, color: '#0b2545', margin: 0 }}>
+              Our Gallery
+            </h2>
+            <p className="text-muted" style={{ maxWidth: '600px', fontSize: '15px', margin: '4px auto 0 auto' }}>
+              Take a look inside Simply Smilez Dental Clinic &ndash; modern operatories, advanced dental technology, and hygienic patient care.
+            </p>
+          </div>
+
+          {/* Navigation Controls (Mobile Slider only) */}
+          {displayedImages.length > 0 && (
+            <div className="gallery-nav-arrows d-flex d-md-none align-items-center mx-auto mt-2" style={{ gap: 8 }}>
+              <button
+                type="button"
+                onClick={() => scroll('left')}
+                className="gallery-scroll-arrow"
+                aria-label="Previous image"
+              >
+                <i className="fa-solid fa-chevron-left" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scroll('right')}
+                className="gallery-scroll-arrow"
+                aria-label="Next image"
+              >
+                <i className="fa-solid fa-chevron-right" />
+              </button>
+            </div>
+          )}
         </div>
 
         {displayedImages.length > 0 ? (
           <>
-            <div className="row g-3 justify-content-center">
-              {displayedImages.map((item: GalleryItem) => (
-                <div key={item.id} className="col-6 col-md-4 col-lg-4 mb-4">
+            {/* 1. DESKTOP VIEW: Normal clean responsive grid (6 featured images) */}
+            <div className="row g-3 d-none d-md-flex justify-content-center">
+              {displayedImages.slice(0, 6).map((item: GalleryItem) => (
+                <div key={item.id} className="col-md-4 col-lg-4 mb-4">
                   <div
-                    className="card shadow-sm h-100 border-0"
-                    style={{
-                      cursor: 'pointer',
-                      overflow: 'hidden',
-                      borderRadius: '12px',
-                      transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-                    }}
+                    className="card shadow-sm h-100 border-0 gallery-card-item desktop-grid-card"
                     onClick={() => setActiveImg(item.src)}
                   >
                     <img
                       src={item.src}
                       alt={item.alt}
                       loading="lazy"
-                      style={{
-                        width: '100%',
-                        height: '240px',
-                        objectFit: 'cover',
-                        transition: 'transform 0.4s ease'
-                      }}
                     />
+                    <div className="gallery-card-overlay">
+                      <i className="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 2. MOBILE VIEW: Smooth auto-scroller */}
+            <div
+              ref={scrollContainerRef}
+              className="gallery-horizontal-scroller d-flex d-md-none"
+            >
+              {displayedImages.map((item: GalleryItem) => (
+                <div key={item.id} className="gallery-scroll-item">
+                  <div
+                    className="card shadow-sm h-100 border-0 gallery-card-item"
+                    onClick={() => setActiveImg(item.src)}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                    />
+                    <div className="gallery-card-overlay">
+                      <i className="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* See More Button */}
-            <div className="text-center mt-3">
+            <div className="text-center mt-3 mt-md-4">
               <Link
                 to="/gallery"
                 className="btn btn-primary px-4 py-2 font-weight-bold"
@@ -62,7 +145,7 @@ export default function GallerySection() {
                   fontSize: '15px'
                 }}
               >
-                See More <i className="fa-solid fa-arrow-right ml-2" style={{ marginLeft: '8px' }}></i>
+                View Full Gallery <i className="fa-solid fa-arrow-right ml-2" style={{ marginLeft: '8px' }}></i>
               </Link>
             </div>
           </>

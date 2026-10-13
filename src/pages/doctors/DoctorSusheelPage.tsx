@@ -1,4 +1,3 @@
-import Seo from '../../components/Seo';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,11 +59,6 @@ export default function DoctorSusheelPage() {
 
   return (
     <div className="page-wrapper doctorsusheelpage">
-      <Seo
-        title="Dr. Susheel Kumar MDS | Pediatric Dentist & Implantologist Hyderabad"
-        description="Profile and qualifications of Dr. Susheel Kumar MDS, specialist in pediatric dentistry and dental implants at Simply Smilez Dental Clinic, Hyderabad."
-        canonicalPath="/doctor/dr-susheel-kumar"
-      />
 
       {/* Doctor Hero Header */}
       <div className="doctor-hero-section">
@@ -128,11 +122,11 @@ export default function DoctorSusheelPage() {
 
                 {/* Direct Action Buttons */}
                 <div className="cta-btn-group">
-                  <a href="tel:+919603338904" className="btn-primary-custom">
+                  <a href="tel:+917799376656" className="btn-primary-custom">
                     <i className="fa-solid fa-phone" /> Call for Appointment
                   </a>
                   <a
-                    href="https://wa.me/919603338904?text=Hello%20Dr.%20Susheel%20Kumar,%20I%20would%20like%20to%20book%20a%20consultation"
+                    href="https://wa.me/917799376656?text=Hello%20Dr.%20Susheel%20Kumar,%20I%20would%20like%20to%20book%20a%20consultation"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp-custom"
@@ -309,10 +303,10 @@ export default function DoctorSusheelPage() {
                       Direct Phone Line
                     </div>
                     <div style={{ fontSize: 18, fontWeight: "800", color: "#0284c7", marginTop: 4 }}>
-                      <a href="tel:+919603338904" style={{ color: "#0284c7", textDecoration: "none" }}>+91 96033 38904</a>
+                      <a href="tel:+917799376656" style={{ color: "#0284c7", textDecoration: "none" }}>+91 77993 76656</a>
                     </div>
                     <div style={{ fontSize: 16, fontWeight: "700", color: "#0284c7", marginTop: 2 }}>
-                      <a href="tel:+917799376656" style={{ color: "#0284c7", textDecoration: "none" }}>+91 77993 76656</a>
+                      <a href="tel:+919603338904" style={{ color: "#0284c7", textDecoration: "none" }}>+91 96033 38904</a>
                     </div>
                   </div>
 
@@ -325,7 +319,7 @@ export default function DoctorSusheelPage() {
                   </div>
 
                   <a
-                    href="https://wa.me/919603338904?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Susheel%20Kumar."
+                    href="https://wa.me/917799376656?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Susheel%20Kumar."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp-custom w-100 justify-content-center mb-2"
@@ -334,7 +328,7 @@ export default function DoctorSusheelPage() {
                   </a>
 
                   <a
-                    href="tel:+919603338904"
+                    href="tel:+917799376656"
                     className="btn-primary-custom w-100 justify-content-center"
                   >
                     <i className="fa-solid fa-phone" /> Call Clinic Now

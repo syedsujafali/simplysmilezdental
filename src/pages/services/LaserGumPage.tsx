@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function LaserGumPage() {
   useEffect(() => {
@@ -10,44 +10,29 @@ export default function LaserGumPage() {
 
   return (
     <div className="page-wrapper lasergumpage">
-      <Seo
-        title="Laser Gum Treatment in Shaikpet, Hyderabad | Periodontal Care"
-        description="Advanced minimally invasive laser gum therapy for bleeding gums, periodontitis and cosmetic gum recontouring in Hyderabad."
-        canonicalPath="/services/laser-gum-surgery"
-      />
-      <><section className="hero-wrap hero-wrap-2" style={{ backgroundImage: "url('images/bg_1.webp')" }} data-stellar-background-ratio="0.5">
-    <div className="overlay" />
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <h1 className="mb-2 bread">Laser Gum Treatment in Hyderabad</h1>
-          <p className="breadcrumbs">
-            <span className="mr-2"><Link to="/">Home <i className="ion-ios-arrow-forward" /></Link></span>
-            <span>Laser Gum Treatment <i className="ion-ios-arrow-forward" /></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div className="container py-5 text-left">
+        <div className="row">
+          <div className="col-lg-8 col-md-12 text-left">
+            <div className="about-us text-left">
+              <h1 className="h2 font-weight-bold mb-3 text-left" style={{ color: "#00b7ff" }}>
+                Laser Gum Treatment in Hyderabad | Simply Smilez Dental Clinic
+              </h1>
+              <hr className="short mb-4 ml-0" style={{ marginLeft: "0", width: 60, borderTop: "3px solid #00b7ff" }} />
 
-  
-  <section className="ftco-section">
-    <div className="container">
-      <div className="row">
-        
-        <div className="col-lg-8 col-md-12 text-left">
-          <h1 className="font-weight-bold mb-3 text-left" style={{ color: "#0d3b66", fontSize: "2.2rem" }}>Laser Gum Treatment in
-            Hyderabad</h1>
-          <p className="text-left lead font-weight-normal text-muted mb-4">Healthy gums are an important part of maintaining
-            strong teeth and a healthy smile. Gum problems can develop when plaque and tartar accumulate around the
-            teeth, leading to inflammation, bleeding, bad breath, gum infection, and periodontal disease.</p>
+              <p className="lead text-left">Healthy gums are an important part of maintaining
+                strong teeth and a healthy smile. Gum problems can develop when plaque and tartar accumulate around the
+                teeth, leading to inflammation, bleeding, bad breath, gum infection, and periodontal disease.</p>
 
-          <p className="text-left">At Simply Smilez Dental Clinic in Shaikpet, Hyderabad, we provide comprehensive gum care
-            and laser-assisted gum treatment for patients who require advanced periodontal care. Our dental team
-            evaluates your oral health and recommends a suitable treatment based on the condition of your gums and
-            supporting tissues.</p>
+              <p className="text-left">At Simply Smilez Dental Clinic in Shaikpet, Hyderabad, we provide comprehensive gum care
+                and laser-assisted gum treatment for patients who require advanced periodontal care. Our dental team
+                evaluates your oral health and recommends a suitable treatment based on the condition of your gums and
+                supporting tissues.</p>
 
-          <h2 className="h4 font-weight-bold mt-5 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is Laser Gum Treatment?</h2>
+              <div className="my-4 text-left">
+                <Link to="/contact" className="btn btn-primary px-4 py-2">Book a Gum Consultation</Link>
+              </div>
+
+              <h3 className="h4 font-weight-bold mt-4 mb-3 text-left" style={{ color: "#0d3b66" }}>What Is Laser Gum Treatment?</h3>
           <p className="text-left">Laser gum treatment is an advanced dental procedure that uses focused laser energy to
             treat certain gum and periodontal conditions. Depending on the patient&apos;s dental condition, laser technology
             may be used to target affected gum tissue and assist with periodontal treatment.</p>
@@ -307,112 +292,35 @@ export default function LaserGumPage() {
           </div>
 
           
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions</h3>
-          <div className="accordion faq-accordion mb-5" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>What is laser gum treatment?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Laser gum treatment uses focused laser technology as part of the treatment of certain gum and
-                  periodontal conditions. The procedure is recommended only when clinically appropriate.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>Is laser gum treatment suitable for everyone?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. The appropriate treatment depends on the patient&apos;s gum condition, oral health, and treatment
-                  requirements. A dental examination is recommended before deciding on laser treatment.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>Can laser treatment treat gum disease?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Laser-assisted treatment may be used as part of periodontal disease management in selected cases. Your
-                  dentist will evaluate your gums and recommend the appropriate treatment.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>Do I need teeth cleaning even after gum treatment?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Yes. Regular professional cleaning and good daily oral hygiene remain important for maintaining
-                  healthy gums and preventing plaque and tartar buildup.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>What are the signs of gum disease?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Common signs include bleeding gums, swelling, redness, gum tenderness, persistent bad breath, gum
-                  recession, plaque or tartar buildup, and loose teeth. If you experience these symptoms, a dental
-                  examination is recommended.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading6">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                    <span>Where can I get laser gum treatment in Hyderabad?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse6" className="collapse" aria-labelledby="faqHeading6" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Simply Smilez Dental Clinic provides laser gum treatment and comprehensive gum care in Shaikpet,
-                  Hyderabad, serving patients from Manikonda, Tolichowki, Jubilee Hills, Banjara Hills, Gachibowli,
-                  Narsingi, and surrounding areas.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions"
+            faqs={[
+              {
+                question: "What is laser gum treatment?",
+                answer: "Laser gum treatment uses focused laser technology as part of the treatment of certain gum and periodontal conditions. The procedure is recommended only when clinically appropriate."
+              },
+              {
+                question: "Is laser gum treatment suitable for everyone?",
+                answer: "No. The appropriate treatment depends on the patient's gum condition, oral health, and treatment requirements. A dental examination is recommended before deciding on laser treatment."
+              },
+              {
+                question: "Can laser treatment treat gum disease?",
+                answer: "Laser-assisted treatment may be used as part of periodontal disease management in selected cases. Your dentist will evaluate your gums and recommend the appropriate treatment."
+              },
+              {
+                question: "Do I need teeth cleaning even after gum treatment?",
+                answer: "Yes. Regular professional cleaning and good daily oral hygiene remain important for maintaining healthy gums and preventing plaque and tartar buildup."
+              },
+              {
+                question: "What are the signs of gum disease?",
+                answer: "Common signs include bleeding gums, swelling, redness, gum tenderness, persistent bad breath, gum recession, plaque or tartar buildup, and loose teeth. If you experience these symptoms, a dental examination is recommended."
+              },
+              {
+                question: "Where can I get laser gum treatment in Hyderabad?",
+                answer: "Simply Smilez Dental Clinic provides laser gum treatment and comprehensive gum care in Shaikpet, Hyderabad, serving patients from Manikonda, Tolichowki, Jubilee Hills, Banjara Hills, Gachibowli, Narsingi, and surrounding areas."
+              }
+            ]}
+          />
 
           
           <div className="bg-light p-4 rounded text-left border mb-4">
@@ -432,35 +340,34 @@ export default function LaserGumPage() {
               <Link to="/contact" className="btn btn-primary px-4 py-2">Book Consultation</Link>
             </div>
           </div>
-        </div>
-
-        
-        <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
-          <div className="sticky-top" style={{ top: 100 }}>
-            <div className="card border-0 shadow-sm mb-4">
-              <img src="/images/lasergum.webp" className="card-img-top rounded-top" alt="Laser Gum Treatment in Hyderabad" />
-              <div className="card-body text-left p-4">
-                <h4 className="card-title font-weight-bold mb-2 text-left">Laser Gum Therapy</h4>
-                <p className="card-text text-muted text-left">Advanced laser-assisted periodontal care for healthy gums and
-                  teeth.</p>
-                <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
-              </div>
             </div>
+          </div>
 
-            <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
-              <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-              <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road,
-                  Shaikpet, Hyderabad - 500008</a></p>
-              <p className="mb-2 text-left"><i className="icon-phone mr-2" /> <a href="tel:+919603338904" className="text-white">96033 38904</a> / <a href="tel:+917799376656" className="text-white">77993 76656</a>
-              </p>
-              <p className="mb-2 text-left"><i className="icon-envelope mr-2" /> info.invisaligndental@gmail.com</p>
-              <p className="mb-0 text-left"><i className="icon-clock-o mr-2" /> Mon - Sat: 10:00am - 9:00pm | Sunday: 11:00am - 4:00pm</p>
+          <div className="col-lg-4 col-md-12 mt-4 mt-lg-0 text-left">
+            <div className="sticky-top" style={{ top: 100 }}>
+              <div className="card border-0 shadow-sm mb-4">
+                <img src="/images/lasergum.webp" className="card-img-top rounded-top" alt="Laser Gum Treatment in Hyderabad" />
+                <div className="card-body text-left p-4">
+                  <h4 className="card-title font-weight-bold mb-2 text-left">Laser Gum Therapy</h4>
+                  <p className="card-text text-muted text-left">Advanced laser-assisted periodontal care for healthy gums and
+                    teeth.</p>
+                  <Link to="/contact" className="btn btn-primary btn-block">Book Consultation</Link>
+                </div>
+              </div>
+
+              <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
+                <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
+                <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+                    Hyderabad, 500008</a></p>
+                <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+                  <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+                </p>
+                <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section></>
     </div>
   );
 }

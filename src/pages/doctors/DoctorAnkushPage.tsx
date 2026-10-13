@@ -1,4 +1,3 @@
-import Seo from '../../components/Seo';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,11 +59,6 @@ export default function DoctorAnkushPage() {
 
   return (
     <div className="page-wrapper doctorankushpage">
-      <Seo
-        title="Dr. Ankush Kumar MDS | Orthodontist & Invisalign Provider Hyderabad"
-        description="Profile and qualifications of Dr. Ankush Kumar MDS, Orthodontist and Certified Invisalign Provider at Simply Smilez Dental Clinic, Hyderabad."
-        canonicalPath="/doctor/dr-ankush-kumar"
-      />
 
       {/* Doctor Hero Header */}
       <div className="doctor-hero-section">

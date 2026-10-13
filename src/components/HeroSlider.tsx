@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Slide {
   bg: string;
@@ -11,7 +12,7 @@ const slides: Slide[] = [
     bg: '/images/banner1.jpeg',
     title: (
       <>
-        dentistry,  <span>designed around you</span>
+        Dentistry,  <span>designed around you.</span>
       </>
     ),
     subheading: 'Comprehensive, painless dental care in Shaikpet / Manikonda, Hyderabad.'
@@ -69,6 +70,15 @@ export default function HeroSlider() {
                 <p className="subheading text-white" style={{ fontSize: '18px', fontWeight: 400 }}>
                   {slide.subheading}
                 </p>
+                <div className="hero-cta-group mt-4">
+                  <Link
+                    to="/contact"
+                    className="hero-btn-appointment"
+                  >
+                    <i className="fa-regular fa-calendar-check"></i>
+                    <span>Book Appointment</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

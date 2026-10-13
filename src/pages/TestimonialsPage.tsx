@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GoogleReviewsSection, { GOOGLE_REVIEWS_URL } from '../components/GoogleReviewsSection';
@@ -11,11 +10,6 @@ export default function TestimonialsPage() {
 
   return (
     <div className="page-wrapper testimonialspage">
-      <Seo
-        title="Patient Testimonials & Reviews | Simply Smilez Dental Clinic Hyderabad"
-        description="Read Google reviews and testimonials from patients who visited Simply Smilez Dental Clinic in Shaikpet, Hyderabad for dental treatments."
-        canonicalPath="/testimonials"
-      />
 
       {/* Hero Header */}
       <section className="doctor-hero-section py-4" style={{ background: '#f0f9ff' }}>

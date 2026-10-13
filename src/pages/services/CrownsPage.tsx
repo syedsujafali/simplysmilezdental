@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function CrownsPage() {
   useEffect(() => {
@@ -10,11 +10,6 @@ export default function CrownsPage() {
 
   return (
     <div className="page-wrapper crownspage">
-      <Seo
-        title="Dental Crowns in Shaikpet, Hyderabad | Ceramic & Zirconia Crowns"
-        description="High-strength ceramic and zirconia dental crowns to protect damaged teeth and restore biting strength in Shaikpet, Hyderabad."
-        canonicalPath="/services/crowns"
-      />
       <div className="container py-5 text-left">
     <div className="row">
       <div className="col-lg-8 col-md-12 text-left">
@@ -310,95 +305,31 @@ export default function CrownsPage() {
             </div>
           </div>
 
-          <h3 className="h4 font-weight-bold mt-5 mb-4 text-left" style={{ color: "#0d3b66" }}>Frequently Asked Questions About
-            Dental Crowns</h3>
-          <div className="accordion faq-accordion mb-4" id="faqAccordion">
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading1">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <span>What is a dental crown?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse1" className="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  A dental crown is a custom restoration that covers a tooth above the gum line to restore its shape,
-                  function and, where appropriate, appearance.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading2">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                    <span>Does every damaged tooth need a crown?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse2" className="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  No. The appropriate treatment depends on the extent of damage and the amount of healthy tooth
-                  structure remaining. A filling, inlay, onlay or another restoration may be suitable in some cases.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading3">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                    <span>Are zirconia crowns available?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse3" className="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  Zirconia is a ceramic material that can be used to make dental crowns. Your dentist can determine
-                  whether a zirconia crown is suitable for your particular tooth.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading4">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                    <span>How many appointments are needed for a dental crown?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse4" className="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The number of appointments depends on the condition of the tooth, the type of crown and any additional
-                  treatment required.
-                </div>
-              </div>
-            </div>
-
-            <div className="card mb-3 border">
-              <div className="card-header bg-white p-0" id="faqHeading5">
-                <h5 className="mb-0">
-                  <button className="btn btn-link text-left collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                    <span>How much does a dental crown cost in Hyderabad?</span>
-                    <i className="fas fa-chevron-down faq-icon" />
-                  </button>
-                </h5>
-              </div>
-              <div id="faqCollapse5" className="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                <div className="card-body text-left">
-                  The cost depends on the type of crown, tooth being treated, preparation required and any additional
-                  dental treatment needed. A dental examination is required to determine the appropriate treatment and
-                  current cost.
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceFaq
+            title="Frequently Asked Questions About Dental Crowns"
+            faqs={[
+              {
+                question: "What is a dental crown?",
+                answer: "A dental crown is a custom restoration that covers a tooth above the gum line to restore its shape, function and, where appropriate, appearance."
+              },
+              {
+                question: "Does every damaged tooth need a crown?",
+                answer: "No. The appropriate treatment depends on the extent of damage and the amount of healthy tooth structure remaining. A filling, inlay, onlay or another restoration may be suitable in some cases."
+              },
+              {
+                question: "Are zirconia crowns available?",
+                answer: "Zirconia is a ceramic material that can be used to make dental crowns. Your dentist can determine whether a zirconia crown is suitable for your particular tooth."
+              },
+              {
+                question: "How many appointments are needed for a dental crown?",
+                answer: "The number of appointments depends on the condition of the tooth, the type of crown and any additional treatment required."
+              },
+              {
+                question: "How much does a dental crown cost in Hyderabad?",
+                answer: "The cost depends on the type of crown, tooth being treated, preparation required and any additional dental treatment needed. A dental examination is required to determine the appropriate treatment and current cost."
+              }
+            ]}
+          />
 
           <div className="bg-light p-4 rounded text-left border mb-4">
             <h3 className="h4 font-weight-bold text-left mb-3" style={{ color: "#0d3b66" }}>Ready to Discuss Your Dental
@@ -435,10 +366,12 @@ export default function CrownsPage() {
 
           <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
             <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-            <p className="mb-2 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
+            <p className="mb-3 text-left"><i className="icon-map-marker mr-2" /> <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet,
                 Hyderabad, 500008</a></p>
-            <p className="mb-2 text-left"><i className="ion-ios-telephone mr-2" /> <a href="tel:+919603338904" className="text-white font-weight-bold">96033 38904</a> / <a href="tel:+917799376656" className="text-white font-weight-bold">77993 76656</a></p>
-            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon - Sat: 10:00am - 9:00pm<br /><span className="pl-4">Sun: 11:00am - 4:00pm</span></p>
+            <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+              <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
+            </p>
+            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
           </div>
         </div>
       </div>

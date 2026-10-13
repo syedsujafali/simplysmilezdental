@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FAQSection from '../components/FAQSection';
@@ -11,11 +10,6 @@ export default function AboutPage() {
 
   return (
     <div className="page-wrapper aboutpage">
-      <Seo
-        title="About Us | Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
-        description="Established in 2018, Simply Smilez Dental Clinic offers Invisalign, pediatric dentistry, implants, and gentle dental care in Shaikpet, Hyderabad."
-        canonicalPath="/about"
-      />
       <section className="ftco-section">
     <div className="container">
       
@@ -99,8 +93,7 @@ export default function AboutPage() {
             <div className="mt-auto">
               <Link
                 to="/doctor/dr-susheel-kumar"
-                className="btn btn-sm btn-primary px-3 py-2 font-weight-bold"
-                style={{ borderRadius: "25px", backgroundColor: "#00b7ff", borderColor: "#00b7ff" }}
+                className="btn-about-doctor"
               >
                 Read More About Dr. Susheel Kumar &rarr;
               </Link>
@@ -123,8 +116,7 @@ export default function AboutPage() {
             <div className="mt-auto">
               <Link
                 to="/doctor/dr-ankush-kumar"
-                className="btn btn-sm btn-primary px-3 py-2 font-weight-bold"
-                style={{ borderRadius: "25px", backgroundColor: "#00b7ff", borderColor: "#00b7ff" }}
+                className="btn-about-doctor"
               >
                 Read More About Dr. Ankush Kumar &rarr;
               </Link>

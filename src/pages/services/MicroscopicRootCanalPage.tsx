@@ -1,6 +1,6 @@
-import Seo from '../../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceFaq from '../../components/ServiceFaq';
 
 export default function MicroscopicRootCanalPage() {
   useEffect(() => {
@@ -10,11 +10,6 @@ export default function MicroscopicRootCanalPage() {
 
   return (
     <div className="page-wrapper laserrootpage">
-      <Seo
-        title="Microscopic Root Canal Treatment in Shaikpet, Hyderabad | Simply Smilez"
-        description="High-precision Microscopic Root Canal Treatment (RCT) in Shaikpet, Hyderabad. Advanced surgical operating microscope endodontics, broken file retrieval, and painless tooth preservation."
-        canonicalPath="/services/microscopic-root-canal"
-      />
       <div className="container py-5 text-left">
         <div className="row">
           <div className="col-lg-8 col-md-12 text-left">
@@ -124,74 +119,27 @@ export default function MicroscopicRootCanalPage() {
               </p>
 
               {/* FAQs accordion matching design */}
-              <h3 className="h4 font-weight-bold mt-4 mb-3 text-left" style={{ color: "#0d3b66" }}>
-                Frequently Asked Questions
-              </h3>
-              <div id="faqAccordion" className="mb-4">
-                <div className="card mb-2 border-0 shadow-sm">
-                  <div className="card-header bg-white py-3" id="headingOne">
-                    <h5 className="mb-0">
-                      <button className="btn btn-link text-dark font-weight-bold text-left w-100 text-decoration-none d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <span>Is Microscopic Root Canal Treatment painful?</span>
-                        <i className="fa-solid fa-chevron-down" style={{ fontSize: 13, color: "#00b7ff" }} />
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                    <div className="card-body text-muted pt-0">
-                      No. Modern dental anesthesia and precision microscope techniques ensure the procedure is virtually painless. Most patients experience immediate relief from the throbbing pain caused by their infected tooth pulp.
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card mb-2 border-0 shadow-sm">
-                  <div className="card-header bg-white py-3" id="headingTwo">
-                    <h5 className="mb-0">
-                      <button className="btn btn-link text-dark font-weight-bold text-left w-100 text-decoration-none collapsed d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <span>Can a broken instrument / file be retrieved from a root canal?</span>
-                        <i className="fa-solid fa-chevron-down" style={{ fontSize: 13, color: "#00b7ff" }} />
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                    <div className="card-body text-muted pt-0">
-                      Yes. Under high surgical magnification and with ultrasonic tips, Dr. Susheel Kumar specializes in locating, bypassing, and retrieving separated endodontic instruments from previously complicated cases.
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card mb-2 border-0 shadow-sm">
-                  <div className="card-header bg-white py-3" id="headingThree">
-                    <h5 className="mb-0">
-                      <button className="btn btn-link text-dark font-weight-bold text-left w-100 text-decoration-none collapsed d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <span>How many visits are required for a root canal?</span>
-                        <i className="fa-solid fa-chevron-down" style={{ fontSize: 13, color: "#00b7ff" }} />
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
-                    <div className="card-body text-muted pt-0">
-                      Most standard root canal treatments are comfortably completed in a single appointment of 45 to 60 minutes. Complex re-treatments or severe infections may require two appointments to ensure thorough disinfection.
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card mb-2 border-0 shadow-sm">
-                  <div className="card-header bg-white py-3" id="headingFour">
-                    <h5 className="mb-0">
-                      <button className="btn btn-link text-dark font-weight-bold text-left w-100 text-decoration-none collapsed d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <span>Is a dental crown necessary after a root canal?</span>
-                        <i className="fa-solid fa-chevron-down" style={{ fontSize: 13, color: "#00b7ff" }} />
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseFour" className="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
-                    <div className="card-body text-muted pt-0">
-                      Yes, in almost all cases. Teeth requiring root canal therapy have usually lost substantial tooth structure due to decay. A custom dental crown seals the tooth, restores biting strength, and protects against future fractures.
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ServiceFaq
+                title="Frequently Asked Questions"
+                faqs={[
+                  {
+                    question: "Is Microscopic Root Canal Treatment painful?",
+                    answer: "No. Modern dental anesthesia and precision microscope techniques ensure the procedure is virtually painless. Most patients experience immediate relief from the throbbing pain caused by their infected tooth pulp."
+                  },
+                  {
+                    question: "Can a broken instrument / file be retrieved from a root canal?",
+                    answer: "Yes. Under high surgical magnification and with ultrasonic tips, Dr. Susheel Kumar specializes in locating, bypassing, and retrieving separated endodontic instruments from previously complicated cases."
+                  },
+                  {
+                    question: "How many visits are required for a root canal?",
+                    answer: "Most standard root canal treatments are comfortably completed in a single appointment of 45 to 60 minutes. Complex re-treatments or severe infections may require two appointments to ensure thorough disinfection."
+                  },
+                  {
+                    question: "Is a dental crown necessary after a root canal?",
+                    answer: "Yes, in almost all cases. Teeth requiring root canal therapy have usually lost substantial tooth structure due to decay. A custom dental crown seals the tooth, restores biting strength, and protects against future fractures."
+                  }
+                ]}
+              />
 
               {/* Ready to Discuss Box matching other service pages */}
               <div className="bg-light p-4 rounded text-left border mb-4">
@@ -247,20 +195,19 @@ export default function MicroscopicRootCanalPage() {
 
               <div className="bg-primary text-white p-4 rounded shadow-sm text-left">
                 <h4 className="text-white font-weight-bold mb-3 text-left">Simply Smilez Dental Clinic</h4>
-                <p className="mb-2 text-left">
+                <p className="mb-3 text-left">
                   <i className="icon-map-marker mr-2" />
                   <a href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9" target="_blank" rel="noopener noreferrer" className="text-white">
                     P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet, Hyderabad, 500008
                   </a>
                 </p>
-                <p className="mb-2 text-left">
-                  <i className="ion-ios-telephone mr-2" />
-                  <a href="tel:+919603338904" className="text-white font-weight-bold">96033 38904</a> / <a href="tel:+917799376656" className="text-white font-weight-bold">77993 76656</a>
+                <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
+                  <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
                 </p>
                 <p className="mb-0 text-left">
                   <i className="ion-ios-time mr-2" />
-                  Mon - Sat: 10:00am - 9:00pm<br />
-                  <span className="pl-4">Sun: 11:00am - 4:00pm</span>
+                  Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br />
+                  <span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span>
                 </p>
               </div>
             </div>

@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -102,11 +101,6 @@ export default function AllServicesPage() {
 
   return (
     <div className="page-wrapper allservicespage">
-      <Seo
-        title="Dental Services in Shaikpet, Hyderabad | Simply Smilez Dental"
-        description="Explore comprehensive dental services in Shaikpet, Hyderabad: Invisalign, braces, implants, root canals, crowns, teeth whitening and pediatric dentistry."
-        canonicalPath="/all-services"
-      />
       <><section className="hero-wrap hero-wrap-2" style={{ backgroundImage: "url('images/bg_1.webp')" }} data-stellar-background-ratio="0.5">
     <div className="overlay" style={{ background: "rgba(13, 59, 102, 0.75)" }} />
     <div className="container">
