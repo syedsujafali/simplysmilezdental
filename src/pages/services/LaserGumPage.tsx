@@ -2,10 +2,281 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const laserGumSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/lasergum.html#webpage",
+      "url": "https://www.simplysmilezdental.in/lasergum.html",
+      "name": "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez",
+      "description": "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and professional dental cleaning.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/lasergum.webp",
+        "caption": "Laser gum treatment at Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental Clinic",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      }
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#clinic",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "image": "https://www.simplysmilezdental.in/images/about.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/logo-3.webp"
+      },
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "email": "info.invisaligndental@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Shaikpet",
+        "O.U. Colony",
+        "Dwaraka Nagar Colony",
+        "Manikonda",
+        "Tolichowki",
+        "Raidurg",
+        "Puppalaguda",
+        "Film Nagar",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Mehdipatnam",
+        "Langar Houz",
+        "Gachibowli",
+        "Narsingi"
+      ]
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure",
+      "name": "Laser Gum Treatment",
+      "alternateName": [
+        "Laser Gum Surgery",
+        "Laser Periodontal Treatment"
+      ],
+      "description": "Laser-assisted gum treatment for selected periodontal and gum conditions at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
+      "procedureType": "http://schema.org/NoninvasiveProcedure",
+      "bodyLocation": "Gums",
+      "url": "https://www.simplysmilezdental.in/lasergum.html",
+      "image": "https://www.simplysmilezdental.in/images/lasergum.webp"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/lasergum.html#gum-care-service",
+      "name": "Hygiene & Gum Care",
+      "serviceType": "Dental Hygiene and Gum Care",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hygiene & Gum Care Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Teeth Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dental Scaling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Teeth Scaling and Polishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Professional Teeth Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gum Disease Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gum Infection Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Periodontal Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gum Care"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bad Breath Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plaque Removal"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tartar Removal"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/lasergum.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Laser Gum Treatment",
+          "item": "https://www.simplysmilezdental.in/lasergum.html"
+        }
+      ]
+    }
+  ]
+};
+
 export default function LaserGumPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/lasergum.html";
+
+    // Metadata
+    setMeta("description", "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and cleaning.");
+    setMeta("keywords", "laser gum treatment Hyderabad, advanced laser gum treatment Hyderabad, laser gum treatment Shaikpet, laser periodontal treatment Hyderabad, gum disease treatment Shaikpet, gum infection treatment Hyderabad, periodontal care Hyderabad, gum specialist Shaikpet, teeth cleaning Shaikpet, dental scaling Hyderabad, teeth scaling and polishing Hyderabad, tartar removal Hyderabad, plaque removal Hyderabad, bad breath treatment Hyderabad, professional teeth cleaning Hyderabad, gum care Hyderabad");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez", true);
+    setMeta("og:description", "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and cleaning.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/lasergum.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/lasergum.webp", true);
+    setMeta("og:image:alt", "Advanced laser gum treatment and periodontal care at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez");
+    setMeta("twitter:description", "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet, with personalized periodontal and gum care.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/lasergum.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'laser-gum-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(laserGumSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
