@@ -72,13 +72,13 @@ const contactSchema = {
             "Saturday"
           ],
           "opens": "10:00",
-          "closes": "21:00"
+          "closes": "20:30"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
-          "opens": "11:00",
-          "closes": "16:00"
+          "opens": "10:30",
+          "closes": "13:00"
         }
       ],
       "areaServed": [

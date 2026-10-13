@@ -101,7 +101,7 @@ export default function Header({ onOpenServices }: HeaderProps) {
             <div className="ssd-topbar-actions d-none d-md-flex">
               <div className="ssd-topbar-item">
                 <i className="fa-regular fa-clock"></i>
-                <span>Mon - Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 4:00 PM</span>
+                <span>Mon - Sat: 10:00 AM - 8:30 PM | Sun: 10:30 AM - 1:00 PM</span>
               </div>
 
               <div className="ssd-topbar-socials">
@@ -467,8 +467,8 @@ export default function Header({ onOpenServices }: HeaderProps) {
               <i className="fa-regular fa-clock mr-1"></i> Working Hours
             </div>
             <div className="ssd-drawer-info-text">
-              <strong>Mon - Sat:</strong> 10:00 AM – 9:00 PM<br />
-              <strong>Sunday:</strong> 11:00 AM – 4:00 PM
+              <strong>Mon - Sat:</strong> 10:00 AM – 8:30 PM<br />
+              <strong>Sunday:</strong> 10:30 AM – 1:00 PM
             </div>
           </div>
         </div>

@@ -519,7 +519,7 @@ export default function CrownsPage() {
               <p className="mb-1 text-left"><strong>Simply Smilez Dental Clinic</strong></p>
               <p className="mb-1 text-left">P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet,
                 Hyderabad &ndash; 500008</p>
-              <p className="mb-1 text-left">Opening hours: Monday&ndash;Saturday, 10:00 AM&ndash;9:00 PM; Sunday, 11:00 AM&ndash;4:00 PM.</p>
+              <p className="mb-1 text-left">Opening hours: Monday&ndash;Saturday, 10:00 AM&ndash;8:30 PM; Sunday, 10:30 AM&ndash;1:00 PM.</p>
               <p className="mb-1 text-left">Phone: <a href="tel:+919603338904">96033 38904</a> / <a href="tel:+917799376656">77993 76656</a></p>
               <p className="mb-3 text-left">Email: <a href="mailto:info.invisaligndental@gmail.com">info.invisaligndental@gmail.com</a></p>
               <Link to="/contact" className="btn btn-primary px-4 py-2">Book Consultation</Link>
@@ -548,7 +548,7 @@ export default function CrownsPage() {
             <p className="mb-3 text-left font-weight-bold" style={{ fontSize: "1.05rem" }}>
               <a href="tel:+917799376656" className="text-white">77993 76656</a> / <a href="tel:+919603338904" className="text-white">96033 38904</a>
             </p>
-            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 9:00pm<br /><span className="pl-4">Sun: 11:00am &ndash; 4:00pm</span></p>
+            <p className="mb-0 text-left"><i className="ion-ios-time mr-2" /> Mon &ndash; Sat: 10:00am &ndash; 8:30pm<br /><span className="pl-4">Sun: 10:30am &ndash; 1:00pm</span></p>
           </div>
         </div>
       </div>

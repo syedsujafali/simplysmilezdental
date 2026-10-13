@@ -123,8 +123,8 @@ export default function Footer() {
                 <div>
                   <strong className="d-block footer-contact-label">Opening Hours:</strong>
                   <p className="mb-0 footer-contact-text">
-                    Mon - Sat: 10:00am - 9:00pm<br />
-                    Sunday: 11:00am - 4:00pm
+                    Mon - Sat: 10:00am - 8:30pm<br />
+                    Sunday: 10:30am - 1:00pm
                   </p>
                 </div>
               </div>
@@ -401,8 +401,8 @@ export default function Footer() {
                   <i className="fa-regular fa-clock footer-contact-icon mr-2 mt-1"></i>
                   <div>
                     <strong className="d-block footer-contact-label">Working Hours:</strong>
-                    <p className="mb-1 footer-contact-text">Monday - Saturday: 10:00am - 9:00pm</p>
-                    <p className="mb-0 footer-contact-text">Sunday: 11:00am - 4:00pm</p>
+                    <p className="mb-1 footer-contact-text">Monday - Saturday: 10:00am - 8:30pm</p>
+                    <p className="mb-0 footer-contact-text">Sunday: 10:30am - 1:00pm</p>
                   </div>
                 </div>
               </div>

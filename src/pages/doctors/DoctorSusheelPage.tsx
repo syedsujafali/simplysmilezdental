@@ -525,8 +525,8 @@ export default function DoctorSusheelPage() {
                     <div style={{ fontSize: 13.5, fontWeight: "700", color: "#1e293b" }}>
                       <i className="fa-regular fa-clock text-primary mr-1" /> Consulting Hours:
                     </div>
-                    <div style={{ fontSize: 13, color: "#64748b", marginTop: 4 }}>Mon - Sat: 10:00 AM &ndash; 9:00 PM</div>
-                    <div style={{ fontSize: 13, color: "#64748b" }}>Sunday: 11:00 AM &ndash; 4:00 PM</div>
+                    <div style={{ fontSize: 13, color: "#64748b", marginTop: 4 }}>Mon - Sat: 10:00 AM &ndash; 8:30 PM</div>
+                    <div style={{ fontSize: 13, color: "#64748b" }}>Sunday: 10:30 AM &ndash; 1:00 PM</div>
                   </div>
 
                   <a
