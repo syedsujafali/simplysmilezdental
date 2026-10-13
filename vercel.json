@@ -1,6 +1,8 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/((?!assets/|images/|css/|fonts/|js/|favicon|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" },
+    { "source": "/((?!assets/|images/|css/|fonts/|js/|favicon|robots\\.txt|sitemap\\.xml|.*\\.html).*)", "destination": "/$1/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
