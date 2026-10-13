@@ -1,6 +1,8 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/((?!assets/|images/|css/|fonts/|js/|favicon|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/about.html", "destination": "/about", "permanent": true },
@@ -21,8 +23,5 @@
     { "source": "/doctor/dr-susheel-kumar-pediatric-dentist-implantologist-hyderabad.html", "destination": "/doctor/dr-susheel-kumar", "permanent": true },
     { "source": "/testimonal.html", "destination": "/testimonials", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/((?!assets/|images/|css/|fonts/|js/|favicon|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
   ]
 }
