@@ -2,10 +2,179 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const veneersSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#dentist",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "telephone": "+917799376656",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html",
+      "url": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html",
+      "name": "Dental Veneers in Hyderabad | Simply Smilez Dental Clinic",
+      "description": "Learn about dental veneers in Hyderabad, including benefits, treatment procedure, suitability, aftercare and veneer options at Simply Smilez Dental Clinic in Shaikpet.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#service"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#service",
+      "name": "Dental Veneers",
+      "serviceType": "Dental Veneer Treatment",
+      "description": "Dental veneer treatment to improve the appearance of suitable teeth affected by discoloration, chips, uneven shapes, small gaps and other cosmetic concerns.",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "url": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are dental veneers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dental veneers are thin, custom-made restorations designed to cover the front surface of selected teeth and improve their appearance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can veneers fix chipped teeth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Veneers may be suitable for some mildly chipped teeth. The appropriate treatment depends on the extent and location of the damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are veneers the same as crowns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Veneers generally cover the front surface of a tooth, while crowns cover a larger portion of the tooth and may be recommended when greater structural restoration is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can veneers close gaps between teeth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Veneers may be considered for certain small cosmetic gaps. Orthodontic treatment or another option may be more appropriate depending on the size and cause of the gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do veneers look natural?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Veneers can be designed to resemble natural teeth. The final appearance depends on factors including the material, colour, shape, tooth position and treatment planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do dental veneers cost in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost depends on factors such as the type of veneer, number of teeth being treated, preparation required and complexity of the case. A consultation is needed to determine the appropriate treatment and current cost."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function VeneersPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Dental Veneers in Hyderabad | Simply Smilez Dental Clinic";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html";
+
+    // Metadata
+    setMeta("description", "Get dental veneers in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Improve chipped, stained or uneven teeth with personalized veneer treatment.");
+    setMeta("keywords", "dental veneers in Hyderabad, dental veneers in Shaikpet, veneers in Hyderabad, cosmetic dental veneers Hyderabad, veneers dentist Hyderabad, teeth veneers Hyderabad");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Dental Veneers in Hyderabad | Simply Smilez Dental Clinic", true);
+    setMeta("og:description", "Get dental veneers in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Improve chipped, stained or uneven teeth with personalized veneer treatment.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/veneers.webp", true);
+    setMeta("og:image:alt", "Dental veneers treatment at Simply Smilez Dental Clinic in Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Dental Veneers in Hyderabad | Simply Smilez Dental Clinic");
+    setMeta("twitter:description", "Explore dental veneers in Hyderabad for chipped, stained and uneven teeth at Simply Smilez Dental Clinic, Shaikpet.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/veneers.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'veneers-page-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(veneersSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
