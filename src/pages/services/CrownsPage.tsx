@@ -2,10 +2,187 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const crownsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#dentist",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "telephone": "+91-7799376656",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Shaikpet",
+        "O.U. Colony",
+        "Dwaraka Nagar Colony",
+        "Manikonda",
+        "Tolichowki",
+        "Raidurg",
+        "Puppalaguda",
+        "Film Nagar",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Mehdipatnam",
+        "Langar Houz",
+        "Gachibowli",
+        "Narsingi"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/crowns.html#webpage",
+      "url": "https://www.simplysmilezdental.in/crowns.html",
+      "name": "Dental Crowns in Hyderabad | Simply Smilez Dental Clinic",
+      "description": "Learn about dental crowns in Hyderabad, including crown types, benefits, procedure, aftercare and treatment options at Simply Smilez Dental Clinic in Shaikpet.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/crowns.html#service"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/crowns.html#service",
+      "name": "Dental Crowns",
+      "serviceType": "Dental Crown Treatment",
+      "description": "Dental crown treatment for damaged, weakened, cracked or extensively restored teeth, including suitable porcelain, ceramic and zirconia crown options.",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "url": "https://www.simplysmilezdental.in/crowns.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.simplysmilezdental.in/crowns.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a dental crown?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A dental crown is a custom restoration that covers a tooth above the gum line to restore its shape, function and, where appropriate, appearance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does every damaged tooth need a crown?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The appropriate treatment depends on the extent of damage and the amount of healthy tooth structure remaining. A filling, inlay, onlay or another restoration may be suitable in some cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are zirconia crowns available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zirconia is a ceramic material that can be used to make dental crowns. Your dentist can determine whether a zirconia crown is suitable for your particular tooth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many appointments are needed for a dental crown?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The number of appointments depends on the condition of the tooth, the type of crown and any additional treatment required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a dental crown cost in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost depends on the type of crown, tooth being treated, preparation required and any additional dental treatment needed. A dental examination is required to determine the appropriate treatment and current cost."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function CrownsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Dental Crowns in Hyderabad | Simply Smilez Dental Clinic";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/crowns.html";
+
+    // Metadata
+    setMeta("description", "Get dental crowns in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Learn about crown types, benefits, procedure, aftercare, and treatment options.");
+    setMeta("keywords", "dental crowns in Hyderabad, dental crowns in Shaikpet, dental crown treatment Hyderabad, tooth cap in Hyderabad, zirconia crowns Hyderabad, porcelain crowns Hyderabad");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Dental Crowns in Hyderabad | Simply Smilez Dental Clinic", true);
+    setMeta("og:description", "Get dental crowns in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Learn about crown types, benefits, procedure, aftercare, and treatment options.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/crowns.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/crowns.webp", true);
+    setMeta("og:image:alt", "Dental crowns at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Dental Crowns in Hyderabad | Simply Smilez Dental Clinic");
+    setMeta("twitter:description", "Learn about dental crowns, zirconia and porcelain options, benefits, procedure, and aftercare at Simply Smilez Dental Clinic, Shaikpet.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/crowns.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'crowns-page-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(crownsSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
