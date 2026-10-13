@@ -2,10 +2,179 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const laserTeethSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#dentist",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "telephone": "+917799376656",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/laserteeth.html",
+      "url": "https://www.simplysmilezdental.in/laserteeth.html",
+      "name": "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez",
+      "description": "Professional laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet, for improving the appearance of naturally discoloured teeth.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/laserteeth.html#service"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/laserteeth.html#service",
+      "name": "Laser Teeth Whitening",
+      "serviceType": "Professional Teeth Whitening",
+      "description": "Professional teeth whitening treatment designed to improve the appearance of certain types of natural tooth discoloration and staining.",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "url": "https://www.simplysmilezdental.in/laserteeth.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.simplysmilezdental.in/laserteeth.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is laser teeth whitening?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laser teeth whitening is a professional cosmetic dental procedure intended to lighten the colour of natural teeth and reduce certain types of discoloration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can laser teeth whitening remove all stains?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Whitening does not guarantee that every type of discoloration will disappear. The result depends on the cause and depth of the staining."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does laser teeth whitening take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Treatment time depends on the whitening system used and the patient's individual needs. The dentist can explain the expected treatment duration during the consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can sensitive teeth be professionally whitened?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "People with sensitive teeth should inform their dentist before treatment. The dentist can assess the cause of sensitivity and determine whether whitening is appropriate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will teeth whitening change the colour of crowns or veneers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whitening primarily affects natural teeth. Existing crowns, veneers and other restorations generally do not whiten in the same way as natural tooth enamel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does laser teeth whitening cost in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost depends on the whitening treatment, dental condition and treatment plan. A consultation is recommended for an accurate current cost."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function LaserTeethPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/laserteeth.html";
+
+    // Metadata
+    setMeta("description", "Get laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Professional whitening for a brighter, more confident smile.");
+    setMeta("keywords", "Laser Teeth Whitening in Hyderabad, laser teeth whitening Hyderabad, laser teeth bleaching Hyderabad, teeth whitening in Shaikpet, professional teeth whitening Hyderabad, laser teeth bleaching in Shaikpet, teeth whitening near Manikonda, cosmetic dentist Hyderabad");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez", true);
+    setMeta("og:description", "Get laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Professional whitening for a brighter, more confident smile.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/laserteeth.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/laserteeth.webp", true);
+    setMeta("og:image:alt", "Laser teeth whitening treatment at Simply Smilez Dental Clinic in Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez");
+    setMeta("twitter:description", "Professional laser teeth whitening in Hyderabad at Simply Smilez Dental Clinic, Shaikpet, for a brighter-looking smile.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/laserteeth.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'laser-teeth-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(laserTeethSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
