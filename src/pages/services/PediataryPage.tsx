@@ -2,10 +2,298 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const pediatricSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/pediatary.html#webpage",
+      "url": "https://www.simplysmilezdental.in/pediatary.html",
+      "name": "Best Child Dentists Near Me in Hyderabad | Pediatric Dentistry",
+      "description": "Pediatric dentistry in Shaikpet, Hyderabad for children's dental checkups, preventive care, fillings, crowns, fluoride, sealants and orthodontic evaluation.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry"
+      },
+      "mainEntity": {
+        "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/pedia2.webp",
+        "caption": "Pediatric dentistry and children's dental care at Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental Clinic",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#clinic",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "image": "https://www.simplysmilezdental.in/images/about.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/logo-3.webp"
+      },
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "email": "info.invisaligndental@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Shaikpet",
+        "O.U. Colony",
+        "Dwaraka Nagar Colony",
+        "Manikonda",
+        "Tolichowki",
+        "Raidurg",
+        "Puppalaguda",
+        "Film Nagar",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Mehdipatnam",
+        "Langar Houz",
+        "Gachibowli",
+        "Narsingi"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry",
+      "name": "Pediatric Dentistry",
+      "alternateName": [
+        "Pediatric Dental Care",
+        "Children's Dentistry",
+        "Kids Dental Care"
+      ],
+      "serviceType": "Pediatric Dentistry",
+      "description": "Pediatric dental care in Shaikpet, Hyderabad, including children's dental checkups, preventive care, fluoride treatment, dental sealants, fillings, crowns, pediatric root canal treatment and early orthodontic evaluation.",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "url": "https://www.simplysmilezdental.in/pediatary.html",
+      "image": "https://www.simplysmilezdental.in/images/pedia2.webp",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pediatric Dental Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pediatric Dental Checkup"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pediatric Dental Consultation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Preventive Pediatric Dentistry"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fluoride Treatment for Children"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dental Sealants for Children"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Children's Dental Fillings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pediatric Root Canal Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stainless Steel Crowns"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pediatric Zirconia Crowns"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Space Maintainers"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Early Orthodontic Evaluation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interceptive Orthodontics"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Phase 1 Orthodontic Treatment"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://www.simplysmilezdental.in/pediatary.html#procedure",
+      "name": "Pediatric Dental Treatment",
+      "description": "Dental procedures for children may include preventive treatments, restorative procedures and selected treatments for primary teeth based on individual clinical needs.",
+      "bodyLocation": "Teeth",
+      "procedureType": "http://schema.org/NoninvasiveProcedure"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/pediatary.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pediatric Dentistry",
+          "item": "https://www.simplysmilezdental.in/pediatary.html"
+        }
+      ]
+    }
+  ]
+};
+
 export default function PediataryPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Best Child Dentists Near Me in Hyderabad | Pediatric Dentistry";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/pediatary.html";
+
+    // Metadata
+    setMeta("description", "Pediatric dentistry in Shaikpet, Hyderabad for children's dental checkups, preventive care, fillings, crowns, fluoride, sealants and orthodontic evaluation.");
+    setMeta("keywords", "pediatric dentistry Hyderabad, pediatric dentist Hyderabad, pediatric dental care Hyderabad, children's dentistry Hyderabad, kids dental checkup, pediatric dental consultation, preventive pediatric dentistry, fluoride treatment for children, dental sealants for children, children's dental fillings, pediatric root canal treatment, stainless steel crowns, pediatric zirconia crowns, space maintainers, early orthodontic evaluation, interceptive orthodontics, Phase 1 orthodontic treatment, pediatric dentist Shaikpet");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Best Child Dentists Near Me in Hyderabad | Pediatric Dentistry", true);
+    setMeta("og:description", "Pediatric dentistry in Shaikpet, Hyderabad for children's dental checkups, preventive care, fillings, crowns, fluoride, sealants and orthodontic evaluation.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/pediatary.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/pedia2.webp", true);
+    setMeta("og:image:alt", "Pediatric dentistry and children's dental care at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Best Child Dentists Near Me in Hyderabad | Pediatric Dentistry");
+    setMeta("twitter:description", "Pediatric dentistry in Shaikpet, Hyderabad for children's dental checkups, preventive care, fillings, crowns, fluoride, sealants and orthodontic evaluation.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/pedia2.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'pediatric-page-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(pediatricSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
