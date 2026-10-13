@@ -28,6 +28,157 @@ const ankushFaqs = [
   }
 ];
 
+const ankushSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Physician",
+      "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#physician",
+      "name": "Dr. Ankush Kumar",
+      "jobTitle": "Orthodontist and Certified Invisalign Provider",
+      "description": "Dr. Ankush Kumar is an Orthodontist and Certified Invisalign Provider in Hyderabad with 9 years of dedicated clinical experience in orthodontic care, clear aligners, and smile designing.",
+      "image": "https://www.simplysmilezdental.in/images/ankush.webp",
+      "url": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar",
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "medicalSpecialty": [
+        "Dentistry",
+        "Orthodontics"
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "SVS Institute of Dental Sciences"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "P. M. N. M. Dental College, Bagalkot, Karnataka"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Indian Orthodontic Society (IOS)"
+      },
+      "worksFor": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      }
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#clinic",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "image": "https://www.simplysmilezdental.in/images/about.webp",
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "email": "info.invisaligndental@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#webpage",
+      "url": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar",
+      "name": "Dr. Ankush Kumar – Orthodontist & Invisalign Provider in Hyderabad | Simply Smilez",
+      "description": "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience. Expert in braces, aligners, and smile makeovers at Simply Smilez Dental Clinic.",
+      "mainEntity": {
+        "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#physician"
+      },
+      "breadcrumb": {
+        "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#breadcrumb"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Dr. Ankush Kumar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Ankush Kumar is an Orthodontist and Certified Invisalign Provider in Hyderabad with 9 years of dedicated clinical experience in orthodontic and dental care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Dr. Ankush Kumar practice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Ankush Kumar practices at Simply Smilez Dental Clinic in Manikonda / Shaikpet, Hyderabad. He also works as a consultant orthodontist across 20 dental clinics throughout the city."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Dr. Ankush Kumar's qualifications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Ankush Kumar completed his BDS from P. M. N. M. Dental College, Bagalkot, Karnataka, and earned his Master's degree (MDS in Orthodontics & Dentofacial Orthopedics) from SVS Institute of Dental Sciences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Dr. Ankush Kumar's specialization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Ankush Kumar specializes in orthodontics, clear aligners (Invisalign), digital smile design, corrective jaw alignment, and braces treatment for adolescents and adults."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many years of experience does Dr. Ankush Kumar have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Ankush Kumar has over 9 years of specialized orthodontic and clinical dentistry experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Dr. Ankush Kumar a member of a professional organization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Dr. Ankush Kumar is an active registered life member of the Indian Orthodontic Society (IOS)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Doctors",
+          "item": "https://www.simplysmilezdental.in/doctor.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dr. Ankush Kumar",
+          "item": "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar"
+        }
+      ]
+    }
+  ]
+};
+
 export default function DoctorAnkushPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -35,7 +186,67 @@ export default function DoctorAnkushPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Dr. Ankush Kumar – Orthodontist & Invisalign Provider in Hyderabad | Simply Smilez";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad.html";
+
+    // Metadata
+    setMeta('description', "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience. Expert in braces, aligners, and smile makeovers at Simply Smilez Dental Clinic.");
+    setMeta('keywords', "Dr Ankush Kumar orthodontist, orthodontist in Hyderabad, Invisalign provider Hyderabad, clear aligners doctor Hyderabad, braces specialist Shaikpet, orthodontic consultation Manikonda, Simply Smilez orthodontist");
+    setMeta('author', "Simply Smilez Dental Clinic");
+    setMeta('robots', "index,follow");
+    setMeta('theme-color', "#ffffff");
+    setMeta('referrer', "strict-origin-when-cross-origin");
+
+    // Open Graph
+    setMeta('og:type', "profile", true);
+    setMeta('og:title', "Dr. Ankush Kumar – Orthodontist & Invisalign Provider in Hyderabad | Simply Smilez", true);
+    setMeta('og:description', "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience. Expert in braces, aligners, and smile makeovers at Simply Smilez Dental Clinic.", true);
+    setMeta('og:url', "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad.html", true);
+    setMeta('og:site_name', "Simply Smilez Dental Clinic", true);
+    setMeta('og:image', "https://www.simplysmilezdental.in/images/ankush.webp", true);
+    setMeta('og:image:alt', "Dr. Ankush Kumar - Orthodontist & Invisalign Provider in Hyderabad at Simply Smilez Dental Clinic", true);
+
+    // Twitter Card
+    setMeta('twitter:card', "summary_large_image");
+    setMeta('twitter:title', "Dr. Ankush Kumar – Orthodontist & Invisalign Provider in Hyderabad | Simply Smilez");
+    setMeta('twitter:description', "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience at Simply Smilez Dental Clinic.");
+    setMeta('twitter:image', "https://www.simplysmilezdental.in/images/ankush.webp");
+
+    // Structured Schema Script
+    let schemaScript = document.getElementById('doctor-ankush-schema') as HTMLScriptElement | null;
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.id = 'doctor-ankush-schema';
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.text = JSON.stringify(ankushSchema);
 
     const updateStickyOffset = () => {
       if (sidebarRef.current && window.innerWidth >= 992) {
