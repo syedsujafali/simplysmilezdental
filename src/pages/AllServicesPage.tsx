@@ -93,11 +93,233 @@ const allServicesList: ServiceCardItem[] = [
   }
 ];
 
+const allServicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#dentist",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "telephone": "+91-7799376656",
+      "email": "info@simplysmilezdental.in",
+      "image": "https://www.simplysmilezdental.in/images/logo.png",
+      "description": "Simply Smilez Dental Clinic provides comprehensive dental care in Hyderabad, including Invisalign and clear aligners, pediatric dentistry, braces, root canal treatment, cosmetic dentistry, teeth whitening, gum care and oral surgery.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road, Shaikpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "16:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "sameAs": [
+        "https://www.simplysmilezdental.in/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/all-services.html#webpage",
+      "url": "https://www.simplysmilezdental.in/all-services.html",
+      "name": "Dental Services in Hyderabad | Simply Smilez Dental",
+      "headline": "Comprehensive Dental Services in Hyderabad",
+      "description": "Explore comprehensive dental services in Hyderabad at Simply Smilez Dental, including Invisalign, pediatric dentistry, braces, root canals, whitening and more.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      },
+      "breadcrumb": {
+        "@id": "https://www.simplysmilezdental.in/all-services.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/all-services.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "All Services",
+          "item": "https://www.simplysmilezdental.in/all-services.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.simplysmilezdental.in/all-services.html#services",
+      "name": "Dental Services at Simply Smilez Dental",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "General Dentistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Invisalign & Clear Aligners"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pediatric Dentistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Braces & Orthodontics"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Root Canal & Endodontics"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Restorative & Cosmetic Dentistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Hygiene & Gum Care"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Oral Surgery"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Teeth Whitening"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Advanced Dentistry"
+        }
+      ]
+    }
+  ]
+};
+
 export default function AllServicesPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Dental Services in Hyderabad | Simply Smilez Dental";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/all-services.html";
+
+    // Metadata
+    setMeta('description', "Explore comprehensive dental services in Hyderabad at Simply Smilez Dental, including Invisalign, pediatric dentistry, braces, root canals, whitening and more.");
+    setMeta('keywords', "dental services Hyderabad, dentist Hyderabad, Invisalign Hyderabad, clear aligners, pediatric dentistry, braces, root canal treatment, teeth whitening, cosmetic dentistry");
+    setMeta('author', "Simply Smilez Dental");
+    setMeta('robots', "index,follow");
+    setMeta('theme-color', "#ffffff");
+    setMeta('referrer', "strict-origin-when-cross-origin");
+
+    // Open Graph
+    setMeta('og:type', "website", true);
+    setMeta('og:title', "Dental Services in Hyderabad | Simply Smilez Dental", true);
+    setMeta('og:description', "Explore comprehensive dental services in Hyderabad at Simply Smilez Dental, including Invisalign, pediatric dentistry, braces, root canals, whitening and more.", true);
+    setMeta('og:url', "https://www.simplysmilezdental.in/all-services.html", true);
+    setMeta('og:site_name', "Simply Smilez Dental", true);
+    setMeta('og:image', "https://www.simplysmilezdental.in/images/dental-services.jpg", true);
+    setMeta('og:image:alt', "Dental services at Simply Smilez Dental", true);
+
+    // Twitter Card
+    setMeta('twitter:card', "summary_large_image");
+    setMeta('twitter:title', "Dental Services in Hyderabad | Simply Smilez Dental");
+    setMeta('twitter:description', "Explore comprehensive dental services in Hyderabad at Simply Smilez Dental, including Invisalign, pediatric dentistry, braces, root canals, whitening and more.");
+    setMeta('twitter:image', "https://www.simplysmilezdental.in/images/dental-services.jpg");
+
+    // Structured Schema Script
+    let schemaScript = document.getElementById('all-services-schema') as HTMLScriptElement | null;
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.id = 'all-services-schema';
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.text = JSON.stringify(allServicesSchema);
+
+    return () => {
+      // Cleanup schema on navigation
+      const currentSchema = document.getElementById('all-services-schema');
+      if (currentSchema) {
+        currentSchema.remove();
+      }
+    };
   }, []);
+
 
   return (
     <div className="page-wrapper allservicespage">
