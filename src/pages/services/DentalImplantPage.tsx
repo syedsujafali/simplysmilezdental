@@ -2,10 +2,232 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceFaq from '../../components/ServiceFaq';
 
+const dentalImplantSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#webpage",
+      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "name": "Dental Implants in Hyderabad | Simply Smilez Dental Clinic",
+      "description": "Get dental implants in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Explore tooth replacement options and personalized implant care.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service"
+      },
+      "mainEntity": {
+        "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service"
+      },
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/dentalimp.webp",
+        "caption": "Dental implant treatment at Simply Smilez Dental Clinic in Shaikpet, Hyderabad"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental Clinic",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#clinic",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "image": "https://www.simplysmilezdental.in/images/about.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/logo-3.webp"
+      },
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "email": "info.invisaligndental@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Shaikpet",
+        "O.U. Colony",
+        "Dwaraka Nagar Colony",
+        "Manikonda",
+        "Tolichowki",
+        "Raidurg",
+        "Puppalaguda",
+        "Film Nagar",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Mehdipatnam",
+        "Langar Houz",
+        "Gachibowli",
+        "Narsingi"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service",
+      "name": "Dental Implant Treatment",
+      "alternateName": [
+        "Dental Implants",
+        "Dental Implant Treatment in Hyderabad",
+        "Tooth Replacement with Dental Implants"
+      ],
+      "description": "Dental implant treatment for replacing missing teeth with implant-supported dental restorations at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
+      "serviceType": "Dental Implant Treatment",
+      "provider": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Hyderabad"
+      },
+      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "image": "https://www.simplysmilezdental.in/images/dentalimp.webp"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#procedure",
+      "name": "Dental Implant Placement",
+      "alternateName": "Dental Implant Treatment",
+      "description": "Dental implant placement is a procedure used to provide support for a dental crown, bridge, or denture when replacing missing teeth.",
+      "procedureType": "http://schema.org/PercutaneousProcedure",
+      "bodyLocation": "Jaw",
+      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "image": "https://www.simplysmilezdental.in/images/dentalimp.webp"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#implant-options",
+      "name": "Dental Implant Treatment Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Single Tooth Dental Implant"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Multiple Dental Implants"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Implant-Supported Dental Restoration"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dental Implants",
+          "item": "https://www.simplysmilezdental.in/dentalimplant.html"
+        }
+      ]
+    }
+  ]
+};
+
 export default function DentalImplantPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Dental Implants in Hyderabad | Simply Smilez Dental Clinic";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/dentalimplant.html";
+
+    // Metadata
+    setMeta("description", "Get dental implants in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Explore tooth replacement options and personalized implant care.");
+    setMeta("keywords", "dental implants Hyderabad, dental implant treatment Hyderabad, dental implants Shaikpet, dental implant dentist Hyderabad, dental implant clinic Hyderabad, single tooth implant Hyderabad, tooth replacement Hyderabad, implant dentist Shaikpet");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Dental Implants in Hyderabad | Simply Smilez Dental Clinic", true);
+    setMeta("og:description", "Get dental implants in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Explore tooth replacement options and personalized implant care.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/dentalimplant.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/dentalimp.webp", true);
+    setMeta("og:image:alt", "Dental implant treatment at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Dental Implants in Hyderabad | Simply Smilez Dental Clinic");
+    setMeta("twitter:description", "Get dental implants in Hyderabad at Simply Smilez Dental Clinic, Shaikpet, with personalized tooth replacement and implant care.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/dentalimp.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'dental-implant-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(dentalImplantSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
