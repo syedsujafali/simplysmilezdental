@@ -30,6 +30,122 @@ const TREATMENTS_LIST = [
   "General Dental Consultation"
 ];
 
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#clinic",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "description": "Simply Smilez Dental Clinic provides family and comprehensive dental care in Shaikpet, Hyderabad, including Invisalign, braces, dental implants, root canal treatment, crowns, veneers, pediatric dentistry and gum treatment.",
+      "image": "https://www.simplysmilezdental.in/images/about.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.simplysmilezdental.in/images/logo-3.webp"
+      },
+      "telephone": [
+        "+91-9603338904",
+        "+91-7799376656"
+      ],
+      "email": "info.invisaligndental@gmail.com",
+      "priceRange": "$$",
+      "medicalSpecialty": "https://schema.org/Dentistry",
+      "foundingDate": "2018",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.V. Reddy Complex, 1st Floor, Dwaraka Nagar Colony, O.U. Colony Road",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "postalCode": "500008",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "16:00"
+        }
+      ],
+      "areaServed": [
+        "Shaikpet",
+        "O.U. Colony",
+        "Dwaraka Nagar Colony",
+        "Manikonda",
+        "Tolichowki",
+        "Raidurg",
+        "Puppalaguda",
+        "Film Nagar",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Mehdipatnam",
+        "Langar Houz",
+        "Gachibowli",
+        "Narsingi",
+        "Kondapur"
+      ]
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.simplysmilezdental.in/contact.html#webpage",
+      "url": "https://www.simplysmilezdental.in/contact.html",
+      "name": "Contact Simply Smilez Dental Clinic | Shaikpet, Hyderabad",
+      "description": "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for comprehensive family dental care and appointments.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "breadcrumb": {
+        "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental Clinic",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#clinic"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us",
+          "item": "https://www.simplysmilezdental.in/contact.html"
+        }
+      ]
+    }
+  ]
+};
+
 export default function ContactPage() {
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -39,7 +155,70 @@ export default function ContactPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Contact Dentist in Shaikpet, Hyderabad | Simply Smilez Dental";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/contact.html";
+
+    // Metadata
+    setMeta("description", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for Invisalign, braces, implants, root canal and comprehensive dental care.");
+    setMeta("keywords", "contact dentist Shaikpet, dental clinic Shaikpet Hyderabad, dentist Hyderabad, Simply Smilez Dental Clinic contact, dental appointment Hyderabad");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Contact Dentist in Shaikpet, Hyderabad | Simply Smilez Dental", true);
+    setMeta("og:description", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for Invisalign, braces, implants, root canal and comprehensive dental care.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/contact.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/gmb.webp", true);
+    setMeta("og:image:alt", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Contact Dentist in Shaikpet, Hyderabad | Simply Smilez Dental");
+    setMeta("twitter:description", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for Invisalign, braces, implants, root canal and comprehensive dental care.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/gmb.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'contact-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(contactSchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
