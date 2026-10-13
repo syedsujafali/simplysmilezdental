@@ -1,0 +1,219 @@
+{
+  "route": "/about",
+  "title": "Invisalign & Root Canal Dentist in Hyderabad | Simply Smilez",
+  "description": "Simply Smilez Dental Clinic offers Invisalign, Invisalign First for Kids, root canal treatment, and family dental care in Shaikpet, Hyderabad.",
+  "keywords": "Invisalign dentist Hyderabad, root canal dentist Hyderabad, Invisalign First for Kids, dentist in Shaikpet, dental clinic Shaikpet, Simply Smilez Dental",
+  "author": "Simply Smilez Dental Clinic",
+  "canonical": "https://www.simplysmilezdental.in/about.html",
+  "ogTitle": "Invisalign & Root Canal Dentist in Hyderabad | Simply Smilez",
+  "ogDescription": "Simply Smilez Dental Clinic offers Invisalign, Invisalign First for Kids, root canal treatment, and family dental care in Shaikpet, Hyderabad.",
+  "ogUrl": "https://www.simplysmilezdental.in/about.html",
+  "ogImage": "https://www.simplysmilezdental.in/images/about.webp",
+  "ogImageAlt": "Simply Smilez Dental Clinic in Shaikpet, Hyderabad",
+  "twitterCard": "summary_large_image",
+  "twitterTitle": "Invisalign & Root Canal Dentist in Hyderabad | Simply Smilez",
+  "twitterDescription": "Simply Smilez Dental Clinic offers Invisalign, Invisalign First for Kids, root canal treatment, and family dental care in Shaikpet, Hyderabad.",
+  "twitterImage": "https://www.simplysmilezdental.in/images/about.webp",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Dentist",
+        "@id": "https://www.simplysmilezdental.in/#dentist",
+        "name": "Simply Smilez Dental Clinic",
+        "url": "https://www.simplysmilezdental.in/",
+        "description": "Simply Smilez Dental Clinic is a dental clinic in Shaikpet, Hyderabad, providing personalized dental care including Invisalign, braces, dental implants, root canal treatment, crowns, veneers, teeth whitening, pediatric dentistry, wisdom tooth extraction and laser gum treatment.",
+        "image": "https://www.simplysmilezdental.in/images/about.webp",
+        "priceRange": "$$",
+        "medicalSpecialty": "https://schema.org/Dentistry",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shaikpet",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Shaikpet"
+          },
+          {
+            "@type": "Place",
+            "name": "Manikonda"
+          },
+          {
+            "@type": "Place",
+            "name": "Tolichowki"
+          },
+          {
+            "@type": "Place",
+            "name": "Jubilee Hills"
+          },
+          {
+            "@type": "Place",
+            "name": "Banjara Hills"
+          },
+          {
+            "@type": "Place",
+            "name": "Gachibowli"
+          },
+          {
+            "@type": "Place",
+            "name": "Narsingi"
+          },
+          {
+            "@type": "Place",
+            "name": "Mehdipatnam"
+          }
+        ],
+        "foundingDate": "2018"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.simplysmilezdental.in/#website",
+        "url": "https://www.simplysmilezdental.in/",
+        "name": "Simply Smilez Dental Clinic",
+        "publisher": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.simplysmilezdental.in/about.html#webpage",
+        "url": "https://www.simplysmilezdental.in/about.html",
+        "name": "About Simply Smilez Dental Clinic",
+        "description": "Learn about Simply Smilez Dental Clinic, a dental clinic in Shaikpet, Hyderabad, established in 2018.",
+        "isPartOf": {
+          "@id": "https://www.simplysmilezdental.in/#website"
+        },
+        "about": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "breadcrumb": {
+          "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.simplysmilezdental.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://www.simplysmilezdental.in/about.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.simplysmilezdental.in/about.html#invisalign",
+        "name": "Invisalign Treatment",
+        "serviceType": "Invisalign",
+        "provider": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Hyderabad"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.simplysmilezdental.in/about.html#root-canal",
+        "name": "Root Canal Treatment",
+        "serviceType": "Root Canal Treatment",
+        "provider": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Hyderabad"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.simplysmilezdental.in/about.html#dental-implants",
+        "name": "Dental Implants",
+        "serviceType": "Dental Implants",
+        "provider": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Hyderabad"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.simplysmilezdental.in/about.html#braces",
+        "name": "Braces and Orthodontic Treatment",
+        "serviceType": "Braces",
+        "provider": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Hyderabad"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.simplysmilezdental.in/about.html#pediatric-dentistry",
+        "name": "Pediatric Dentistry",
+        "serviceType": "Pediatric Dentistry",
+        "provider": {
+          "@id": "https://www.simplysmilezdental.in/#dentist"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Hyderabad"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.simplysmilezdental.in/about.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where is Simply Smilez Dental Clinic located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are located in Shaikpet, Hyderabad, serving patients from surrounding areas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What treatments do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our services include Invisalign, braces, dental implants, root canal treatment, crowns, veneers, teeth whitening, pediatric dentistry, wisdom tooth extraction, laser gum treatment, and preventive care."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide Invisalign for children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer Invisalign First for Kids where clinically appropriate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When was Simply Smilez Dental Clinic established?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The clinic was established in 2018 and has been providing dental care in Hyderabad since then."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
