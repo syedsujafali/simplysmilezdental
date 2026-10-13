@@ -2,12 +2,148 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { galleryImages, GalleryItem } from '../data';
 
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://www.simplysmilezdental.in/#dentist",
+      "name": "Simply Smilez Dental Clinic",
+      "url": "https://www.simplysmilezdental.in/",
+      "description": "Simply Smilez Dental Clinic provides comprehensive dental care in Shaikpet, Hyderabad, including Invisalign, braces, dental implants, root canal treatment, cosmetic dentistry and pediatric dentistry.",
+      "medicalSpecialty": "https://schema.org/Dentistry",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Shaikpet",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Shaikpet",
+        "Manikonda",
+        "Tolichowki",
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Gachibowli",
+        "Narsingi",
+        "Mehdipatnam"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.simplysmilezdental.in/#website",
+      "url": "https://www.simplysmilezdental.in/",
+      "name": "Simply Smilez Dental Clinic",
+      "publisher": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.simplysmilezdental.in/gallery.html#webpage",
+      "url": "https://www.simplysmilezdental.in/gallery.html",
+      "name": "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad",
+      "description": "Explore the Simply Smilez Dental Clinic gallery and view the clinic environment and dental care facilities in Shaikpet, Hyderabad.",
+      "isPartOf": {
+        "@id": "https://www.simplysmilezdental.in/#website"
+      },
+      "about": {
+        "@id": "https://www.simplysmilezdental.in/#dentist"
+      },
+      "breadcrumb": {
+        "@id": "https://www.simplysmilezdental.in/gallery.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.simplysmilezdental.in/gallery.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.simplysmilezdental.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gallery",
+          "item": "https://www.simplysmilezdental.in/gallery.html"
+        }
+      ]
+    }
+  ]
+};
+
 export default function GalleryPage() {
   const [activeImg, setActiveImg] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Page Title
     document.title = "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad";
+
+    // Meta Helper function
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(attr);
+      if (!element) {
+        element = document.createElement('meta');
+        if (isProperty) {
+          element.setAttribute('property', name);
+        } else {
+          element.setAttribute('name', name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Canonical link helper
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.simplysmilezdental.in/gallery.html";
+
+    // Metadata
+    setMeta("description", "Take a look inside Simply Smilez Dental Clinic in Shaikpet, Hyderabad, and explore our dental clinic environment and patient care facilities.");
+    setMeta("keywords", "Simply Smilez Dental Clinic gallery, dental clinic Shaikpet Hyderabad, dentist clinic gallery Hyderabad, dental clinic photos Shaikpet");
+    setMeta("author", "Simply Smilez Dental Clinic");
+
+    // Open Graph
+    setMeta("og:type", "website", true);
+    setMeta("og:title", "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad", true);
+    setMeta("og:description", "Take a look inside Simply Smilez Dental Clinic in Shaikpet, Hyderabad, and explore our dental clinic environment and patient care facilities.", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/gallery.html", true);
+    setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
+    setMeta("og:image", "https://www.simplysmilezdental.in/images/gallery-1.webp", true);
+    setMeta("og:image:alt", "Simply Smilez Dental Clinic interior and facilities in Shaikpet, Hyderabad", true);
+
+    // Twitter
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad");
+    setMeta("twitter:description", "Take a look inside Simply Smilez Dental Clinic in Shaikpet, Hyderabad, and explore our dental clinic environment and patient care facilities.");
+    setMeta("twitter:image", "https://www.simplysmilezdental.in/images/gallery-1.webp");
+
+    // Dynamic Schema script injection
+    const scriptId = 'gallery-schema';
+    let scriptElement = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!scriptElement) {
+      scriptElement = document.createElement('script');
+      scriptElement.id = scriptId;
+      scriptElement.type = 'application/ld+json';
+      document.head.appendChild(scriptElement);
+    }
+    scriptElement.textContent = JSON.stringify(gallerySchema);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
   }, []);
 
   return (
