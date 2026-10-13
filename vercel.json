@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/about.html", "destination": "/about", "permanent": true },
@@ -9,7 +10,7 @@
     { "source": "/dental-veneers-hyderabad.html", "destination": "/services/veneers", "permanent": true },
     { "source": "/braces.html", "destination": "/services/braces", "permanent": true },
     { "source": "/laserteeth.html", "destination": "/services/laser-teeth-whitening", "permanent": true },
-    { "source": "/laserroot.html", "destination": "/services/laser-root-canal", "permanent": true },
+    { "source": "/laserroot.html", "destination": "/services/microscopic-root-canal", "permanent": true },
     { "source": "/lasergum.html", "destination": "/services/laser-gum-surgery", "permanent": true },
     { "source": "/dentalimplant.html", "destination": "/services/dental-implants", "permanent": true },
     { "source": "/pediatary.html", "destination": "/services/pediatric-dentistry", "permanent": true },
@@ -22,6 +23,6 @@
     { "source": "/contact.html", "destination": "/contact", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!assets/|images/|css/|fonts/|js/|favicon|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
   ]
 }
