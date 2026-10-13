@@ -706,7 +706,7 @@ img {
   inset: 0;
   background: rgba(11, 37, 69, 0.6);
   backdrop-filter: blur(4px);
-  z-index: 1060;
+  z-index: 999990;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -721,12 +721,13 @@ img {
   position: fixed;
   top: 0;
   right: 0;
-  width: 85%;
-  max-width: 360px;
-  height: 100%;
+  width: 88%;
+  max-width: 380px;
+  height: 100vh;
+  height: 100dvh;
   background: #ffffff;
-  z-index: 1070;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.25);
   transform: translateX(100%);
   visibility: hidden;
   pointer-events: none;
@@ -816,9 +817,11 @@ img {
 }
 
 .ssd-drawer-body {
-  padding: 16px 20px;
+  padding: 16px 20px 30px;
   overflow-y: auto;
+  overflow-x: hidden;
   flex: 1;
+  min-height: 0;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
