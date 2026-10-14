@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import HeroSlider from '../components/HeroSlider';
-import WelcomeAbout from '../components/WelcomeAbout';
-import ServicesSection from '../components/ServicesSection';
-import WhyChooseUs from '../components/WhyChooseUs';
-import DoctorsSection from '../components/DoctorsSection';
-import GallerySection from '../components/GallerySection';
-import FAQSection from '../components/FAQSection';
-import GoogleReviewsSection from '../components/GoogleReviewsSection';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Services from '../components/Services';
+import WhyUs from '../components/WhyUs';
+import Doctors from '../components/Doctors';
+import Gallery from '../components/Gallery';
+import Faqs from '../components/Faqs';
+import Testimonial from '../components/Testimonial';
 
 interface HomePageProps {
   onOpenServices?: () => void;
@@ -22,29 +22,29 @@ export default function HomePage({ onOpenServices }: HomePageProps) {
   return (
     <>
       {/* Main Hero Banner Slider */}
-      <HeroSlider />
+      <Hero />
 
 
       {/* Welcome & About Section */}
-      <WelcomeAbout />
+      <About />
 
       {/* Clinic Services Slider */}
-      <ServicesSection onOpenServices={onOpenServices} />
+      <Services onOpenServices={onOpenServices} />
 
       {/* Why Choose Us & CTA Banners */}
-      <WhyChooseUs />
+      <WhyUs />
 
       {/* Senior Doctors Showcase */}
-      <DoctorsSection />
+      <Doctors />
 
       {/* Clinical Image Gallery */}
-      <GallerySection />
+      <Gallery />
 
       {/* Frequently Asked Questions */}
-      <FAQSection />
+      <Faqs />
 
       {/* Patient Google Reviews & Direct Feedback */}
-      <GoogleReviewsSection />
+      <Testimonial />
     </>
   );
 }

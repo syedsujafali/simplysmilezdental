@@ -272,7 +272,9 @@ export default function Header({ onOpenServices }: HeaderProps) {
             <div className="ssd-nav-actions">
               {/* Direct Click to Call - Icon + Number only */}
               <a href="tel:+917799376656" className="ssd-quick-phone" title="Call: 77993 76656">
-                <i className="fa-solid fa-phone ssd-quick-phone-icon"></i>
+                <span className="ssd-quick-phone-icon">
+                  <i className="fa-solid fa-phone"></i>
+                </span>
                 <span className="ssd-quick-phone-number">77993 76656</span>
               </a>
 

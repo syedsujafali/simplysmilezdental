@@ -39,7 +39,7 @@ const reasons: ReasonItem[] = [
   }
 ];
 
-export default function WhyChooseUs() {
+export default function WhyUs() {
   return (
     <>
       <section className="ftco-section bg-light py-5">

@@ -4,11 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from './Link';
 import { servicesData, ServiceItem } from '../data';
 
-interface ServicesSectionProps {
+interface ServicesProps {
   onOpenServices: () => void;
 }
 
-export default function ServicesSection({ onOpenServices }: ServicesSectionProps) {
+export default function Services({ onOpenServices }: ServicesProps) {
   // Filter out wisdom tooth extraction service card
   const filteredServices = servicesData.filter(
     (service: ServiceItem) => !service.title.toLowerCase().includes('wisdom')

@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from '../components/Link';
-import FAQSection from '../components/FAQSection';
+import Faqs from '../components/Faqs';
 
 const aboutSchema = {
   "@context": "https://schema.org",
@@ -378,7 +378,7 @@ export default function AboutPage() {
   </section>
 
   {/* Frequently Asked Questions */}
-  <FAQSection />
+  <Faqs />
 </div>
 );
 }

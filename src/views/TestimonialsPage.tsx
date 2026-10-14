@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from '../components/Link';
-import GoogleReviewsSection, { GOOGLE_REVIEWS_URL } from '../components/GoogleReviewsSection';
+import Testimonial, { GOOGLE_REVIEWS_URL } from '../components/Testimonial';
 
 const testimonialsSchema = {
   "@context": "https://schema.org",
@@ -227,7 +227,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Embedded Google Reviews Component */}
-      <GoogleReviewsSection />
+      <Testimonial />
     </div>
   );
 }

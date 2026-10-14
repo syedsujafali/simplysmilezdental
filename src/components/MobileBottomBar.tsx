@@ -32,6 +32,18 @@ export default function MobileBottomBar({ onOpenServices }: MobileBottomBarProps
     setIsOpen(false);
   }, [pathname]);
 
+  // Prevent background scrolling when dropup is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('services-dropup-open'); document.documentElement.classList.add('services-dropup-open');
+    } else {
+      document.body.classList.remove('services-dropup-open'); document.documentElement.classList.remove('services-dropup-open');
+    }
+    return () => {
+      document.body.classList.remove('services-dropup-open'); document.documentElement.classList.remove('services-dropup-open');
+    };
+  }, [isOpen]);
+
   // Close on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from './Link';
 
-export default function WelcomeAbout() {
+export default function About() {
   return (
     <section className="ftco-section ftco-no-pt ftco-no-pb pb-md-2" id="about">
       <div className="container">

@@ -3417,3 +3417,20 @@ body.mobile-menu-open .mobile-services-dropup-backdrop {
 
 
 
+
+
+/* Lock background when services dropup is open */
+html.services-dropup-open,
+body.services-dropup-open {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+}
+
+.mobile-services-dropup {
+  overscroll-behavior: contain !important;
+}
+
+.dropup-list {
+  overscroll-behavior: contain !important;
+}

@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from './Link';
 import { galleryImages, GalleryItem } from '../data';
 
-export default function GallerySection() {
+export default function Gallery() {
   const [activeImg, setActiveImg] = useState<string | null>(null);
   const [isInteracting, setIsInteracting] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);

@@ -30,7 +30,7 @@ const slides: Slide[] = [
   }
 ];
 
-export default function HeroSlider() {
+export default function Hero() {
   const [current, setCurrent] = useState<number>(0);
 
   useEffect(() => {

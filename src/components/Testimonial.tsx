@@ -92,7 +92,7 @@ export const clinicReviews: GoogleReview[] = [
   }
 ];
 
-export default function GoogleReviewsSection() {
+export default function Testimonial() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [expandedReviews, setExpandedReviews] = useState<{ [key: string]: boolean }>({});
   const [isInteracting, setIsInteracting] = useState(false);

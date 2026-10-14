@@ -10303,43 +10303,45 @@ img.mfp-img {
     right: 0;
     width: 100%;
     height: 60px;
-    background: #0d3b66;
+    background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
     z-index: 99999;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 -3px 15px rgba(234, 88, 12, 0.35);
     align-items: center;
     justify-content: space-around;
   }
   .mobile-bottom-bar .mobile-bar-item {
     flex: 1;
     text-align: center;
-    color: #0b2545;
+    color: #ffffff !important;
     text-decoration: none !important;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding: 6px 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
     transition: background 0.2s ease, color 0.2s ease;
   }
   .mobile-bottom-bar .mobile-bar-item:last-child {
     border-right: none;
   }
   .mobile-bottom-bar .mobile-bar-item:active,
-  .mobile-bottom-bar .mobile-bar-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #00b7ff;
+  .mobile-bottom-bar .mobile-bar-item:hover,
+  .mobile-bottom-bar .mobile-bar-item.active-dropup {
+    background: rgba(0, 0, 0, 0.15);
+    color: #ffffff !important;
   }
   .mobile-bottom-bar .mobile-bar-item i {
     font-size: 18px;
     margin-bottom: 3px;
-    color: #00b7ff;
+    color: #ffffff;
   }
   .mobile-bottom-bar .mobile-bar-item.whatsapp-item i {
-    color: #25D366;
+    color: #ffffff;
   }
   body {
     padding-bottom: 60px !important;

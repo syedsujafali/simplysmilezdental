@@ -2,7 +2,7 @@ import React from 'react';
 import Link from './Link';
 import { doctorsData, DoctorItem } from '../data';
 
-export default function DoctorsSection() {
+export default function Doctors() {
   return (
     <section className="ftco-section test8 py-5" id="doctors">
       <div className="container">

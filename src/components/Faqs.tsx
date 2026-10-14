@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { faqsData, FAQItem } from '../data';
 
-export default function FAQSection() {
+export default function Faqs() {
   const [openId, setOpenId] = useState<number | null>(1);
   const [showAllFaqs, setShowAllFaqs] = useState<boolean>(false);
 
