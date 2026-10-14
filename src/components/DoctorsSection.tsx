@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 import { doctorsData, DoctorItem } from '../data';
 
 export default function DoctorsSection() {

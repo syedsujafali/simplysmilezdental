@@ -6,26 +6,26 @@ import ServicesModal from './components/ServicesModal';
 import MobileBottomBar from './components/MobileBottomBar';
 
 // Dedicated Page Components
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import AllServicesPage from './pages/AllServicesPage';
-import CompositeFillingsPage from './pages/services/CompositeFillingsPage';
-import CrownsPage from './pages/services/CrownsPage';
-import VeneersPage from './pages/services/VeneersPage';
-import BracesPage from './pages/services/BracesPage';
-import LaserTeethPage from './pages/services/LaserTeethPage';
-import MicroscopicRootCanalPage from './pages/services/MicroscopicRootCanalPage';
-import LaserGumPage from './pages/services/LaserGumPage';
-import DentalImplantPage from './pages/services/DentalImplantPage';
-import PediataryPage from './pages/services/PediataryPage';
-import WisdomPage from './pages/services/WisdomPage';
-import GalleryPage from './pages/GalleryPage';
-import BlogPage from './pages/BlogPage';
-import DoctorsPage from './pages/DoctorsPage';
-import DoctorAnkushPage from './pages/doctors/DoctorAnkushPage';
-import DoctorSusheelPage from './pages/doctors/DoctorSusheelPage';
-import TestimonialsPage from './pages/TestimonialsPage';
-import ContactPage from './pages/ContactPage';
+import HomePage from './views/HomePage';
+import AboutPage from './views/AboutPage';
+import AllServicesPage from './views/AllServicesPage';
+import CompositeFillingsPage from './views/services/CompositeFillingsPage';
+import CrownsPage from './views/services/CrownsPage';
+import VeneersPage from './views/services/VeneersPage';
+import BracesPage from './views/services/BracesPage';
+import LaserTeethPage from './views/services/LaserTeethPage';
+import MicroscopicRootCanalPage from './views/services/MicroscopicRootCanalPage';
+import LaserGumPage from './views/services/LaserGumPage';
+import DentalImplantPage from './views/services/DentalImplantPage';
+import PediataryPage from './views/services/PediataryPage';
+import WisdomPage from './views/services/WisdomPage';
+import GalleryPage from './views/GalleryPage';
+import BlogPage from './views/BlogPage';
+import DoctorsPage from './views/DoctorsPage';
+import DoctorAnkushPage from './views/doctors/DoctorAnkushPage';
+import DoctorSusheelPage from './views/doctors/DoctorSusheelPage';
+import TestimonialsPage from './views/TestimonialsPage';
+import ContactPage from './views/ContactPage';
 
 export default function App() {
   const [isServicesModalOpen, setIsServicesModalOpen] = useState<boolean>(false);

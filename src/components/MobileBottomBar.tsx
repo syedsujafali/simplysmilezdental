@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from './Link';
+import { usePathname } from 'next/navigation';
 
 interface MobileBottomBarProps {
   onOpenServices?: () => void;
@@ -22,12 +25,12 @@ const serviceItems = [
 export default function MobileBottomBar({ onOpenServices }: MobileBottomBarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropupRef = useRef<HTMLDivElement>(null);
-  const location = useLocation();
+  const pathname = usePathname();
 
   // Close dropup when route changes
   useEffect(() => {
     setIsOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   // Close on outside click
   useEffect(() => {

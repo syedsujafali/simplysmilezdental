@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef, useState, useEffect } from 'react';
 
 // Exact Google Write Review Link (triggers review dialog directly with 5-star prompt)

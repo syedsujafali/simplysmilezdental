@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 import { servicesData, ServiceItem } from '../data';
 
 interface ServicesSectionProps {

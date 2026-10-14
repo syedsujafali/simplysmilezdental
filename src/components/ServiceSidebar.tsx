@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 
 const quickServices = [
   { name: 'All Services', path: '/all-services', icon: 'fa-layer-group', highlight: true },
