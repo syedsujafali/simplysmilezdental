@@ -10,7 +10,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const [isServicesModalOpen, setIsServicesModalOpen] = useState(false);
 
   return (
-    <div className="app-root">
+    <div className="app-root" suppressHydrationWarning>
       {/* Top Header & Navigation */}
       <Header onOpenServices={() => setIsServicesModalOpen(true)} />
 
