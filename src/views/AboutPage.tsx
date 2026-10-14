@@ -45,8 +45,8 @@ const aboutSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/about.html#webpage",
-      "url": "https://www.simplysmilezdental.in/about.html",
+      "@id": "https://www.simplysmilezdental.in/about#webpage",
+      "url": "https://www.simplysmilezdental.in/about",
       "name": "About Simply Smilez Dental Clinic",
       "description": "Learn about Simply Smilez Dental Clinic, a dental clinic in Shaikpet, Hyderabad, established in 2018.",
       "isPartOf": {
@@ -56,12 +56,12 @@ const aboutSchema = {
         "@id": "https://www.simplysmilezdental.in/#dentist"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/about#breadcrumb"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/about#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -73,13 +73,13 @@ const aboutSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "About Us",
-          "item": "https://www.simplysmilezdental.in/about.html"
+          "item": "https://www.simplysmilezdental.in/about"
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#invisalign",
+      "@id": "https://www.simplysmilezdental.in/about#invisalign",
       "name": "Invisalign Treatment",
       "serviceType": "Invisalign",
       "provider": {
@@ -92,7 +92,7 @@ const aboutSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#root-canal",
+      "@id": "https://www.simplysmilezdental.in/about#root-canal",
       "name": "Root Canal Treatment",
       "serviceType": "Root Canal Treatment",
       "provider": {
@@ -105,7 +105,7 @@ const aboutSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#dental-implants",
+      "@id": "https://www.simplysmilezdental.in/about#dental-implants",
       "name": "Dental Implants",
       "serviceType": "Dental Implants",
       "provider": {
@@ -118,7 +118,7 @@ const aboutSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#braces",
+      "@id": "https://www.simplysmilezdental.in/about#braces",
       "name": "Braces and Orthodontic Treatment",
       "serviceType": "Braces",
       "provider": {
@@ -131,7 +131,7 @@ const aboutSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#pediatric-dentistry",
+      "@id": "https://www.simplysmilezdental.in/about#pediatric-dentistry",
       "name": "Pediatric Dentistry",
       "serviceType": "Pediatric Dentistry",
       "provider": {
@@ -144,7 +144,7 @@ const aboutSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/about.html#faq",
+      "@id": "https://www.simplysmilezdental.in/about#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -213,7 +213,7 @@ export default function AboutPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/about.html";
+    canonical.href = "https://www.simplysmilezdental.in/about";
 
     // Metadata
     setMeta('description', "Simply Smilez Dental Clinic offers Invisalign, Invisalign First for Kids, root canal treatment, and family dental care in Shaikpet, Hyderabad.");
@@ -227,7 +227,7 @@ export default function AboutPage() {
     setMeta('og:type', "website", true);
     setMeta('og:title', "Invisalign & Root Canal Dentist in Hyderabad | Simply Smilez", true);
     setMeta('og:description', "Simply Smilez Dental Clinic offers Invisalign, Invisalign First for Kids, root canal treatment, and family dental care in Shaikpet, Hyderabad.", true);
-    setMeta('og:url', "https://www.simplysmilezdental.in/about.html", true);
+    setMeta('og:url', "https://www.simplysmilezdental.in/about", true);
     setMeta('og:site_name', "Simply Smilez Dental Clinic", true);
     setMeta('og:image', "https://www.simplysmilezdental.in/images/about.webp", true);
     setMeta('og:image:alt', "Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);

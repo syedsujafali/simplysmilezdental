@@ -31,18 +31,18 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#webpage",
-      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "@id": "https://www.simplysmilezdental.in/services/dental-implants#webpage",
+      "url": "https://www.simplysmilezdental.in/services/dental-implants",
       "name": "Dental Implants in Hyderabad | Simply Smilez Dental Clinic",
       "description": "Get dental implants in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Explore tooth replacement options and personalized implant care.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/dental-implants#service"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/dental-implants#service"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -106,7 +106,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/dental-implants#service",
       "name": "Dental Implant Treatment",
       "alternateName": [
         "Dental Implants",
@@ -122,23 +122,23 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "url": "https://www.simplysmilezdental.in/services/dental-implants",
       "image": "https://www.simplysmilezdental.in/images/dentalimp.webp"
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/dental-implants#procedure",
       "name": "Dental Implant Placement",
       "alternateName": "Dental Implant Treatment",
       "description": "Dental implant placement is a procedure used to provide support for a dental crown, bridge, or denture when replacing missing teeth.",
       "procedureType": "http://schema.org/PercutaneousProcedure",
       "bodyLocation": "Jaw",
-      "url": "https://www.simplysmilezdental.in/dentalimplant.html",
+      "url": "https://www.simplysmilezdental.in/services/dental-implants",
       "image": "https://www.simplysmilezdental.in/images/dentalimp.webp"
     },
     {
       "@type": "OfferCatalog",
-      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#implant-options",
+      "@id": "https://www.simplysmilezdental.in/services/dental-implants#implant-options",
       "name": "Dental Implant Treatment Options",
       "itemListElement": [
         {
@@ -166,7 +166,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/dentalimplant.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/dental-implants#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -178,7 +178,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Dental Implants",
-          "item": "https://www.simplysmilezdental.in/dentalimplant.html"
+          "item": "https://www.simplysmilezdental.in/services/dental-implants"
         }
       ]
     }

@@ -24,15 +24,15 @@ const laserTeethSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/laserteeth.html",
-      "url": "https://www.simplysmilezdental.in/laserteeth.html",
+      "@id": "https://www.simplysmilezdental.in/services/laser-teeth-whitening",
+      "url": "https://www.simplysmilezdental.in/services/laser-teeth-whitening",
       "name": "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez",
       "description": "Professional laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet, for improving the appearance of naturally discoloured teeth.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/laserteeth.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/laser-teeth-whitening#service"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#dentist"
@@ -40,7 +40,7 @@ const laserTeethSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/laserteeth.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/laser-teeth-whitening#service",
       "name": "Laser Teeth Whitening",
       "serviceType": "Professional Teeth Whitening",
       "description": "Professional teeth whitening treatment designed to improve the appearance of certain types of natural tooth discoloration and staining.",
@@ -51,11 +51,11 @@ const laserTeethSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/laserteeth.html"
+      "url": "https://www.simplysmilezdental.in/services/laser-teeth-whitening"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/laserteeth.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/laser-teeth-whitening#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -140,7 +140,7 @@ export default function LaserTeethPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/laserteeth.html";
+    canonical.href = "https://www.simplysmilezdental.in/services/laser-teeth-whitening";
 
     // Metadata
     setMeta("description", "Get laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Professional whitening for a brighter, more confident smile.");
@@ -151,7 +151,7 @@ export default function LaserTeethPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Laser Teeth Whitening Treatment in Hyderabad | Simply Smilez", true);
     setMeta("og:description", "Get laser teeth whitening treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Professional whitening for a brighter, more confident smile.", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/laserteeth.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/services/laser-teeth-whitening", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/laserteeth.webp", true);
     setMeta("og:image:alt", "Laser teeth whitening treatment at Simply Smilez Dental Clinic in Hyderabad", true);

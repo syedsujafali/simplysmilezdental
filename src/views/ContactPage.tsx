@@ -103,8 +103,8 @@ const contactSchema = {
     },
     {
       "@type": "ContactPage",
-      "@id": "https://www.simplysmilezdental.in/contact.html#webpage",
-      "url": "https://www.simplysmilezdental.in/contact.html",
+      "@id": "https://www.simplysmilezdental.in/contact#webpage",
+      "url": "https://www.simplysmilezdental.in/contact",
       "name": "Contact Simply Smilez Dental Clinic | Shaikpet, Hyderabad",
       "description": "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for comprehensive family dental care and appointments.",
       "isPartOf": {
@@ -114,7 +114,7 @@ const contactSchema = {
         "@id": "https://www.simplysmilezdental.in/#clinic"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/contact#breadcrumb"
       }
     },
     {
@@ -129,7 +129,7 @@ const contactSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/contact#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -141,7 +141,7 @@ const contactSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact Us",
-          "item": "https://www.simplysmilezdental.in/contact.html"
+          "item": "https://www.simplysmilezdental.in/contact"
         }
       ]
     }
@@ -184,7 +184,7 @@ export default function ContactPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/contact.html";
+    canonical.href = "https://www.simplysmilezdental.in/contact";
 
     // Metadata
     setMeta("description", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for Invisalign, braces, implants, root canal and comprehensive dental care.");
@@ -195,7 +195,7 @@ export default function ContactPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Contact Dentist in Shaikpet, Hyderabad | Simply Smilez Dental", true);
     setMeta("og:description", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for Invisalign, braces, implants, root canal and comprehensive dental care.", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/contact.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/contact", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/gmb.webp", true);
     setMeta("og:image:alt", "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);

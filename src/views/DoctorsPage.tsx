@@ -58,8 +58,8 @@ const doctorsSchema = {
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.simplysmilezdental.in/doctor.html#webpage",
-      "url": "https://www.simplysmilezdental.in/doctor.html",
+      "@id": "https://www.simplysmilezdental.in/doctors#webpage",
+      "url": "https://www.simplysmilezdental.in/doctors",
       "name": "Experienced Dentists & Dental Specialists in Shaikpet, Hyderabad | Simply Smilez",
       "description": "Meet our team of experienced dentists and dental specialists at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
       "isPartOf": {
@@ -69,7 +69,7 @@ const doctorsSchema = {
         "@id": "https://www.simplysmilezdental.in/#clinic"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/doctor.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/doctors#breadcrumb"
       }
     },
     {
@@ -96,7 +96,7 @@ const doctorsSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/doctor.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/doctors#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -108,7 +108,7 @@ const doctorsSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Doctors",
-          "item": "https://www.simplysmilezdental.in/doctor.html"
+          "item": "https://www.simplysmilezdental.in/doctors"
         }
       ]
     }
@@ -145,7 +145,7 @@ export default function DoctorsPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/doctor.html";
+    canonical.href = "https://www.simplysmilezdental.in/doctors";
 
     // Metadata
     setMeta("description", "Meet our team of experienced dentists and dental specialists at Simply Smilez Dental Clinic in Shaikpet, Hyderabad. Expert care by Dr. Ankush Kumar (Orthodontist) and Dr. Susheel Kumar (Pediatric Dentist & Implantologist).");
@@ -156,7 +156,7 @@ export default function DoctorsPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Experienced Dentists & Dental Specialists in Shaikpet, Hyderabad | Simply Smilez", true);
     setMeta("og:description", "Meet our team of experienced dental specialists at Simply Smilez Dental Clinic in Shaikpet, Hyderabad: Dr. Ankush Kumar (Orthodontist & Invisalign Provider) and Dr. Susheel Kumar (Pediatric Dentist & Implantologist).", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/doctor.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/doctors", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/about.webp", true);
     setMeta("og:image:alt", "Expert dentists and dental team at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);

@@ -31,8 +31,8 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/pediatary.html#webpage",
-      "url": "https://www.simplysmilezdental.in/pediatary.html",
+      "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#webpage",
+      "url": "https://www.simplysmilezdental.in/services/pediatric-dentistry",
       "name": "Best Child Dentists Near Me in Hyderabad | Pediatric Dentistry",
       "description": "Pediatric dentistry in Shaikpet, Hyderabad for children's dental checkups, preventive care, fillings, crowns, fluoride, sealants and orthodontic evaluation.",
       "inLanguage": "en-IN",
@@ -40,10 +40,10 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry"
+        "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#pediatric-dentistry"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry"
+        "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#pediatric-dentistry"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -106,7 +106,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/pediatary.html#pediatric-dentistry",
+      "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#pediatric-dentistry",
       "name": "Pediatric Dentistry",
       "alternateName": [
         "Pediatric Dental Care",
@@ -122,7 +122,7 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/pediatary.html",
+      "url": "https://www.simplysmilezdental.in/services/pediatric-dentistry",
       "image": "https://www.simplysmilezdental.in/images/pedia2.webp",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -224,7 +224,7 @@ const pageSchema = {
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/pediatary.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#procedure",
       "name": "Pediatric Dental Treatment",
       "description": "Dental procedures for children may include preventive treatments, restorative procedures and selected treatments for primary teeth based on individual clinical needs.",
       "bodyLocation": "Teeth",
@@ -232,7 +232,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/pediatary.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/pediatric-dentistry#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -244,7 +244,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Pediatric Dentistry",
-          "item": "https://www.simplysmilezdental.in/pediatary.html"
+          "item": "https://www.simplysmilezdental.in/services/pediatric-dentistry"
         }
       ]
     }

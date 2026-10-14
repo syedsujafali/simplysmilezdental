@@ -62,15 +62,15 @@ const pageSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/crowns.html#webpage",
-      "url": "https://www.simplysmilezdental.in/crowns.html",
+      "@id": "https://www.simplysmilezdental.in/services/crowns#webpage",
+      "url": "https://www.simplysmilezdental.in/services/crowns",
       "name": "Dental Crowns in Hyderabad | Simply Smilez Dental Clinic",
       "description": "Learn about dental crowns in Hyderabad, including crown types, benefits, procedure, aftercare and treatment options at Simply Smilez Dental Clinic in Shaikpet.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/crowns.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/crowns#service"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#dentist"
@@ -78,7 +78,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/crowns.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/crowns#service",
       "name": "Dental Crowns",
       "serviceType": "Dental Crown Treatment",
       "description": "Dental crown treatment for damaged, weakened, cracked or extensively restored teeth, including suitable porcelain, ceramic and zirconia crown options.",
@@ -89,11 +89,11 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/crowns.html"
+      "url": "https://www.simplysmilezdental.in/services/crowns"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/crowns.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/crowns#faq",
       "mainEntity": [
         {
           "@type": "Question",

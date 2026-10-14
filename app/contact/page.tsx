@@ -97,8 +97,8 @@ const pageSchema = {
     },
     {
       "@type": "ContactPage",
-      "@id": "https://www.simplysmilezdental.in/contact.html#webpage",
-      "url": "https://www.simplysmilezdental.in/contact.html",
+      "@id": "https://www.simplysmilezdental.in/contact#webpage",
+      "url": "https://www.simplysmilezdental.in/contact",
       "name": "Contact Simply Smilez Dental Clinic | Shaikpet, Hyderabad",
       "description": "Contact Simply Smilez Dental Clinic in Shaikpet, Hyderabad, for comprehensive family dental care and appointments.",
       "isPartOf": {
@@ -108,7 +108,7 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#clinic"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/contact#breadcrumb"
       }
     },
     {
@@ -123,7 +123,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/contact.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/contact#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -135,7 +135,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact Us",
-          "item": "https://www.simplysmilezdental.in/contact.html"
+          "item": "https://www.simplysmilezdental.in/contact"
         }
       ]
     }

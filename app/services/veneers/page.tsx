@@ -46,15 +46,15 @@ const pageSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html",
-      "url": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html",
+      "@id": "https://www.simplysmilezdental.in/services/veneers",
+      "url": "https://www.simplysmilezdental.in/services/veneers",
       "name": "Dental Veneers in Hyderabad | Simply Smilez Dental Clinic",
       "description": "Learn about dental veneers in Hyderabad, including benefits, treatment procedure, suitability, aftercare and veneer options at Simply Smilez Dental Clinic in Shaikpet.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/veneers#service"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#dentist"
@@ -62,7 +62,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/veneers#service",
       "name": "Dental Veneers",
       "serviceType": "Dental Veneer Treatment",
       "description": "Dental veneer treatment to improve the appearance of suitable teeth affected by discoloration, chips, uneven shapes, small gaps and other cosmetic concerns.",
@@ -73,11 +73,11 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html"
+      "url": "https://www.simplysmilezdental.in/services/veneers"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/dental-veneers-hyderabad.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/veneers#faq",
       "mainEntity": [
         {
           "@type": "Question",

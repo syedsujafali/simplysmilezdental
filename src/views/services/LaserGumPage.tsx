@@ -9,18 +9,18 @@ const laserGumSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/lasergum.html#webpage",
-      "url": "https://www.simplysmilezdental.in/lasergum.html",
+      "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#webpage",
+      "url": "https://www.simplysmilezdental.in/services/laser-gum-surgery",
       "name": "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez",
       "description": "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and professional dental cleaning.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure"
+        "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#procedure"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure"
+        "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#procedure"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -83,7 +83,7 @@ const laserGumSchema = {
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/lasergum.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#procedure",
       "name": "Laser Gum Treatment",
       "alternateName": [
         "Laser Gum Surgery",
@@ -92,12 +92,12 @@ const laserGumSchema = {
       "description": "Laser-assisted gum treatment for selected periodontal and gum conditions at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
       "procedureType": "http://schema.org/NoninvasiveProcedure",
       "bodyLocation": "Gums",
-      "url": "https://www.simplysmilezdental.in/lasergum.html",
+      "url": "https://www.simplysmilezdental.in/services/laser-gum-surgery",
       "image": "https://www.simplysmilezdental.in/images/lasergum.webp"
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/lasergum.html#gum-care-service",
+      "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#gum-care-service",
       "name": "Hygiene & Gum Care",
       "serviceType": "Dental Hygiene and Gum Care",
       "provider": {
@@ -193,7 +193,7 @@ const laserGumSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/lasergum.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/laser-gum-surgery#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -205,7 +205,7 @@ const laserGumSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Laser Gum Treatment",
-          "item": "https://www.simplysmilezdental.in/lasergum.html"
+          "item": "https://www.simplysmilezdental.in/services/laser-gum-surgery"
         }
       ]
     }
@@ -242,7 +242,7 @@ export default function LaserGumPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/lasergum.html";
+    canonical.href = "https://www.simplysmilezdental.in/services/laser-gum-surgery";
 
     // Metadata
     setMeta("description", "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and cleaning.");
@@ -253,7 +253,7 @@ export default function LaserGumPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Advanced Laser Gum Treatment in Hyderabad | Simply Smilez", true);
     setMeta("og:description", "Improve gum health with laser gum treatment in Hyderabad at Simply Smilez, Shaikpet. Get personalized periodontal care, gum treatment and cleaning.", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/lasergum.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/services/laser-gum-surgery", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/lasergum.webp", true);
     setMeta("og:image:alt", "Advanced laser gum treatment and periodontal care at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);

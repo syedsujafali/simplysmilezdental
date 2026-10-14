@@ -83,8 +83,8 @@ const pageSchema = {
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.simplysmilezdental.in/testimonal.html#webpage",
-      "url": "https://www.simplysmilezdental.in/testimonal.html",
+      "@id": "https://www.simplysmilezdental.in/testimonials#webpage",
+      "url": "https://www.simplysmilezdental.in/testimonials",
       "name": "Patient Reviews & Testimonials | Simply Smilez Dental Hyderabad",
       "description": "Read patient testimonials and verified experiences with Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
       "isPartOf": {
@@ -94,7 +94,7 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#clinic"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/testimonal.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/testimonials#breadcrumb"
       }
     },
     {
@@ -147,7 +147,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/testimonal.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/testimonials#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -159,7 +159,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Testimonials",
-          "item": "https://www.simplysmilezdental.in/testimonal.html"
+          "item": "https://www.simplysmilezdental.in/testimonials"
         }
       ]
     }

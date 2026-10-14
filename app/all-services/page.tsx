@@ -77,8 +77,8 @@ const pageSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/all-services.html#webpage",
-      "url": "https://www.simplysmilezdental.in/all-services.html",
+      "@id": "https://www.simplysmilezdental.in/all-services#webpage",
+      "url": "https://www.simplysmilezdental.in/all-services",
       "name": "Dental Services in Hyderabad | Simply Smilez Dental",
       "headline": "Comprehensive Dental Services in Hyderabad",
       "description": "Explore comprehensive dental services in Hyderabad at Simply Smilez Dental, including Invisalign, pediatric dentistry, braces, root canals, whitening and more.",
@@ -89,7 +89,7 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#dentist"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/all-services.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/all-services#breadcrumb"
       }
     },
     {
@@ -103,7 +103,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/all-services.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/all-services#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -115,13 +115,13 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "All Services",
-          "item": "https://www.simplysmilezdental.in/all-services.html"
+          "item": "https://www.simplysmilezdental.in/all-services"
         }
       ]
     },
     {
       "@type": "ItemList",
-      "@id": "https://www.simplysmilezdental.in/all-services.html#services",
+      "@id": "https://www.simplysmilezdental.in/all-services#services",
       "name": "Dental Services at Simply Smilez Dental",
       "itemListElement": [
         {
