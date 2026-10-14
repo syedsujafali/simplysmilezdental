@@ -253,13 +253,13 @@ img {
 
 @media (min-width: 1024px) {
   .ssd-brand {
-    margin-right: 48px;
+    margin-right: 16px;
   }
 }
 
 @media (min-width: 1280px) {
   .ssd-brand {
-    margin-right: 64px;
+    margin-right: 20px;
   }
 }
 
@@ -313,15 +313,15 @@ img {
   flex-wrap: nowrap;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1340px) {
   .ssd-nav-menu {
     display: flex;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1220px) {
+@media (min-width: 1200px) and (max-width: 1360px) {
   .ssd-nav-menu {
-    gap: 2px;
+    gap: 3px;
   }
 }
 
@@ -345,9 +345,9 @@ img {
   white-space: nowrap !important;
 }
 
-@media (min-width: 1024px) and (max-width: 1220px) {
+@media (min-width: 1200px) and (max-width: 1360px) {
   .ssd-nav-link {
-    padding: 7px 9px;
+    padding: 6px 8px;
     font-size: 13px;
     gap: 3px;
   }
@@ -677,7 +677,7 @@ img {
   color: var(--ssd-navy);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1340px) {
   .ssd-mobile-toggle {
     display: none;
   }
