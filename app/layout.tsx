@@ -87,6 +87,9 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="/css/animate.css" />
+        <link rel="stylesheet" href="/css/flaticon.css" />
+        <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
