@@ -168,7 +168,7 @@ const ankushSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Doctors",
-          "item": "https://www.simplysmilezdental.in/doctor.html"
+          "item": "https://www.simplysmilezdental.in/doctors"
         },
         {
           "@type": "ListItem",
@@ -215,7 +215,7 @@ export default function DoctorAnkushPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad.html";
+    canonical.href = "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar";
 
     // Metadata
     setMeta('description', "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience. Expert in braces, aligners, and smile makeovers at Simply Smilez Dental Clinic.");
@@ -229,7 +229,7 @@ export default function DoctorAnkushPage() {
     setMeta('og:type', "profile", true);
     setMeta('og:title', "Dr. Ankush Kumar – Orthodontist & Invisalign Provider in Hyderabad | Simply Smilez", true);
     setMeta('og:description', "Consult Dr. Ankush Kumar, leading Orthodontist and Certified Invisalign Provider in Hyderabad with 9+ years experience. Expert in braces, aligners, and smile makeovers at Simply Smilez Dental Clinic.", true);
-    setMeta('og:url', "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar-orthodontist-invisalign-provider-hyderabad.html", true);
+    setMeta('og:url', "https://www.simplysmilezdental.in/doctor/dr-ankush-kumar", true);
     setMeta('og:site_name', "Simply Smilez Dental Clinic", true);
     setMeta('og:image', "https://www.simplysmilezdental.in/images/ankush.webp", true);
     setMeta('og:image:alt', "Dr. Ankush Kumar - Orthodontist & Invisalign Provider in Hyderabad at Simply Smilez Dental Clinic", true);

@@ -44,7 +44,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#service",
       "name": "Composite Fillings",
       "serviceType": "Composite Dental Fillings",
       "description": "Tooth-coloured composite fillings for restoring teeth affected by cavities, decay or minor damage.",
@@ -55,22 +55,22 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html"
+      "url": "https://www.simplysmilezdental.in/services/composite-fillings"
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#webpage",
-      "url": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#webpage",
+      "url": "https://www.simplysmilezdental.in/services/composite-fillings",
       "name": "Composite Fillings in Hyderabad | Tooth-Coloured Dental Fillings",
       "description": "Learn about composite fillings in Hyderabad, including tooth-coloured fillings, benefits, procedure, suitability and aftercare.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/composite-fillings#service"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/services/composite-fillings#breadcrumb"
       }
     },
     {
@@ -84,7 +84,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -96,7 +96,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Composite Fillings",
-          "item": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html"
+          "item": "https://www.simplysmilezdental.in/services/composite-fillings"
         }
       ]
     }

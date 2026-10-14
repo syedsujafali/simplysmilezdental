@@ -9,8 +9,8 @@ const wisdomSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#webpage",
-      "url": "https://www.simplysmilezdental.in/wisdom.html",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#webpage",
+      "url": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction",
       "name": "Wisdom Tooth Extraction in Hyderabad | Simply Smilez",
       "description": "Wisdom tooth extraction in Shaikpet, Hyderabad for impacted, painful or infected wisdom teeth. Get a dental evaluation and personalized treatment plan.",
       "inLanguage": "en-IN",
@@ -18,10 +18,10 @@ const wisdomSchema = {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction"
+        "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction"
+        "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -84,7 +84,7 @@ const wisdomSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction",
       "name": "Wisdom Tooth Extraction",
       "alternateName": [
         "Wisdom Teeth Removal",
@@ -101,12 +101,12 @@ const wisdomSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/wisdom.html",
+      "url": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction",
       "image": "https://www.simplysmilezdental.in/images/wisdom.webp"
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#procedure",
       "name": "Wisdom Tooth Extraction",
       "alternateName": "Third Molar Extraction",
       "description": "A dental extraction procedure used to remove a wisdom tooth when clinically indicated, including certain impacted or problematic third molars.",
@@ -116,7 +116,7 @@ const wisdomSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -170,7 +170,7 @@ const wisdomSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -182,7 +182,7 @@ const wisdomSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Wisdom Tooth Extraction",
-          "item": "https://www.simplysmilezdental.in/wisdom.html"
+          "item": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction"
         }
       ]
     }
@@ -219,7 +219,7 @@ export default function WisdomPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/wisdom.html";
+    canonical.href = "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction";
 
     // Metadata
     setMeta("description", "Wisdom tooth extraction in Shaikpet, Hyderabad for impacted, painful or infected wisdom teeth. Get a dental evaluation and personalized treatment plan.");
@@ -230,7 +230,7 @@ export default function WisdomPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Wisdom Tooth Extraction in Hyderabad | Simply Smilez", true);
     setMeta("og:description", "Wisdom tooth extraction in Shaikpet, Hyderabad for impacted, painful or infected wisdom teeth. Get a dental evaluation and personalized treatment plan.", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/wisdom.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/wisdom.webp", true);
     setMeta("og:image:alt", "Wisdom tooth extraction and impacted tooth treatment at Simply Smilez Dental Clinic in Shaikpet, Hyderabad", true);

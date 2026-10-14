@@ -64,8 +64,8 @@ const pageSchema = {
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.simplysmilezdental.in/gallery.html#webpage",
-      "url": "https://www.simplysmilezdental.in/gallery.html",
+      "@id": "https://www.simplysmilezdental.in/gallery#webpage",
+      "url": "https://www.simplysmilezdental.in/gallery",
       "name": "Inside Simply Smilez Dental Clinic | Shaikpet, Hyderabad",
       "description": "Explore the Simply Smilez Dental Clinic gallery and view the clinic environment and dental care facilities in Shaikpet, Hyderabad.",
       "isPartOf": {
@@ -75,12 +75,12 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#dentist"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/gallery.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/gallery#breadcrumb"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/gallery.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/gallery#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -92,7 +92,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Gallery",
-          "item": "https://www.simplysmilezdental.in/gallery.html"
+          "item": "https://www.simplysmilezdental.in/gallery"
         }
       ]
     }

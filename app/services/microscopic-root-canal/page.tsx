@@ -31,15 +31,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/laserroot.html#webpage",
-      "url": "https://www.simplysmilezdental.in/laserroot.html",
+      "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#webpage",
+      "url": "https://www.simplysmilezdental.in/services/microscopic-root-canal",
       "name": "Microscopic Root Canal Treatment in Hyderabad | Simply Smilez",
       "description": "Get microscopic root canal treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet. Advanced 25x surgical magnification endodontics to preserve infected or damaged teeth.",
       "about": {
-        "@id": "https://www.simplysmilezdental.in/laserroot.html#procedure"
+        "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#procedure"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/laserroot.html#procedure"
+        "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#procedure"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -47,13 +47,13 @@ const pageSchema = {
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/laserroot.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#procedure",
       "name": "Microscopic Root Canal Treatment",
       "alternateName": "Laser Root Canal Treatment in Hyderabad",
       "description": "Microscopic root canal treatment using surgical dental operating microscopes for infected or damaged teeth at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
       "procedureType": "http://schema.org/NoninvasiveProcedure",
       "bodyLocation": "Tooth",
-      "url": "https://www.simplysmilezdental.in/laserroot.html",
+      "url": "https://www.simplysmilezdental.in/services/microscopic-root-canal",
       "image": "https://www.simplysmilezdental.in/images/microscopic-rct.jpg"
     },
     {
@@ -77,7 +77,7 @@ const pageSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/laserroot.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -131,7 +131,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/laserroot.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/microscopic-root-canal#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -143,7 +143,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Microscopic Root Canal",
-          "item": "https://www.simplysmilezdental.in/laserroot.html"
+          "item": "https://www.simplysmilezdental.in/services/microscopic-root-canal"
         }
       ]
     }

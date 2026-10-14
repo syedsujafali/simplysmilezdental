@@ -164,7 +164,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Doctors",
-          "item": "https://www.simplysmilezdental.in/doctor.html"
+          "item": "https://www.simplysmilezdental.in/doctors"
         },
         {
           "@type": "ListItem",

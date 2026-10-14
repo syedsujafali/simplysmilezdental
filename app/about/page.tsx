@@ -91,8 +91,8 @@ const pageSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/about.html#webpage",
-      "url": "https://www.simplysmilezdental.in/about.html",
+      "@id": "https://www.simplysmilezdental.in/about#webpage",
+      "url": "https://www.simplysmilezdental.in/about",
       "name": "About Simply Smilez Dental Clinic",
       "description": "Learn about Simply Smilez Dental Clinic, a dental clinic in Shaikpet, Hyderabad, established in 2018.",
       "isPartOf": {
@@ -102,12 +102,12 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#dentist"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/about#breadcrumb"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/about.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/about#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -119,13 +119,13 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "About Us",
-          "item": "https://www.simplysmilezdental.in/about.html"
+          "item": "https://www.simplysmilezdental.in/about"
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#invisalign",
+      "@id": "https://www.simplysmilezdental.in/about#invisalign",
       "name": "Invisalign Treatment",
       "serviceType": "Invisalign",
       "provider": {
@@ -138,7 +138,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#root-canal",
+      "@id": "https://www.simplysmilezdental.in/about#root-canal",
       "name": "Root Canal Treatment",
       "serviceType": "Root Canal Treatment",
       "provider": {
@@ -151,7 +151,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#dental-implants",
+      "@id": "https://www.simplysmilezdental.in/about#dental-implants",
       "name": "Dental Implants",
       "serviceType": "Dental Implants",
       "provider": {
@@ -164,7 +164,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#braces",
+      "@id": "https://www.simplysmilezdental.in/about#braces",
       "name": "Braces and Orthodontic Treatment",
       "serviceType": "Braces",
       "provider": {
@@ -177,7 +177,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/about.html#pediatric-dentistry",
+      "@id": "https://www.simplysmilezdental.in/about#pediatric-dentistry",
       "name": "Pediatric Dentistry",
       "serviceType": "Pediatric Dentistry",
       "provider": {
@@ -190,7 +190,7 @@ const pageSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/about.html#faq",
+      "@id": "https://www.simplysmilezdental.in/about#faq",
       "mainEntity": [
         {
           "@type": "Question",

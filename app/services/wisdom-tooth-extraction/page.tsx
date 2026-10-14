@@ -31,8 +31,8 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#webpage",
-      "url": "https://www.simplysmilezdental.in/wisdom.html",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#webpage",
+      "url": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction",
       "name": "Wisdom Tooth Extraction in Hyderabad | Simply Smilez",
       "description": "Wisdom tooth extraction in Shaikpet, Hyderabad for impacted, painful or infected wisdom teeth. Get a dental evaluation and personalized treatment plan.",
       "inLanguage": "en-IN",
@@ -40,10 +40,10 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction"
+        "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction"
       },
       "mainEntity": {
-        "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction"
+        "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#clinic"
@@ -106,7 +106,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#wisdom-tooth-extraction",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#wisdom-tooth-extraction",
       "name": "Wisdom Tooth Extraction",
       "alternateName": [
         "Wisdom Teeth Removal",
@@ -123,12 +123,12 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/wisdom.html",
+      "url": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction",
       "image": "https://www.simplysmilezdental.in/images/wisdom.webp"
     },
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#procedure",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#procedure",
       "name": "Wisdom Tooth Extraction",
       "alternateName": "Third Molar Extraction",
       "description": "A dental extraction procedure used to remove a wisdom tooth when clinically indicated, including certain impacted or problematic third molars.",
@@ -138,7 +138,7 @@ const pageSchema = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -192,7 +192,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/wisdom.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -204,7 +204,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Wisdom Tooth Extraction",
-          "item": "https://www.simplysmilezdental.in/wisdom.html"
+          "item": "https://www.simplysmilezdental.in/services/wisdom-tooth-extraction"
         }
       ]
     }

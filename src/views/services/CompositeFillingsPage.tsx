@@ -22,7 +22,7 @@ const compositeSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#service",
       "name": "Composite Fillings",
       "serviceType": "Composite Dental Fillings",
       "description": "Tooth-coloured composite fillings for restoring teeth affected by cavities, decay or minor damage.",
@@ -33,22 +33,22 @@ const compositeSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html"
+      "url": "https://www.simplysmilezdental.in/services/composite-fillings"
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#webpage",
-      "url": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#webpage",
+      "url": "https://www.simplysmilezdental.in/services/composite-fillings",
       "name": "Composite Fillings in Hyderabad | Tooth-Coloured Dental Fillings",
       "description": "Learn about composite fillings in Hyderabad, including tooth-coloured fillings, benefits, procedure, suitability and aftercare.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/composite-fillings#service"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/services/composite-fillings#breadcrumb"
       }
     },
     {
@@ -62,7 +62,7 @@ const compositeSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/services/composite-fillings#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -74,7 +74,7 @@ const compositeSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Composite Fillings",
-          "item": "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html"
+          "item": "https://www.simplysmilezdental.in/services/composite-fillings"
         }
       ]
     }
@@ -111,7 +111,7 @@ export default function CompositeFillingsPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html";
+    canonical.href = "https://www.simplysmilezdental.in/services/composite-fillings";
 
     // Metadata
     setMeta("description", "Looking for composite fillings in Hyderabad? Learn about tooth-coloured fillings, benefits, procedure, suitability and aftercare at Simply Smilez Dental Clinic, Shaikpet.");
@@ -122,7 +122,7 @@ export default function CompositeFillingsPage() {
     setMeta("og:type", "website", true);
     setMeta("og:title", "Composite Fillings in Hyderabad | Tooth-Coloured Dental Fillings", true);
     setMeta("og:description", "Looking for composite fillings in Hyderabad? Learn about tooth-coloured fillings, benefits, procedure, suitability and aftercare at Simply Smilez Dental Clinic, Shaikpet.", true);
-    setMeta("og:url", "https://www.simplysmilezdental.in/composite-fillings-hyderabad.html", true);
+    setMeta("og:url", "https://www.simplysmilezdental.in/services/composite-fillings", true);
     setMeta("og:site_name", "Simply Smilez Dental Clinic", true);
     setMeta("og:image", "https://www.simplysmilezdental.in/images/composite.webp", true);
     setMeta("og:image:alt", "Composite tooth-coloured dental fillings in Hyderabad", true);

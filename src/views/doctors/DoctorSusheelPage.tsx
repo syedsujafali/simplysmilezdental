@@ -168,7 +168,7 @@ const susheelSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Doctors",
-          "item": "https://www.simplysmilezdental.in/doctor.html"
+          "item": "https://www.simplysmilezdental.in/doctors"
         },
         {
           "@type": "ListItem",
@@ -215,7 +215,7 @@ export default function DoctorSusheelPage() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://www.simplysmilezdental.in/doctor/dr-susheel-kumar-pediatric-dentist-implantologist-hyderabad.html";
+    canonical.href = "https://www.simplysmilezdental.in/doctor/dr-susheel-kumar";
 
     // Metadata
     setMeta('description', "Consult Dr. Susheel Kumar, leading Pediatric Dentist & Implantologist in Hyderabad with 9+ years experience. Expert in child dental care and dental implants at Simply Smilez Dental Clinic.");
@@ -229,7 +229,7 @@ export default function DoctorSusheelPage() {
     setMeta('og:type', "profile", true);
     setMeta('og:title', "Dr. Susheel Kumar – Pediatric Dentist & Implantologist in Hyderabad | Simply Smilez", true);
     setMeta('og:description', "Consult Dr. Susheel Kumar, leading Pediatric Dentist & Implantologist in Hyderabad with 9+ years experience. Expert in child dental care and dental implants at Simply Smilez Dental Clinic.", true);
-    setMeta('og:url', "https://www.simplysmilezdental.in/doctor/dr-susheel-kumar-pediatric-dentist-implantologist-hyderabad.html", true);
+    setMeta('og:url', "https://www.simplysmilezdental.in/doctor/dr-susheel-kumar", true);
     setMeta('og:site_name', "Simply Smilez Dental Clinic", true);
     setMeta('og:image', "https://www.simplysmilezdental.in/images/susheel2.webp", true);
     setMeta('og:image:alt', "Dr. Susheel Kumar - Pediatric Dentist and Implantologist in Hyderabad at Simply Smilez Dental Clinic", true);

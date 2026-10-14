@@ -62,15 +62,15 @@ const pageSchema = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.simplysmilezdental.in/braces.html",
-      "url": "https://www.simplysmilezdental.in/braces.html",
+      "@id": "https://www.simplysmilezdental.in/services/braces",
+      "url": "https://www.simplysmilezdental.in/services/braces",
       "name": "Dental Braces Clinic in Hyderabad | Braces & Orthodontic Treatment",
       "description": "Learn about braces, clear aligners and orthodontic treatment in Hyderabad at Simply Smilez Dental Clinic, Shaikpet.",
       "isPartOf": {
         "@id": "https://www.simplysmilezdental.in/#website"
       },
       "about": {
-        "@id": "https://www.simplysmilezdental.in/braces.html#service"
+        "@id": "https://www.simplysmilezdental.in/services/braces#service"
       },
       "publisher": {
         "@id": "https://www.simplysmilezdental.in/#dentist"
@@ -78,7 +78,7 @@ const pageSchema = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.simplysmilezdental.in/braces.html#service",
+      "@id": "https://www.simplysmilezdental.in/services/braces#service",
       "name": "Dental Braces",
       "serviceType": "Orthodontic Treatment",
       "description": "Orthodontic treatment using dental braces to address suitable cases of crowded, crooked, spaced or misaligned teeth and certain bite concerns.",
@@ -89,11 +89,11 @@ const pageSchema = {
         "@type": "City",
         "name": "Hyderabad"
       },
-      "url": "https://www.simplysmilezdental.in/braces.html"
+      "url": "https://www.simplysmilezdental.in/services/braces"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.simplysmilezdental.in/braces.html#faq",
+      "@id": "https://www.simplysmilezdental.in/services/braces#faq",
       "mainEntity": [
         {
           "@type": "Question",

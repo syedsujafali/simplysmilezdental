@@ -47,137 +47,127 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Dental Treatments */}
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            {/* Column 2: Dental Treatments (Split into 2 Columns: 5 and 5) */}
+            <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
               <h4 className="footer-heading">Dental Treatments</h4>
               <div className="footer-heading-bar"></div>
-              <ul className="footer-links-list list-unstyled mb-0">
-                <li>
-                  <Link to="/services/braces">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Braces &amp; Clear Aligners (Invisalign)
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/pediatric-dentistry">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Pediatric Dentistry
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/dental-implants">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Implants
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/microscopic-root-canal">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Microscopic Root Canal Treatment
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/crowns">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Crowns
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/veneers">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Veneers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/composite-fillings">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Composite Fillings
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/laser-teeth-whitening">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Teeth Whitening
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/laser-gum-surgery">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Gum Surgery &amp; Care
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/wisdom-tooth-extraction">
-                    <i className="fa-solid fa-chevron-right link-arrow"></i> Wisdom Tooth Extractions
-                  </Link>
-                </li>
-              </ul>
+              <div className="row">
+                {/* Treatments Part 1 (First 5) */}
+                <div className="col-6 pr-1">
+                  <ul className="footer-links-list list-unstyled mb-0">
+                    <li>
+                      <Link to="/services/braces">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Braces &amp; Invisalign
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/pediatric-dentistry">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Pediatric Dentistry
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/dental-implants">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Implants
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/microscopic-root-canal">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Root Canal Treatment
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/crowns">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Crowns
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Treatments Part 2 (Second 5) */}
+                <div className="col-6 pl-1">
+                  <ul className="footer-links-list list-unstyled mb-0">
+                    <li>
+                      <Link to="/services/veneers">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Dental Veneers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/composite-fillings">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Composite Fillings
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/laser-teeth-whitening">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Teeth Whitening
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/laser-gum-surgery">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Laser Gum Surgery
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/wisdom-tooth-extraction">
+                        <i className="fa-solid fa-chevron-right link-arrow"></i> Wisdom Extractions
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            {/* Column 3: Contact & Timings */}
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h4 className="footer-heading">Contact &amp; Timings</h4>
+            {/* Column 3: Contact, Timings & Clear Get Directions Button (Without Map) */}
+            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
+              <h4 className="footer-heading">Contact &amp; Location</h4>
               <div className="footer-heading-bar"></div>
 
-              <div className="footer-contact-item d-flex align-items-start mb-3">
+              <div className="footer-contact-item d-flex align-items-start mb-2">
                 <i className="fa-solid fa-location-dot footer-contact-icon mr-2 mt-1"></i>
                 <div>
                   <strong className="d-block footer-contact-label">Address:</strong>
-                  <p className="mb-0 footer-contact-text">
+                  <a
+                    href="https://www.google.com/maps/place/Simply+Smilez+Dental/@17.4110386,78.3924029,17z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-0 footer-contact-text text-decoration-none d-block"
+                    style={{ color: '#94a3b8', transition: 'color 0.2s ease' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#38bdf8')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
+                    title="Open Simply Smilez Dental in Google Maps"
+                  >
                     P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet, Hyderabad, Telangana 500008
-                  </p>
+                  </a>
                 </div>
               </div>
 
-              <div className="footer-contact-item d-flex align-items-start mb-3">
-                <i className="fa-regular fa-clock footer-contact-icon mr-2 mt-1"></i>
-                <div>
-                  <strong className="d-block footer-contact-label">Opening Hours:</strong>
-                  <p className="mb-0 footer-contact-text">
+              {/* High Visibility Get Directions Button */}
+
+
+              <div className="row mt-2">
+                <div className="col-sm-6 mb-2">
+                  <strong className="d-block footer-contact-label">
+                    <i className="fa-regular fa-clock mr-1 text-info"></i> Timings:
+                  </strong>
+                  <p className="mb-0 footer-contact-text" style={{ fontSize: '12.5px' }}>
                     Mon - Sat: 10:00am - 8:30pm<br />
                     Sunday: 10:30am - 1:00pm
                   </p>
                 </div>
-              </div>
 
-              <div className="footer-contact-item d-flex align-items-start mb-3">
-                <i className="fa-solid fa-phone footer-contact-icon mr-2 mt-1"></i>
-                <div>
-                  <strong className="d-block footer-contact-label">Phone Numbers:</strong>
-                  <p className="mb-0 footer-contact-phones">
-                    <a href="tel:+917799376656">77993 76656</a> &bull; <a href="tel:+919603338904">96033 38904</a>
+                <div className="col-sm-6 mb-2">
+                  <strong className="d-block footer-contact-label">
+                    <i className="fa-solid fa-phone mr-1 text-info"></i> Phone:
+                  </strong>
+                  <p className="mb-0 footer-contact-phones" style={{ fontSize: '13px' }}>
+                    <a href="tel:+917799376656">+91 77993 76656</a><br />
+                    <a href="tel:+919603338904">+91 96033 38904</a>
                   </p>
                 </div>
               </div>
 
-              <div className="footer-contact-item d-flex align-items-start mb-0">
-                <i className="fa-regular fa-envelope footer-contact-icon mr-2 mt-1"></i>
-                <div>
-                  <strong className="d-block footer-contact-label">Email:</strong>
-                  <a href="mailto:info.invisaligndental@gmail.com" className="footer-contact-email">
-                    info.invisaligndental@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Column 4: Find Our Clinic & Map */}
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h4 className="footer-heading">Find Our Clinic</h4>
-              <div className="footer-heading-bar"></div>
-
-              <div className="footer-map-card mb-3">
-                <iframe
-                  src="https://www.google.com/maps?q=Simply%20Smilez%20Dental%20Clinic%2C%20Shaikpet%2C%20Hyderabad&output=embed"
-                  title="Simply Smilez Dental Clinic location"
-                  width="100%"
-                  height="135"
-                  style={{ border: 0, display: 'block', borderRadius: '12px' }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-
-              <div className="d-flex align-items-center justify-content-between pt-1">
-                <a
-                  href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-directions-link"
-                >
-                  <i className="fa-solid fa-location-arrow mr-1"></i> Get Directions &rarr;
-                </a>
+              {/* Social Icons */}
+              <div className="d-flex align-items-center mt-2 pt-2 border-top border-secondary">
+                <span className="text-muted mr-3" style={{ fontSize: '12.5px' }}>Connect with us:</span>
                 <div className="footer-social-icons d-flex align-items-center">
                   <a
                     href="https://www.instagram.com/sush_micro_dontist?stkn=cTMxejQ2ejl6djR0&utm_source=qr"

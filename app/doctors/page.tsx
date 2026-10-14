@@ -81,8 +81,8 @@ const pageSchema = {
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.simplysmilezdental.in/doctor.html#webpage",
-      "url": "https://www.simplysmilezdental.in/doctor.html",
+      "@id": "https://www.simplysmilezdental.in/doctors#webpage",
+      "url": "https://www.simplysmilezdental.in/doctors",
       "name": "Experienced Dentists & Dental Specialists in Shaikpet, Hyderabad | Simply Smilez",
       "description": "Meet our team of experienced dentists and dental specialists at Simply Smilez Dental Clinic in Shaikpet, Hyderabad.",
       "isPartOf": {
@@ -92,7 +92,7 @@ const pageSchema = {
         "@id": "https://www.simplysmilezdental.in/#clinic"
       },
       "breadcrumb": {
-        "@id": "https://www.simplysmilezdental.in/doctor.html#breadcrumb"
+        "@id": "https://www.simplysmilezdental.in/doctors#breadcrumb"
       }
     },
     {
@@ -119,7 +119,7 @@ const pageSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.simplysmilezdental.in/doctor.html#breadcrumb",
+      "@id": "https://www.simplysmilezdental.in/doctors#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -131,7 +131,7 @@ const pageSchema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Doctors",
-          "item": "https://www.simplysmilezdental.in/doctor.html"
+          "item": "https://www.simplysmilezdental.in/doctors"
         }
       ]
     }
