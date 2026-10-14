@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from './Link';
+import { usePathname } from 'next/navigation';
 
 interface HeaderProps {
   onOpenServices: () => void;
@@ -28,12 +31,12 @@ export default function Header({ onOpenServices }: HeaderProps) {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [mobileSpecialtiesOpen, setMobileSpecialtiesOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     setDropdownOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -77,9 +80,9 @@ export default function Header({ onOpenServices }: HeaderProps) {
   useEffect(() => {
     setDrawerOpen(false);
     setDropdownOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <header className={`ssd-header-wrapper ${isScrolled ? 'is-scrolled' : ''}`}>
@@ -188,7 +191,7 @@ export default function Header({ onOpenServices }: HeaderProps) {
                 onMouseLeave={() => setDropdownOpen(false)}
               >
                 <div
-                  className={`ssd-nav-link ${location.pathname.startsWith('/services') || isActive('/all-services') ? 'active' : ''}`}
+                  className={`ssd-nav-link ${pathname.startsWith('/services') || isActive('/all-services') ? 'active' : ''}`}
                   onClick={(e) => {
                     e.stopPropagation();
                     setDropdownOpen((prev) => !prev);
@@ -269,7 +272,9 @@ export default function Header({ onOpenServices }: HeaderProps) {
             <div className="ssd-nav-actions">
               {/* Direct Click to Call - Icon + Number only */}
               <a href="tel:+917799376656" className="ssd-quick-phone" title="Call: 77993 76656">
-                <i className="fa-solid fa-phone ssd-quick-phone-icon"></i>
+                <span className="ssd-quick-phone-icon">
+                  <i className="fa-solid fa-phone"></i>
+                </span>
                 <span className="ssd-quick-phone-number">77993 76656</span>
               </a>
 

@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
   const toggleAccordion = (name: string) => {
