@@ -125,25 +125,23 @@ export default function Footer() {
                 <i className="fa-solid fa-location-dot footer-contact-icon mr-2 mt-1"></i>
                 <div>
                   <strong className="d-block footer-contact-label">Address:</strong>
-                  <p className="mb-0 footer-contact-text">
+                  <a
+                    href="https://www.google.com/maps/place/Simply+Smilez+Dental/@17.4110386,78.3924029,17z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-0 footer-contact-text text-decoration-none d-block"
+                    style={{ color: '#94a3b8', transition: 'color 0.2s ease' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#38bdf8')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
+                    title="Open Simply Smilez Dental in Google Maps"
+                  >
                     P.V.Reddy Complex 1st Floor, Dwaraka Nagar Colony, O.U Colony Road, Shaikpet, Hyderabad, Telangana 500008
-                  </p>
+                  </a>
                 </div>
               </div>
 
               {/* High Visibility Get Directions Button */}
-              <div className="my-3">
-                <a
-                  href="https://maps.app.goo.gl/wvkijcKcuaGCoHTq9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-footer-directions d-inline-flex align-items-center"
-                >
-                  <i className="fa-solid fa-diamond-turn-right mr-2"></i>
-                  <span>Get Directions on Google Maps</span>
-                  <i className="fa-solid fa-arrow-up-right-from-square ml-2" style={{ fontSize: '11px' }}></i>
-                </a>
-              </div>
+
 
               <div className="row mt-2">
                 <div className="col-sm-6 mb-2">
