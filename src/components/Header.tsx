@@ -29,19 +29,26 @@ const specialtiesList: SpecialtyMenuItem[] = [
 export default function Header({ onOpenServices }: HeaderProps) {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState<boolean>(false);
   const [mobileSpecialtiesOpen, setMobileSpecialtiesOpen] = useState<boolean>(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const moreDropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     setDropdownOpen(false);
+    setMoreDropdownOpen(false);
   }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
+      }
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target as Node)) {
+        setMoreDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -238,26 +245,8 @@ export default function Header({ onOpenServices }: HeaderProps) {
               </li>
 
               <li className="ssd-nav-item">
-                <Link to="/doctors" className={`ssd-nav-link ${isActive('/doctors') ? 'active' : ''}`}>
-                  Doctors
-                </Link>
-              </li>
-
-              <li className="ssd-nav-item">
-                <Link to="/gallery" className={`ssd-nav-link ${isActive('/gallery') ? 'active' : ''}`}>
-                  Gallery
-                </Link>
-              </li>
-
-              <li className="ssd-nav-item">
                 <Link to="/blog" className={`ssd-nav-link ${isActive('/blog') ? 'active' : ''}`}>
                   Blog
-                </Link>
-              </li>
-
-              <li className="ssd-nav-item">
-                <Link to="/testimonials" className={`ssd-nav-link ${isActive('/testimonials') ? 'active' : ''}`}>
-                  Testimonials
                 </Link>
               </li>
 
@@ -265,6 +254,67 @@ export default function Header({ onOpenServices }: HeaderProps) {
                 <Link to="/contact" className={`ssd-nav-link ${isActive('/contact') ? 'active' : ''}`}>
                   Contact
                 </Link>
+              </li>
+
+              {/* More Dropdown (Doctors, Gallery, Testimonials) */}
+              <li
+                ref={moreDropdownRef}
+                className={`ssd-nav-item ${moreDropdownOpen ? 'dropdown-open' : ''}`}
+                onMouseEnter={() => setMoreDropdownOpen(true)}
+                onMouseLeave={() => setMoreDropdownOpen(false)}
+              >
+                <div
+                  className={`ssd-nav-link ${isActive('/doctors') || isActive('/gallery') || isActive('/testimonials') ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMoreDropdownOpen((prev) => !prev);
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setMoreDropdownOpen((prev) => !prev);
+                    }
+                  }}
+                  style={{ cursor: 'pointer', userSelect: 'none' }}
+                >
+                  More <i className="fa-solid fa-chevron-down chevron"></i>
+                </div>
+
+                <div className={`ssd-specialties-dropdown ssd-more-dropdown ${moreDropdownOpen ? 'show' : ''}`} style={{ width: '220px' }}>
+                  <div className="ssd-spec-dropdown-list">
+                    <Link
+                      to="/doctors"
+                      className="ssd-spec-dropdown-item"
+                      onClick={() => setMoreDropdownOpen(false)}
+                    >
+                      <i className="fa-solid fa-user-doctor mr-2" style={{ color: '#38bdf8', fontSize: '13px', width: '16px' }}></i>
+                      <span className="ssd-spec-name">Doctors</span>
+                      <i className="fa-solid fa-chevron-right ssd-spec-item-arrow"></i>
+                    </Link>
+
+                    <Link
+                      to="/gallery"
+                      className="ssd-spec-dropdown-item"
+                      onClick={() => setMoreDropdownOpen(false)}
+                    >
+                      <i className="fa-solid fa-images mr-2" style={{ color: '#38bdf8', fontSize: '13px', width: '16px' }}></i>
+                      <span className="ssd-spec-name">Gallery</span>
+                      <i className="fa-solid fa-chevron-right ssd-spec-item-arrow"></i>
+                    </Link>
+
+                    <Link
+                      to="/testimonials"
+                      className="ssd-spec-dropdown-item"
+                      onClick={() => setMoreDropdownOpen(false)}
+                    >
+                      <i className="fa-solid fa-comments mr-2" style={{ color: '#38bdf8', fontSize: '13px', width: '16px' }}></i>
+                      <span className="ssd-spec-name">Testimonials</span>
+                      <i className="fa-solid fa-chevron-right ssd-spec-item-arrow"></i>
+                    </Link>
+                  </div>
+                </div>
               </li>
             </ul>
 
@@ -406,44 +456,11 @@ export default function Header({ onOpenServices }: HeaderProps) {
 
             <li>
               <Link
-                to="/doctors"
-                className={`ssd-drawer-link ${isActive('/doctors') ? 'active' : ''}`}
-                onClick={() => setDrawerOpen(false)}
-              >
-                <span>Doctors &amp; Specialists</span>
-                <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/gallery"
-                className={`ssd-drawer-link ${isActive('/gallery') ? 'active' : ''}`}
-                onClick={() => setDrawerOpen(false)}
-              >
-                <span>Clinic Gallery</span>
-                <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
-              </Link>
-            </li>
-
-            <li>
-              <Link
                 to="/blog"
                 className={`ssd-drawer-link ${isActive('/blog') ? 'active' : ''}`}
                 onClick={() => setDrawerOpen(false)}
               >
-                <span>Dental Blog &amp; Articles</span>
-                <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/testimonials"
-                className={`ssd-drawer-link ${isActive('/testimonials') ? 'active' : ''}`}
-                onClick={() => setDrawerOpen(false)}
-              >
-                <span>Patient Testimonials</span>
+                <span>Dental Blog</span>
                 <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
               </Link>
             </li>
@@ -457,6 +474,50 @@ export default function Header({ onOpenServices }: HeaderProps) {
                 <span>Contact Us</span>
                 <i className="fa-solid fa-chevron-right" style={{ fontSize: '11px', opacity: 0.5 }}></i>
               </Link>
+            </li>
+
+            {/* Expandable More Accordion (Doctors, Gallery, Testimonials) */}
+            <li>
+              <button
+                type="button"
+                className={`ssd-drawer-accordion-btn ${mobileMoreOpen ? 'expanded' : ''}`}
+                onClick={() => setMobileMoreOpen(!mobileMoreOpen)}
+              >
+                <span>More</span>
+                <i className="fa-solid fa-chevron-down"></i>
+              </button>
+
+              {mobileMoreOpen && (
+                <ul className="ssd-drawer-submenu">
+                  <li>
+                    <Link
+                      to="/doctors"
+                      className="ssd-drawer-sublink"
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      <i className="fa-solid fa-user-doctor"></i> Doctors &amp; Specialists
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/gallery"
+                      className="ssd-drawer-sublink"
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      <i className="fa-solid fa-images"></i> Clinic Gallery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/testimonials"
+                      className="ssd-drawer-sublink"
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      <i className="fa-solid fa-comments"></i> Patient Testimonials
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
 
